@@ -5,7 +5,7 @@ import paho.mqtt.client as mqtt
 import json
 import random
 
-THINGSBOARD_HOST = '64.227.46.82'
+THINGSBOARD_HOST = 'eyeohtee.ie'
 ACCESS_TOKEN = 'DHT11_DEMO_TOKEN'
 
 # Data capture and upload interval in seconds. Less interval will eventually hang the DHT22.
