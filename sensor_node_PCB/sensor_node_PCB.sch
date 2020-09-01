@@ -163,16 +163,12 @@ F 3 "~" H 6350 3450 50  0001 C CNN
 	1    6350 3450
 	1    0    0    1   
 $EndComp
-Text Label 5025 3250 0    50   ~ 0
-12V_BUS
 Text Label 5025 3450 0    50   ~ 0
 MODBUS_B+
 Text Label 5025 3350 0    50   ~ 0
 MODBUS_A-
 Text Label 5025 3550 0    50   ~ 0
 GND
-Text Label 6075 3250 2    50   ~ 0
-12V_BUS
 Text Label 6075 3350 2    50   ~ 0
 MODBUS_A-
 Text Label 6075 3450 2    50   ~ 0
@@ -188,19 +184,24 @@ Wire Notes Line
 Wire Notes Line
 	4600 3675 4600 2950
 Wire Wire Line
-	4950 3250 5025 3250
-Wire Wire Line
 	4950 3350 5025 3350
 Wire Wire Line
 	4950 3450 5025 3450
 Wire Wire Line
 	4950 3550 5025 3550
 Wire Wire Line
-	6075 3250 6150 3250
-Wire Wire Line
 	6075 3350 6150 3350
 Wire Wire Line
 	6075 3450 6150 3450
 Wire Wire Line
 	6075 3550 6150 3550
+Text GLabel 5500 3200 1    50   Input ~ 0
+12V_BUS
+Wire Wire Line
+	4950 3250 5500 3250
+Wire Wire Line
+	5500 3250 5500 3200
+Connection ~ 5500 3250
+Wire Wire Line
+	5500 3250 6150 3250
 $EndSCHEMATC

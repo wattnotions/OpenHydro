@@ -186,16 +186,7 @@ F 6 "~" H 5275 4525 60  0001 C CNN "Notes"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4025 3675 4225 3675
-Wire Wire Line
-	4225 3675 4225 3775
-Connection ~ 4225 3775
-Wire Wire Line
 	5275 3775 5275 4025
-Wire Wire Line
-	4025 3875 4225 3875
-Wire Wire Line
-	4225 3875 4225 4525
 Wire Wire Line
 	5275 4325 5275 4525
 Wire Notes Line
@@ -302,43 +293,10 @@ F 6 "~" H 7800 4525 60  0001 C CNN "Notes"
 	1    7800 4525
 	1    0    0    -1  
 $EndComp
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR09
-U 1 1 56209A71
-P 4225 4525
-F 0 "#PWR09" H 4225 4275 50  0001 C CNN
-F 1 "GND" H 4225 4375 50  0001 C CNN
-F 2 "" H 4225 4525 60  0000 C CNN
-F 3 "" H 4225 4525 60  0000 C CNN
-F 4 "ANY" H 4225 4525 60  0001 C CNN "Source"
-F 5 "N" H 4225 4525 60  0001 C CNN "Critical"
-F 6 "~" H 4225 4525 60  0001 C CNN "Notes"
-	1    4225 4525
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6325 3775 6475 3775
 Wire Wire Line
 	4850 3775 5075 3775
-Wire Wire Line
-	4025 3775 4225 3775
-$Comp
-L Connector:Screw_Terminal_01x04 J?
-U 1 1 5F4E5A9B
-P 3550 3850
-F 0 "J?" H 3468 3425 50  0000 C CNN
-F 1 "Screw_Terminal_01x04" H 3468 3516 50  0000 C CNN
-F 2 "" H 3550 3850 50  0001 C CNN
-F 3 "~" H 3550 3850 50  0001 C CNN
-	1    3550 3850
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3750 3650 4025 3650
-Wire Wire Line
-	4025 3650 4025 3675
-Wire Wire Line
-	4225 3775 4550 3775
 Wire Wire Line
 	5275 3775 5525 3775
 Wire Wire Line
@@ -348,7 +306,7 @@ Wire Wire Line
 Wire Wire Line
 	5075 3775 5275 3775
 Wire Wire Line
-	3750 3950 4025 3950
-Wire Wire Line
-	4025 3950 4025 3875
+	4025 3775 4550 3775
+Text GLabel 4025 3775 0    50   Input ~ 0
+12V_BUS
 $EndSCHEMATC
