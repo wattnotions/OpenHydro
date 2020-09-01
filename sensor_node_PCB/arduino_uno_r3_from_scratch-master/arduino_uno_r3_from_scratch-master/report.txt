@@ -1,0 +1,122 @@
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\sym-lib-table” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\sym-lib-table-2020-09-01-09-39-46”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\Arduino_Uno_R3_From_Scratch.sch” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\Arduino_Uno_R3_From_Scratch-2020-09-01-09-39-46.sch”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\Voltage_Regulator.sch” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\Voltage_Regulator-2020-09-01-09-39-46.sch”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\voltage_management.sch” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\voltage_management-2020-09-01-09-39-46.sch”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\Pin_13_LED.sch” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\Pin_13_LED-2020-09-01-09-39-46.sch”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\USB_Interface.sch” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\USB_Interface-2020-09-01-09-39-46.sch”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\ATMEGA16U2.sch” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\ATMEGA16U2-2020-09-01-09-39-46.sch”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\Headers.sch” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\Headers-2020-09-01-09-39-46.sch”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\ATMEGA328P.sch” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\ATMEGA328P-2020-09-01-09-39-46.sch”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\Arduino_Uno_R3_From_Scratch.pro” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\Arduino_Uno_R3_From_Scratch-2020-09-01-09-39-46.pro”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\Arduino_Uno_R3_From_Scratch-cache.lib” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\Arduino_Uno_R3_From_Scratch-cache-2020-09-01-09-39-46.lib”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\Arduino_Uno_R3_From_Scratch-rescue.lib” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\Arduino_Uno_R3_From_Scratch-rescue-2020-09-01-09-39-46.lib”.
+Info: Backing up file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\Arduino_Uno_R3_From_Scratch-rescue.dcm” to file “C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\arduino_uno_r3_from_scratch-master\arduino_uno_r3_from_scratch-master\rescue-backup\Arduino_Uno_R3_From_Scratch-rescue-2020-09-01-09-39-46.dcm”.
+Info: Adding library “Arduino_Uno_R3_From_Scratch-rescue”, file “${KIPRJMOD}/Arduino_Uno_R3_From_Scratch-rescue.lib” to project symbol library table.
+Symbol “D” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “CP” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “BARREL_JACK” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “CP” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “LED” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “Vin” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “LD1117S50TR” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “Q_PMOS_GSD” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “LM358” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND-RESCUE-Arduino_Uno_R3_From_Scratch” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “USBVCC” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “LP2985LV” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “3V3_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “Vin” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “3V3_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “LM358” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “LED” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “THERMISTOR” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “USB_TYPE_B” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “VR” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “FILTER” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “VR” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “USBVCC” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “ATMEGA16U2-MU” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “Crystal” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “CONN_02X03” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “D” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “CONN_02X02” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “LED” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “LED” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “USBVCC” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “CONN_01X08” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “CONN_01X10” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “CONN_01X06” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “3V3_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “Vin” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “CONN_01X08” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “ATMEGA328P-PU” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “CONN_02X03” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “D” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “RESET_SWITCH” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “5V_LDO” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “CERAMIC_RESONATOR” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “C” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “R” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Symbol “GND” mapped to symbol library “Arduino_Uno_R3_From_Scratch-rescue”.
+Info: Symbol library table mapping complete!

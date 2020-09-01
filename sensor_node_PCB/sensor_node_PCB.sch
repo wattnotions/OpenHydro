@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -24,4 +24,22 @@ F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-D
 	1    8800 2350
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 1750 3950 1600 2800
+U 5F4E1E8A
+F0 "atmega328p" 50
+F1 "atmega328p.sch" 50
+$EndSheet
+$Sheet
+S 1300 800  850  850 
+U 5F4E110C
+F0 "voltage_management" 50
+F1 "voltage_management.sch" 50
+$EndSheet
+$Sheet
+S 1300 2050 850  1050
+U 5F4E2C52
+F0 "voltage_regulator" 50
+F1 "voltage_regulator.sch" 50
+$EndSheet
 $EndSCHEMATC
