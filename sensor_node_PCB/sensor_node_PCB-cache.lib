@@ -1,20 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Arduino_Uno_R3_From_Scratch-rescue_3V3_LDO
-#
-DEF Arduino_Uno_R3_From_Scratch-rescue_3V3_LDO #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -40 30 H I C CNN
-F1 "Arduino_Uno_R3_From_Scratch-rescue_3V3_LDO" 0 120 30 H V C CNN
-F2 "" 0 0 60 H V C CNN
-F3 "" 0 0 60 H V C CNN
-DRAW
-C 0 60 20 0 1 6 N
-P 3 0 1 6 0 0 0 40 0 40 N
-X 3V3_LDO 1 0 0 0 U 30 30 0 0 W N
-ENDDRAW
-ENDDEF
-#
 # Arduino_Uno_R3_From_Scratch-rescue_5V_LDO
 #
 DEF Arduino_Uno_R3_From_Scratch-rescue_5V_LDO #PWR 0 40 Y Y 1 F P
@@ -66,27 +52,6 @@ X (T0)PD4 6 1200 -1550 300 L 50 50 1 1 I
 X VCC 7 -1200 -950 300 R 50 50 1 1 I
 X GND 8 -1200 -1750 300 R 50 50 1 1 I
 X XTAL1 9 -1200 700 300 R 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
-# Arduino_Uno_R3_From_Scratch-rescue_BARREL_JACK
-#
-DEF Arduino_Uno_R3_From_Scratch-rescue_BARREL_JACK CON 0 40 Y Y 1 F N
-F0 "CON" 0 250 60 H V C CNN
-F1 "Arduino_Uno_R3_From_Scratch-rescue_BARREL_JACK" 0 -200 60 H V C CNN
-F2 "" 0 0 60 H V C CNN
-F3 "" 0 0 60 H V C CNN
-DRAW
-A -300 99 49 -900 1788 0 1 0 N -300 50 -350 100
-A -300 101 49 900 -1788 0 1 0 N -300 150 -350 100
-S 100 150 0 50 0 1 0 N
-P 2 0 1 0 -300 50 0 50 N
-P 2 0 1 0 0 150 -300 150 N
-P 3 0 1 0 100 0 -50 0 -50 -100 N
-P 5 0 1 0 100 -100 -150 -100 -200 -50 -250 -100 -350 -100 N
-X ~ 1 300 100 200 L 50 50 1 1 P
-X ~ 2 300 -100 200 L 50 50 1 1 P
-X ~ 3 300 0 200 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -299,23 +264,6 @@ X ~ 7 500 0 300 L 40 40 2 1 O
 ENDDRAW
 ENDDEF
 #
-# Arduino_Uno_R3_From_Scratch-rescue_LP2985LV
-#
-DEF Arduino_Uno_R3_From_Scratch-rescue_LP2985LV U 0 30 Y Y 1 F N
-F0 "U" 200 -450 60 H V C CNN
-F1 "Arduino_Uno_R3_From_Scratch-rescue_LP2985LV" 0 450 60 H V C CNN
-F2 "" 0 0 60 H V C CNN
-F3 "" 0 0 60 H V C CNN
-DRAW
-S -500 -400 500 400 0 1 0 N
-X VIN 1 -800 300 300 R 60 60 1 1 W
-X GND 2 0 -700 300 U 60 40 1 1 W
-X ON/OFF 3 -800 100 300 R 60 60 1 1 I
-X BYPASS 4 -800 -200 300 R 60 60 1 1 I
-X VOUT 5 800 300 300 L 60 60 1 1 w
-ENDDRAW
-ENDDEF
-#
 # Arduino_Uno_R3_From_Scratch-rescue_Q_PMOS_GSD
 #
 DEF Arduino_Uno_R3_From_Scratch-rescue_Q_PMOS_GSD Q 0 0 Y N 1 F N
@@ -406,6 +354,37 @@ C 0 60 20 0 1 6 N
 P 2 0 1 6 0 30 0 40 N
 P 4 0 1 6 0 0 0 30 0 30 0 30 N
 X Vin 1 0 0 0 U 20 20 0 0 W N
+ENDDRAW
+ENDDEF
+#
+# Connector_Screw_Terminal_01x04
+#
+DEF Connector_Screw_Terminal_01x04 J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Connector_Screw_Terminal_01x04" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TerminalBlock*:*
+$ENDFPLIST
+DRAW
+C 0 -200 25 1 1 6 N
+C 0 -100 25 1 1 6 N
+C 0 0 25 1 1 6 N
+C 0 100 25 1 1 6 N
+S -50 150 50 -250 1 1 10 f
+P 2 1 1 6 -21 -187 13 -220 N
+P 2 1 1 6 -21 -87 13 -120 N
+P 2 1 1 6 -21 13 13 -20 N
+P 2 1 1 6 -21 113 13 80 N
+P 2 1 1 6 -14 -180 20 -213 N
+P 2 1 1 6 -14 -80 20 -113 N
+P 2 1 1 6 -14 20 20 -13 N
+P 2 1 1 6 -14 120 20 87 N
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 -200 0 150 R 50 50 1 1 P
+X Pin_3 3 -200 -100 150 R 50 50 1 1 P
+X Pin_4 4 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
