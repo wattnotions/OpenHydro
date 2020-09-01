@@ -78,7 +78,7 @@ Wire Wire Line
 Wire Wire Line
 	3950 2750 4200 2750
 Wire Wire Line
-	3950 2500 3950 2950
+	3950 2500 3950 2750
 Connection ~ 3950 2750
 $Comp
 L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR010
@@ -99,7 +99,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 2750 4700 2750
 Wire Wire Line
-	2950 3000 2950 3500
+	2950 3000 2950 3250
 $Comp
 L Arduino_Uno_R3_From_Scratch-rescue:GND-RESCUE-Arduino_Uno_R3_From_Scratch #PWR011
 U 1 1 55D120DC
@@ -119,8 +119,6 @@ Wire Wire Line
 	3550 3250 2950 3250
 Connection ~ 2950 3250
 Wire Wire Line
-	3550 3450 3450 3450
-Wire Wire Line
 	4550 3350 5050 3350
 Wire Wire Line
 	5050 3350 5050 3900
@@ -139,65 +137,6 @@ Wire Wire Line
 	4850 4200 4650 4200
 Wire Wire Line
 	4650 4200 4650 4050
-Wire Wire Line
-	3450 3450 3450 2950
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:LP2985LV U3
-U 1 1 55D1286F
-P 7000 4500
-F 0 "U3" H 7200 4050 60  0000 C CNN
-F 1 "LP2985-33DBVR" H 7000 4950 60  0000 C CNN
-F 2 "~" H 7000 4500 60  0000 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lp2985-33.pdf" H 7000 4500 60  0001 C CNN
-F 4 "3.3V FIXED POSITIVE LDO REGULATOR, 0.575V DROPOUT" H 7000 4500 60  0001 C CNN "Characteristics"
-F 5 "3V3 Fixed LDO Regulator" H 7000 4500 60  0001 C CNN "Description"
-F 6 "Texas Instruments" H 7000 4500 60  0001 C CNN "MFN"
-F 7 "LP2985-33DBVR" H 7000 4500 60  0001 C CNN "MFP"
-F 8 "SOT-23 5" H 7000 4500 60  0001 C CNN "Package ID"
-F 9 "ANY" H 7000 4500 60  0001 C CNN "Source"
-F 10 "N" H 7000 4500 60  0001 C CNN "Critical"
-F 11 "Voltage_Mgmt" H 7000 4500 60  0001 C CNN "Subsystem"
-F 12 "~" H 7000 4500 60  0001 C CNN "Notes"
-	1    7000 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5250 4200 6200 4200
-Wire Wire Line
-	5900 4200 5900 4400
-Wire Wire Line
-	5900 4400 6200 4400
-Connection ~ 5900 4200
-Wire Wire Line
-	7000 5200 7000 5325
-NoConn ~ 6200 4700
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:C C6
-U 1 1 55D12923
-P 8000 4600
-F 0 "C6" H 8000 4700 40  0000 L CNN
-F 1 "2.2uF" H 8006 4515 40  0000 L CNN
-F 2 "~" H 8038 4450 30  0000 C CNN
-F 3 "http://product.tdk.com/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 8000 4600 60  0001 C CNN
-F 4 "CAP CER 2.2UF 16V X7R 0805" H 8000 4600 60  0001 C CNN "Characteristics"
-F 5 "2.2uF 3V3 LDO Output Cap" H 8000 4600 60  0001 C CNN "Description"
-F 6 "TDK Corporation" H 8000 4600 60  0001 C CNN "MFN"
-F 7 "C2012X7R1C225K125AB" H 8000 4600 60  0001 C CNN "MFP"
-F 8 "SMD_0805" H 8000 4600 60  0001 C CNN "Package ID"
-F 9 "ANY" H 8000 4600 60  0001 C CNN "Source"
-F 10 "Y" H 8000 4600 60  0001 C CNN "Critical"
-F 11 "Voltage_Mgmt" H 8000 4600 60  0001 C CNN "Subsystem"
-F 12 "Must be between 0.001 and 1Ω ESR" H 8000 4600 60  0001 C CNN "Notes"
-	1    8000 4600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7800 4200 8000 4200
-Wire Wire Line
-	8000 4000 8000 4450
-Wire Wire Line
-	8000 4750 8000 5325
-Connection ~ 8000 4200
 Wire Notes Line
 	2650 2500 2650 2150
 Wire Notes Line
@@ -206,7 +145,6 @@ Wire Notes Line
 	8000 2150 8000 2450
 Wire Wire Line
 	5400 3700 5400 4200
-Connection ~ 5400 4200
 Text Notes 4450 2100 0    60   ~ 0
 USBVCC / VIN Comparator
 $Comp
@@ -231,7 +169,6 @@ F 12 "~" H 5650 4600 60  0001 C CNN "Notes"
 $EndComp
 Wire Wire Line
 	5650 4200 5650 4450
-Connection ~ 5650 4200
 Wire Wire Line
 	5650 4750 5650 5325
 $Comp
@@ -275,17 +212,6 @@ F 12 "~" H 4350 2750 60  0001 C CNN "Notes"
 	0    1    1    0   
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR013
-U 1 1 55E95795
-P 8000 4000
-F 0 "#PWR013" H 8000 3960 30  0001 C CNN
-F 1 "3V3_LDO" H 8000 4120 30  0000 C CNN
-F 2 "~" H 8000 4000 60  0000 C CNN
-F 3 "~" H 8000 4000 60  0000 C CNN
-	1    8000 4000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR014
 U 1 1 55E957AE
 P 5400 3700
@@ -313,22 +239,12 @@ U 1 1 55E957DB
 P 2950 2500
 AR Path="/55E957DB" Ref="#PWR020"  Part="1" 
 AR Path="/55D0D7E6/55E957DB" Ref="#PWR016"  Part="1" 
+AR Path="/5F4E110C/55E957DB" Ref="#PWR016"  Part="1" 
 F 0 "#PWR016" H 2950 2590 20  0001 C CNN
 F 1 "VIN" H 2950 2620 30  0000 C CNN
 F 2 "~" H 2950 2500 60  0000 C CNN
 F 3 "~" H 2950 2500 60  0000 C CNN
 	1    2950 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR017
-U 1 1 55E957F2
-P 3450 2950
-F 0 "#PWR017" H 3450 2910 30  0001 C CNN
-F 1 "3V3_LDO" H 3450 3070 30  0000 C CNN
-F 2 "~" H 3450 2950 60  0000 C CNN
-F 3 "~" H 3450 2950 60  0000 C CNN
-	1    3450 2950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -346,34 +262,6 @@ F 6 "~" H 5650 5325 60  0001 C CNN "Notes"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR019
-U 1 1 561FE596
-P 7000 5325
-F 0 "#PWR019" H 7000 5325 30  0001 C CNN
-F 1 "GND" H 7000 5255 30  0001 C CNN
-F 2 "~" H 7000 5325 60  0000 C CNN
-F 3 "~" H 7000 5325 60  0000 C CNN
-F 4 "ANY" H 7000 5325 60  0001 C CNN "Source"
-F 5 "N" H 7000 5325 60  0001 C CNN "Critical"
-F 6 "~" H 7000 5325 60  0001 C CNN "Notes"
-	1    7000 5325
-	1    0    0    -1  
-$EndComp
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR020
-U 1 1 561FE5BF
-P 8000 5325
-F 0 "#PWR020" H 8000 5325 30  0001 C CNN
-F 1 "GND" H 8000 5255 30  0001 C CNN
-F 2 "~" H 8000 5325 60  0000 C CNN
-F 3 "~" H 8000 5325 60  0000 C CNN
-F 4 "ANY" H 8000 5325 60  0001 C CNN "Source"
-F 5 "N" H 8000 5325 60  0001 C CNN "Critical"
-F 6 "~" H 8000 5325 60  0001 C CNN "Notes"
-	1    8000 5325
-	1    0    0    -1  
-$EndComp
-$Comp
 L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR021
 U 1 1 562082E4
 P 3950 4150
@@ -387,4 +275,70 @@ F 6 "~" H 3950 4150 60  0001 C CNN "Notes"
 	1    3950 4150
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3950 2750 3950 2950
+Wire Wire Line
+	2950 3250 2950 3500
+Wire Wire Line
+	5250 4200 5400 4200
+Connection ~ 5400 4200
+Wire Wire Line
+	5400 4200 5650 4200
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+U 1 1 5F4F0202
+P 3275 3700
+F 0 "#PWR?" H 3275 3790 20  0001 C CNN
+F 1 "5V_LDO" H 3271 3838 30  0000 C CNN
+F 2 "" H 3275 3700 60  0000 C CNN
+F 3 "" H 3275 3700 60  0000 C CNN
+	1    3275 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:R R?
+U 1 1 5F4F0E62
+P 3275 3950
+F 0 "R?" H 3345 3996 50  0000 L CNN
+F 1 "10k" H 3345 3905 50  0000 L CNN
+F 2 "" V 3205 3950 30  0000 C CNN
+F 3 "" H 3275 3950 30  0000 C CNN
+	1    3275 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:R R?
+U 1 1 5F4F1648
+P 3275 4375
+F 0 "R?" H 3345 4421 50  0000 L CNN
+F 1 "10k" H 3345 4330 50  0000 L CNN
+F 2 "" V 3205 4375 30  0000 C CNN
+F 3 "" H 3275 4375 30  0000 C CNN
+	1    3275 4375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND-RESCUE-Arduino_Uno_R3_From_Scratch #PWR?
+U 1 1 5F4F1C0A
+P 3275 4650
+F 0 "#PWR?" H 3275 4650 30  0001 C CNN
+F 1 "GND" H 3275 4580 30  0001 C CNN
+F 2 "~" H 3275 4650 60  0000 C CNN
+F 3 "~" H 3275 4650 60  0000 C CNN
+	1    3275 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3275 3700 3275 3800
+Wire Wire Line
+	3275 4100 3275 4150
+Wire Wire Line
+	3275 4525 3275 4650
+Wire Wire Line
+	3275 4150 3550 4150
+Wire Wire Line
+	3550 4150 3550 3450
+Connection ~ 3275 4150
+Wire Wire Line
+	3275 4150 3275 4225
 $EndSCHEMATC
