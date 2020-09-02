@@ -204,17 +204,6 @@ Connection ~ 9675 1025
 Wire Wire Line
 	9675 1025 10325 1025
 $Comp
-L Interface_UART:ADM2484E U?
-U 1 1 5F4FCE90
-P 9300 4875
-F 0 "U?" H 9300 5642 50  0000 C CNN
-F 1 "ADM2484E" H 9300 5551 50  0000 C CNN
-F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 9300 4175 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADM2484E.pdf" H 8550 4925 50  0001 C CNN
-	1    9300 4875
-	1    0    0    -1  
-$EndComp
-$Comp
 L Arduino_Uno_R3_From_Scratch-rescue:D D?
 U 1 1 5F514196
 P 3450 6550
@@ -630,12 +619,131 @@ Wire Wire Line
 	2225 3775 2300 3775
 Wire Wire Line
 	2225 3675 2300 3675
-Text Label 8625 4875 2    50   ~ 0
-ARD_TX1
-Text Label 8625 5075 2    50   ~ 0
+$Comp
+L Kicad_symbols:SP485EEN-L_TR U?
+U 1 1 5F4FEF6B
+P 8150 4650
+F 0 "U?" H 8950 5037 60  0000 C CNN
+F 1 "SP485EEN-L_TR" H 8950 4931 60  0000 C CNN
+F 2 "NSOIC-8" H 8950 4890 60  0001 C CNN
+F 3 "" H 8150 4650 60  0000 C CNN
+	1    8150 4650
+	1    0    0    -1  
+$EndComp
+Text Label 8100 4950 2    50   ~ 0
+AED_TX1
+Text Label 8100 4650 2    50   ~ 0
 ARD_RX1
 Wire Wire Line
-	8625 4875 8700 4875
+	8100 4650 8150 4650
 Wire Wire Line
-	8625 5075 8700 5075
+	8100 4950 8150 4950
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+U 1 1 5F505092
+P 7350 4750
+F 0 "#PWR?" H 7350 4500 50  0001 C CNN
+F 1 "GND" H 7355 4577 50  0000 C CNN
+F 2 "" H 7350 4750 60  0000 C CNN
+F 3 "" H 7350 4750 60  0000 C CNN
+	1    7350 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 4750 8150 4750
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+U 1 1 5F506F96
+P 9875 5075
+F 0 "#PWR?" H 9875 4825 50  0001 C CNN
+F 1 "GND" H 9880 4902 50  0000 C CNN
+F 2 "" H 9875 5075 60  0000 C CNN
+F 3 "" H 9875 5075 60  0000 C CNN
+	1    9875 5075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 4950 9875 4950
+Wire Wire Line
+	9875 4950 9875 5075
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+U 1 1 5F508F61
+P 7550 4950
+F 0 "#PWR?" H 7550 5040 20  0001 C CNN
+F 1 "5V_LDO" H 7546 5088 30  0000 C CNN
+F 2 "" H 7550 4950 60  0000 C CNN
+F 3 "" H 7550 4950 60  0000 C CNN
+	1    7550 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 4850 7700 4850
+Wire Wire Line
+	7700 4850 7700 5025
+Wire Wire Line
+	7700 5025 7550 5025
+Wire Wire Line
+	7550 5025 7550 4950
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+U 1 1 5F50B3E1
+P 9850 4575
+F 0 "#PWR?" H 9850 4665 20  0001 C CNN
+F 1 "5V_LDO" H 9846 4713 30  0000 C CNN
+F 2 "" H 9850 4575 60  0000 C CNN
+F 3 "" H 9850 4575 60  0000 C CNN
+	1    9850 4575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 4650 9850 4575
+Wire Wire Line
+	9750 4650 9850 4650
+Text Label 9825 4850 0    50   ~ 0
+MODBUS_A-
+Text Label 9825 4750 0    50   ~ 0
+MODBUS_B+
+Wire Wire Line
+	9750 4750 9825 4750
+Wire Wire Line
+	9750 4850 9825 4850
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+U 1 1 5F51E415
+P 8800 3075
+F 0 "#PWR?" H 8800 2825 50  0001 C CNN
+F 1 "GND" H 8805 2902 50  0000 C CNN
+F 2 "" H 8800 3075 60  0000 C CNN
+F 3 "" H 8800 3075 60  0000 C CNN
+	1    8800 3075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 2950 8800 2950
+Wire Wire Line
+	8800 2950 8800 3075
+Connection ~ 8800 2950
+Wire Wire Line
+	8800 2950 8900 2950
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR?
+U 1 1 5F522D75
+P 8800 1650
+F 0 "#PWR?" H 8800 1610 30  0001 C CNN
+F 1 "3V3_LDO" H 8809 1788 30  0000 C CNN
+F 2 "" H 8800 1650 60  0000 C CNN
+F 3 "" H 8800 1650 60  0000 C CNN
+	1    8800 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 1750 8700 1650
+Wire Wire Line
+	8700 1650 8800 1650
+Wire Wire Line
+	8900 1750 8900 1650
+Wire Wire Line
+	8900 1650 8800 1650
+Connection ~ 8800 1650
 $EndSCHEMATC
