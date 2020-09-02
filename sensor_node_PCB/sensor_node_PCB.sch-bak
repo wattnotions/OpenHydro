@@ -31,6 +31,7 @@ F0 "atmega328p" 50
 F1 "atmega328p.sch" 50
 F2 "SERIAL_Rx" I R 2225 4250 50 
 F3 "SERIAL_Tx" I R 2225 4150 50 
+F4 "DTR" I R 2225 4050 50 
 $EndSheet
 $Sheet
 S 650  4925 850  850 
@@ -576,4 +577,40 @@ Text Label 2300 4250 0    50   ~ 0
 ard_rx
 Wire Wire Line
 	2225 4250 2300 4250
+Text Label 6175 3400 0    50   ~ 0
+ard_tx
+Text Label 6175 3300 0    50   ~ 0
+ard_rx
+Wire Wire Line
+	6075 3300 6175 3300
+Wire Wire Line
+	6075 3400 6175 3400
+Text Label 2300 4050 0    50   ~ 0
+ard_DTR
+Wire Wire Line
+	2200 4050 2300 4050
+Text Label 6175 3700 0    50   ~ 0
+ard_DTR
+Wire Wire Line
+	6075 3700 6175 3700
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+U 1 1 5F50BD57
+P 5375 4925
+F 0 "#PWR?" H 5375 4675 50  0001 C CNN
+F 1 "GND" H 5380 4752 50  0000 C CNN
+F 2 "" H 5375 4925 60  0000 C CNN
+F 3 "" H 5375 4925 60  0000 C CNN
+	1    5375 4925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5275 4800 5275 4925
+Wire Wire Line
+	5275 4925 5375 4925
+Wire Wire Line
+	5475 4800 5475 4925
+Wire Wire Line
+	5475 4925 5375 4925
+Connection ~ 5375 4925
 $EndSCHEMATC
