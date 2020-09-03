@@ -105,9 +105,9 @@ Wire Wire Line
 Wire Wire Line
 	1250 5650 2550 5650
 Text HLabel 9350 3250 2    40   Input ~ 0
-ARD_AN5/SCL
+ARD_AN5(SCL)
 Text HLabel 9350 3450 2    40   Input ~ 0
-ARD_AN4/SDA
+ARD_AN4(SDA)
 Text HLabel 9350 3650 2    40   Input ~ 0
 ARD_AN3
 Text HLabel 9350 3850 2    40   Input ~ 0
