@@ -25,21 +25,6 @@ F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-D
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 625  1825 1600 2800
-U 5F4E1E8A
-F0 "atmega328p" 50
-F1 "atmega328p.sch" 50
-F2 "SERIAL_Rx" I R 2225 4250 50 
-F3 "SERIAL_Tx" I R 2225 4150 50 
-F4 "DTR" I R 2225 4050 50 
-F5 "ARD_DIG2" I R 2225 3775 50 
-F6 "ARD_DIG3" I R 2225 3675 50 
-F7 "ARD_DIG4" I R 2225 3450 50 
-F8 "ARD_DIG5" I R 2225 3375 50 
-F9 "ARD_AN4(SDA)" I R 2225 3175 50 
-F10 "ARD_AN5(SCL)" I R 2225 3075 50 
-$EndSheet
-$Sheet
 S 650  4925 850  850 
 U 5F4E110C
 F0 "voltage_management" 50
@@ -557,14 +542,14 @@ F 3 "" H 3575 2400 60  0000 C CNN
 	1    3575 2400
 	1    0    0    -1  
 $EndComp
-Text Label 2300 4150 0    50   ~ 0
+Text Label 1425 3150 0    50   ~ 0
 ard_tx
 Wire Wire Line
-	2225 4150 2300 4150
-Text Label 2300 4250 0    50   ~ 0
+	1350 3150 1425 3150
+Text Label 1425 3250 0    50   ~ 0
 ard_rx
 Wire Wire Line
-	2225 4250 2300 4250
+	1350 3250 1425 3250
 Text Label 4750 2900 0    50   ~ 0
 ard_tx
 Text Label 4750 2800 0    50   ~ 0
@@ -573,10 +558,10 @@ Wire Wire Line
 	4650 2800 4750 2800
 Wire Wire Line
 	4650 2900 4750 2900
-Text Label 2300 4050 0    50   ~ 0
+Text Label 1425 3050 0    50   ~ 0
 ard_DTR
 Wire Wire Line
-	2200 4050 2300 4050
+	1325 3050 1425 3050
 Text Label 4750 3200 0    50   ~ 0
 ard_DTR
 Wire Wire Line
@@ -615,14 +600,14 @@ Wire Wire Line
 	4175 2200 4175 2500
 Wire Wire Line
 	4175 2500 4050 2500
-Text Label 2300 3675 0    50   ~ 0
+Text Label 1425 2675 0    50   ~ 0
 ARD_TX1
-Text Label 2300 3775 0    50   ~ 0
+Text Label 1425 2775 0    50   ~ 0
 ARD_RX1
 Wire Wire Line
-	2225 3775 2300 3775
+	1350 2775 1425 2775
 Wire Wire Line
-	2225 3675 2300 3675
+	1350 2675 1425 2675
 $Comp
 L Kicad_symbols:SP485EEN-L_TR U?
 U 1 1 5F4FEF6B
@@ -791,14 +776,14 @@ Wire Wire Line
 	3100 1325 3100 1300
 Wire Wire Line
 	3100 1300 3225 1300
-Text Label 2325 3375 0    50   ~ 0
+Text Label 1450 2375 0    50   ~ 0
 ARD_TX2
 Wire Wire Line
-	2225 3375 2325 3375
-Text Label 2325 3450 0    50   ~ 0
+	1350 2375 1450 2375
+Text Label 1450 2450 0    50   ~ 0
 ARD_RX2
 Wire Wire Line
-	2225 3450 2325 3450
+	1350 2450 1450 2450
 Text Label 4450 1600 0    50   ~ 0
 ARD_RX2
 Text Label 4450 1450 0    50   ~ 0
@@ -967,14 +952,14 @@ Wire Wire Line
 Connection ~ 9100 2975
 Wire Wire Line
 	9800 2950 9800 3000
-Text Label 2325 3075 0    50   ~ 0
+Text Label 1450 2075 0    50   ~ 0
 ARD_SCL
-Text Label 2325 3175 0    50   ~ 0
+Text Label 1450 2175 0    50   ~ 0
 ARD_SDA
 Wire Wire Line
-	2225 3075 2325 3075
+	1350 2075 1450 2075
 Wire Wire Line
-	2225 3175 2325 3175
+	1350 2175 1450 2175
 Text Label 10200 2600 0    50   ~ 0
 ARD_SCL
 Text Label 10200 3375 0    50   ~ 0
@@ -1015,4 +1000,76 @@ Wire Wire Line
 	10025 4300 10950 4300
 Wire Wire Line
 	10950 4300 10950 4375
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:CONN_01X06 P?
+U 1 1 5F6DB19A
+P 1875 1625
+F 0 "P?" H 1953 1666 50  0000 L CNN
+F 1 "BREAKOUTS" H 1650 2000 50  0000 L CNN
+F 2 "" H 1875 1625 60  0000 C CNN
+F 3 "" H 1875 1625 60  0000 C CNN
+	1    1875 1625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+U 1 1 5F6DDE3C
+P 1575 1250
+F 0 "#PWR?" H 1575 1340 20  0001 C CNN
+F 1 "5V_LDO" H 1571 1388 30  0000 C CNN
+F 2 "" H 1575 1250 60  0000 C CNN
+F 3 "" H 1575 1250 60  0000 C CNN
+	1    1575 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+U 1 1 5F6DF1FF
+P 1450 1400
+F 0 "#PWR?" H 1450 1150 50  0001 C CNN
+F 1 "GND" H 1325 1400 50  0000 C CNN
+F 2 "" H 1450 1400 60  0000 C CNN
+F 3 "" H 1450 1400 60  0000 C CNN
+	1    1450 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1575 1250 1575 1375
+Wire Wire Line
+	1575 1375 1675 1375
+Wire Wire Line
+	1675 1475 1525 1475
+Wire Wire Line
+	1525 1475 1525 1350
+Wire Wire Line
+	1525 1350 1450 1350
+Wire Wire Line
+	1450 1350 1450 1400
+Wire Wire Line
+	1350 1575 1675 1575
+Wire Wire Line
+	1350 1675 1675 1675
+Wire Wire Line
+	1350 1775 1675 1775
+Wire Wire Line
+	1350 1875 1675 1875
+$Sheet
+S 700  825  650  2475
+U 5F4E1E8A
+F0 "atmega328p" 50
+F1 "atmega328p.sch" 50
+F2 "SERIAL_Rx" I R 1350 3250 50 
+F3 "SERIAL_Tx" I R 1350 3150 50 
+F4 "DTR" I R 1350 3050 50 
+F5 "ARD_DIG2" I R 1350 2775 50 
+F6 "ARD_DIG3" I R 1350 2675 50 
+F7 "ARD_DIG4" I R 1350 2450 50 
+F8 "ARD_DIG5" I R 1350 2375 50 
+F9 "ARD_AN4(SDA)" I R 1350 2175 50 
+F10 "ARD_AN5(SCL)" I R 1350 2075 50 
+F11 "ARD_DIG6" I R 1350 1775 50 
+F12 "ARD_DIG7" I R 1350 1675 50 
+F13 "ARD_DIG8" I R 1350 1575 50 
+F14 "ARD_AN0" I R 1350 1875 50 
+$EndSheet
 $EndSCHEMATC
