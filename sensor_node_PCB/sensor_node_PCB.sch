@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Sensor:BME280 U?
+L Sensor:BME280 U8
 U 1 1 5F4C0C85
 P 9425 4600
-F 0 "U?" H 8996 4646 50  0000 R CNN
+F 0 "U8" H 8996 4646 50  0000 R CNN
 F 1 "BME280" H 8996 4555 50  0000 R CNN
 F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 10925 4150 50  0001 C CNN
 F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf" H 9425 4400 50  0001 C CNN
@@ -25,45 +25,45 @@ F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-D
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_B_Mini J?
+L Connector:USB_B_Mini J1
 U 1 1 5F4E1AA5
 P 6275 1200
-F 0 "J?" H 6332 1667 50  0000 C CNN
+F 0 "J1" H 6332 1667 50  0000 C CNN
 F 1 "USB_B_Mini" H 6332 1576 50  0000 C CNN
-F 2 "" H 6425 1150 50  0001 C CNN
+F 2 "Connector_USB:USB_Mini-B_Wuerth_65100516121_Horizontal" H 6425 1150 50  0001 C CNN
 F 3 "~" H 6425 1150 50  0001 C CNN
 	1    6275 1200
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:R R?
+L Arduino_Uno_R3_From_Scratch-rescue:R R4
 U 1 1 5F4E3CCC
 P 7100 1200
-F 0 "R?" V 7000 1200 50  0000 C CNN
+F 0 "R4" V 7000 1200 50  0000 C CNN
 F 1 "27R" V 7100 1200 50  0000 C CNN
-F 2 "" V 7030 1200 30  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 1200 30  0001 C CNN
 F 3 "" H 7100 1200 30  0000 C CNN
 	1    7100 1200
 	0    1    1    0   
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:R R?
+L Arduino_Uno_R3_From_Scratch-rescue:R R5
 U 1 1 5F4E5156
 P 7100 1300
-F 0 "R?" V 7200 1300 50  0000 C CNN
+F 0 "R5" V 7200 1300 50  0000 C CNN
 F 1 "27R" V 7100 1300 50  0000 C CNN
-F 2 "" V 7030 1300 30  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 1300 30  0001 C CNN
 F 3 "" H 7100 1300 30  0000 C CNN
 	1    7100 1300
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Polyfuse F?
+L Device:Polyfuse F1
 U 1 1 5F4E6403
 P 6975 900
-F 0 "F?" V 6750 900 50  0000 C CNN
+F 0 "F1" V 6750 900 50  0000 C CNN
 F 1 "Polyfuse" V 6841 900 50  0000 C CNN
-F 2 "" H 7025 700 50  0001 L CNN
+F 2 "Fuse:Fuse_1206_3216Metric" H 7025 700 50  0001 L CNN
 F 3 "~" H 6975 900 50  0001 C CNN
 	1    6975 900 
 	0    1    1    0   
@@ -75,10 +75,10 @@ Wire Wire Line
 Wire Wire Line
 	6750 900  6825 900 
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:USBVCC #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:USBVCC #PWR0101
 U 1 1 5F4E7EA2
 P 7475 775
-F 0 "#PWR?" H 7475 865 20  0001 C CNN
+F 0 "#PWR0101" H 7475 865 20  0001 C CNN
 F 1 "USBVCC" H 7471 913 30  0000 C CNN
 F 2 "" H 7475 775 60  0000 C CNN
 F 3 "" H 7475 775 60  0000 C CNN
@@ -102,10 +102,10 @@ USB_D+
 Text Label 7425 1300 0    50   ~ 0
 USB_D-
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0102
 U 1 1 5F4E97D5
 P 6225 1750
-F 0 "#PWR?" H 6225 1500 50  0001 C CNN
+F 0 "#PWR0102" H 6225 1500 50  0001 C CNN
 F 1 "GND" H 6230 1577 50  0000 C CNN
 F 2 "" H 6225 1750 60  0000 C CNN
 F 3 "" H 6225 1750 60  0000 C CNN
@@ -124,10 +124,10 @@ Wire Wire Line
 	6275 1700 6225 1700
 Connection ~ 6225 1700
 $Comp
-L Connector:Screw_Terminal_01x04 J?
+L Connector:Screw_Terminal_01x04 J2
 U 1 1 5F4EDCB8
 P 8925 1225
-F 0 "J?" H 8843 800 50  0000 C CNN
+F 0 "J2" H 8843 800 50  0000 C CNN
 F 1 "INPUT CONNECTOR" H 8675 900 50  0000 C CNN
 F 2 "" H 8925 1225 50  0001 C CNN
 F 3 "~" H 8925 1225 50  0001 C CNN
@@ -135,10 +135,10 @@ F 3 "~" H 8925 1225 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x04 J?
+L Connector:Screw_Terminal_01x04 J3
 U 1 1 5F4EE65B
 P 10525 1225
-F 0 "J?" H 10443 800 50  0000 C CNN
+F 0 "J3" H 10443 800 50  0000 C CNN
 F 1 "OUTPUT_CONNECTOR" H 10150 900 50  0000 C CNN
 F 2 "" H 10525 1225 50  0001 C CNN
 F 3 "~" H 10525 1225 50  0001 C CNN
@@ -191,10 +191,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:D D?
 U 1 1 5F514196
 P 2475 4725
 AR Path="/5F4E2C52/5F514196" Ref="D?"  Part="1" 
-AR Path="/5F514196" Ref="D?"  Part="1" 
-F 0 "D?" H 2475 4825 40  0000 C CNN
+AR Path="/5F514196" Ref="D1"  Part="1" 
+F 0 "D1" H 2475 4825 40  0000 C CNN
 F 1 "DIODE" H 2475 4625 40  0000 C CNN
-F 2 "~" H 2475 4725 60  0000 C CNN
+F 2 "" H 2475 4725 60  0001 C CNN
 F 3 "http://www.onsemi.com/pub_link/Collateral/MRA4003T3-D.PDF" H 2475 4725 60  0001 C CNN
 F 4 "1A, 1000V, SILICON, SIGNAL DIODE, ROHS COMPLIANT, COMPACT, PLASTIC, CASE 403D-02, SMA, 2 PIN" H 2475 4725 60  0001 C CNN "Characteristics"
 F 5 "Reverse Voltage Protection Diode" H 2475 4725 60  0001 C CNN "Description"
@@ -213,10 +213,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:CP C?
 U 1 1 5F5141A5
 P 3050 5125
 AR Path="/5F4E2C52/5F5141A5" Ref="C?"  Part="1" 
-AR Path="/5F5141A5" Ref="C?"  Part="1" 
-F 0 "C?" H 3100 5225 40  0000 L CNN
+AR Path="/5F5141A5" Ref="C2"  Part="1" 
+F 0 "C2" H 3100 5225 40  0000 L CNN
 F 1 "47uF" H 3100 5025 40  0000 L CNN
-F 2 "~" H 3150 4975 30  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3150 4975 30  0000 C CNN
 F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/BEYS/BEYSS04513/BEYSS04513-1.pdf" H 3050 5125 300 0001 C CNN
 F 4 "CAPACITOR, ALUMINUM ELECTROLYTIC, NON SOLID, POLARIZED, 50 V, 47 uF, SURFACE MOUNT, 3131, CHIP, ROHS COMPLIANT" H 3050 5125 60  0001 C CNN "Characteristics"
 F 5 "47uF Low ESR LDO Input Cap" H 3050 5125 60  0001 C CNN "Description"
@@ -235,10 +235,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:C C?
 U 1 1 5F5141B4
 P 4800 5125
 AR Path="/5F4E2C52/5F5141B4" Ref="C?"  Part="1" 
-AR Path="/5F5141B4" Ref="C?"  Part="1" 
-F 0 "C?" H 4850 5225 40  0000 L CNN
+AR Path="/5F5141B4" Ref="C5"  Part="1" 
+F 0 "C5" H 4850 5225 40  0000 L CNN
 F 1 "0.1 uF" H 4850 5025 40  0000 L CNN
-F 2 "~" H 4838 4975 30  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4838 4975 30  0000 C CNN
 F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf" H 4800 5125 60  0001 C CNN
 F 4 "CAPACITOR, CERAMIC, MULTILAYER, 100 V, X7R, 0.1 uF, SURFACE MOUNT, 0805, CHIP, ROHS COMPLIANT" H 4800 5125 60  0001 C CNN "Characteristics"
 F 5 "LDO Bypass Cap" H 4800 5125 60  0001 C CNN "Description"
@@ -257,10 +257,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:CP C?
 U 1 1 5F5141C4
 P 4400 5125
 AR Path="/5F4E2C52/5F5141C4" Ref="C?"  Part="1" 
-AR Path="/5F5141C4" Ref="C?"  Part="1" 
-F 0 "C?" H 4450 5225 40  0000 L CNN
+AR Path="/5F5141C4" Ref="C4"  Part="1" 
+F 0 "C4" H 4450 5225 40  0000 L CNN
 F 1 "47uF" H 4450 5025 40  0000 L CNN
-F 2 "~" H 4500 4975 30  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4500 4975 30  0000 C CNN
 F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/BEYS/BEYSS04513/BEYSS04513-1.pdf" H 4400 5125 300 0001 C CNN
 F 4 "CAPACITOR, ALUMINUM ELECTROLYTIC, NON SOLID, POLARIZED, 50 V, 47 uF, SURFACE MOUNT, 3131, CHIP, ROHS COMPLIANT" H 4400 5125 60  0001 C CNN "Characteristics"
 F 5 "47uF Low ESR LDO Output Cap" H 4400 5125 60  0001 C CNN "Description"
@@ -279,10 +279,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:R R?
 U 1 1 5F5141D3
 P 5350 6725
 AR Path="/5F4E2C52/5F5141D3" Ref="R?"  Part="1" 
-AR Path="/5F5141D3" Ref="R?"  Part="1" 
-F 0 "R?" V 5430 6725 40  0000 C CNN
+AR Path="/5F5141D3" Ref="R3"  Part="1" 
+F 0 "R3" V 5430 6725 40  0000 C CNN
 F 1 "510" V 5357 6726 40  0000 C CNN
-F 2 "~" V 5280 6725 30  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5280 6725 30  0001 C CNN
 F 3 "http://www.yageo.com/pdf/Pu-RC0805_51_PbFree_L_2.pdf" H 5350 6725 30  0001 C CNN
 F 4 "RESISTOR, METAL GLAZE/THICK FILM, 0.125W, 1%, 100ppm, 510ohm, SURFACE MOUNT, 0805" H 5350 6725 60  0001 C CNN "Characteristics"
 F 5 "Power On LED Resistor" H 5350 6725 60  0001 C CNN "Description"
@@ -301,10 +301,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:LED D?
 U 1 1 5F5141E2
 P 5350 7225
 AR Path="/5F4E2C52/5F5141E2" Ref="D?"  Part="1" 
-AR Path="/5F5141E2" Ref="D?"  Part="1" 
-F 0 "D?" H 5350 7325 50  0000 C CNN
+AR Path="/5F5141E2" Ref="D2"  Part="1" 
+F 0 "D2" H 5350 7325 50  0000 C CNN
 F 1 "LED" H 5350 7125 50  0000 C CNN
-F 2 "~" H 5350 7225 60  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 5350 7225 60  0000 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 5350 7225 60  0001 C CNN
 F 4 "LED CHIPLED 570NM GREEN" H 5350 7225 60  0001 C CNN "Characteristics"
 F 5 "Power On Green LED" H 5350 7225 60  0001 C CNN "Description"
@@ -319,13 +319,13 @@ F 12 "~" H 5350 7225 60  0001 C CNN "Notes"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:Vin #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:Vin #PWR0103
 U 1 1 5F5141E8
 P 2825 4600
-AR Path="/5F5141E8" Ref="#PWR?"  Part="1" 
+AR Path="/5F5141E8" Ref="#PWR0103"  Part="1" 
 AR Path="/55CCFEA2/5F5141E8" Ref="#PWR?"  Part="1" 
 AR Path="/5F4E2C52/5F5141E8" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2825 4690 20  0001 C CNN
+F 0 "#PWR0103" H 2825 4690 20  0001 C CNN
 F 1 "VIN" H 2825 4720 30  0000 C CNN
 F 2 "~" H 2825 4600 60  0000 C CNN
 F 3 "~" H 2825 4600 60  0000 C CNN
@@ -337,8 +337,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
 U 1 1 5F5141EE
 P 4250 4550
 AR Path="/5F4E2C52/5F5141EE" Ref="#PWR?"  Part="1" 
-AR Path="/5F5141EE" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4250 4640 20  0001 C CNN
+AR Path="/5F5141EE" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 4250 4640 20  0001 C CNN
 F 1 "5V_LDO" H 4250 4670 30  0000 C CNN
 F 2 "~" H 4250 4550 60  0000 C CNN
 F 3 "~" H 4250 4550 60  0000 C CNN
@@ -350,8 +350,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
 U 1 1 5F5141F4
 P 5350 6425
 AR Path="/5F4E2C52/5F5141F4" Ref="#PWR?"  Part="1" 
-AR Path="/5F5141F4" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5350 6515 20  0001 C CNN
+AR Path="/5F5141F4" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 5350 6515 20  0001 C CNN
 F 1 "5V_LDO" H 5350 6545 30  0000 C CNN
 F 2 "~" H 5350 6425 60  0000 C CNN
 F 3 "~" H 5350 6425 60  0000 C CNN
@@ -363,8 +363,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
 U 1 1 5F5141FD
 P 3050 5475
 AR Path="/5F4E2C52/5F5141FD" Ref="#PWR?"  Part="1" 
-AR Path="/5F5141FD" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3050 5225 50  0001 C CNN
+AR Path="/5F5141FD" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 3050 5225 50  0001 C CNN
 F 1 "GND" H 3050 5325 50  0001 C CNN
 F 2 "" H 3050 5475 60  0000 C CNN
 F 3 "" H 3050 5475 60  0000 C CNN
@@ -399,10 +399,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:LD1117S50TR U?
 U 1 1 5F51421D
 P 3700 4775
 AR Path="/5F4E2C52/5F51421D" Ref="U?"  Part="1" 
-AR Path="/5F51421D" Ref="U?"  Part="1" 
-F 0 "U?" H 3900 4525 60  0000 C CNN
+AR Path="/5F51421D" Ref="U2"  Part="1" 
+F 0 "U2" H 3900 4525 60  0000 C CNN
 F 1 "LD1117S50TR" H 3700 5025 60  0000 C CNN
-F 2 "" H 3700 4775 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3700 4775 60  0001 C CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 3700 4775 60  0001 C CNN
 F 4 "5 V FIXED POSITIVE LDO REGULATOR, 1.2 V DROPOUT, PDSO3, ROHS COMPLIANT, SOT-223, 4 PIN" H 3700 4775 60  0001 C CNN "Characteristics"
 F 5 "5V Fixed LDO" H 3700 4775 60  0001 C CNN "Description"
@@ -423,8 +423,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
 U 1 1 5F514227
 P 3700 5475
 AR Path="/5F4E2C52/5F514227" Ref="#PWR?"  Part="1" 
-AR Path="/5F514227" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3700 5225 50  0001 C CNN
+AR Path="/5F514227" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 3700 5225 50  0001 C CNN
 F 1 "GND" H 3700 5325 50  0001 C CNN
 F 2 "" H 3700 5475 60  0000 C CNN
 F 3 "" H 3700 5475 60  0000 C CNN
@@ -439,8 +439,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
 U 1 1 5F514230
 P 4400 5475
 AR Path="/5F4E2C52/5F514230" Ref="#PWR?"  Part="1" 
-AR Path="/5F514230" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4400 5225 50  0001 C CNN
+AR Path="/5F514230" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 4400 5225 50  0001 C CNN
 F 1 "GND" H 4400 5325 50  0001 C CNN
 F 2 "" H 4400 5475 60  0000 C CNN
 F 3 "" H 4400 5475 60  0000 C CNN
@@ -455,8 +455,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
 U 1 1 5F514239
 P 4800 5475
 AR Path="/5F4E2C52/5F514239" Ref="#PWR?"  Part="1" 
-AR Path="/5F514239" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4800 5225 50  0001 C CNN
+AR Path="/5F514239" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 4800 5225 50  0001 C CNN
 F 1 "GND" H 4800 5325 50  0001 C CNN
 F 2 "" H 4800 5475 60  0000 C CNN
 F 3 "" H 4800 5475 60  0000 C CNN
@@ -471,8 +471,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
 U 1 1 5F514242
 P 5350 7625
 AR Path="/5F4E2C52/5F514242" Ref="#PWR?"  Part="1" 
-AR Path="/5F514242" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5350 7375 50  0001 C CNN
+AR Path="/5F514242" Ref="#PWR0110"  Part="1" 
+F 0 "#PWR0110" H 5350 7375 50  0001 C CNN
 F 1 "GND" H 5350 7475 50  0001 C CNN
 F 2 "" H 5350 7625 60  0000 C CNN
 F 3 "" H 5350 7625 60  0000 C CNN
@@ -491,10 +491,10 @@ Wire Wire Line
 Text GLabel 1800 4725 0    50   Input ~ 0
 12V_BUS
 $Comp
-L Interface_USB:FT231XS U?
+L Interface_USB:FT231XS U3
 U 1 1 5F4E39B1
 P 3975 2300
-F 0 "U?" H 3975 3381 50  0000 C CNN
+F 0 "U3" H 3975 3381 50  0000 C CNN
 F 1 "FT231XS" H 3975 3290 50  0000 C CNN
 F 2 "Package_SO:SSOP-20_3.9x8.7mm_P0.635mm" H 4975 1500 50  0001 C CNN
 F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT231X.pdf" H 3975 2300 50  0001 C CNN
@@ -510,10 +510,10 @@ Wire Wire Line
 Wire Wire Line
 	3200 2100 3275 2100
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR0111
 U 1 1 5F4ED2A9
 P 3600 1300
-F 0 "#PWR?" H 3600 1390 20  0001 C CNN
+F 0 "#PWR0111" H 3600 1390 20  0001 C CNN
 F 1 "5V_LDO" H 3596 1438 30  0000 C CNN
 F 2 "" H 3600 1300 60  0000 C CNN
 F 3 "" H 3600 1300 60  0000 C CNN
@@ -545,10 +545,10 @@ ard_DTR
 Wire Wire Line
 	4675 2100 4775 2100
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0112
 U 1 1 5F50BD57
 P 3975 3325
-F 0 "#PWR?" H 3975 3075 50  0001 C CNN
+F 0 "#PWR0112" H 3975 3075 50  0001 C CNN
 F 1 "GND" H 3980 3152 50  0000 C CNN
 F 2 "" H 3975 3325 60  0000 C CNN
 F 3 "" H 3975 3325 60  0000 C CNN
@@ -587,12 +587,12 @@ Wire Wire Line
 Wire Wire Line
 	1350 2675 1425 2675
 $Comp
-L Kicad_symbols:SP485EEN-L_TR U?
+L Kicad_symbols:SP485EEN-L_TR U6
 U 1 1 5F4FEF6B
 P 6300 2625
-F 0 "U?" H 7100 3012 60  0000 C CNN
+F 0 "U6" H 7100 3012 60  0000 C CNN
 F 1 "SP485EEN-L_TR" H 7100 2906 60  0000 C CNN
-F 2 "NSOIC-8" H 7100 2865 60  0001 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7100 2865 60  0001 C CNN
 F 3 "" H 6300 2625 60  0000 C CNN
 	1    6300 2625
 	1    0    0    -1  
@@ -606,10 +606,10 @@ Wire Wire Line
 Wire Wire Line
 	6250 2925 6300 2925
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0113
 U 1 1 5F505092
 P 5500 2725
-F 0 "#PWR?" H 5500 2475 50  0001 C CNN
+F 0 "#PWR0113" H 5500 2475 50  0001 C CNN
 F 1 "GND" H 5505 2552 50  0000 C CNN
 F 2 "" H 5500 2725 60  0000 C CNN
 F 3 "" H 5500 2725 60  0000 C CNN
@@ -619,10 +619,10 @@ $EndComp
 Wire Wire Line
 	5500 2725 6300 2725
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0114
 U 1 1 5F506F96
 P 8025 3050
-F 0 "#PWR?" H 8025 2800 50  0001 C CNN
+F 0 "#PWR0114" H 8025 2800 50  0001 C CNN
 F 1 "GND" H 8030 2877 50  0000 C CNN
 F 2 "" H 8025 3050 60  0000 C CNN
 F 3 "" H 8025 3050 60  0000 C CNN
@@ -634,10 +634,10 @@ Wire Wire Line
 Wire Wire Line
 	8025 2925 8025 3050
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR0115
 U 1 1 5F508F61
 P 5700 2925
-F 0 "#PWR?" H 5700 3015 20  0001 C CNN
+F 0 "#PWR0115" H 5700 3015 20  0001 C CNN
 F 1 "5V_LDO" H 5696 3063 30  0000 C CNN
 F 2 "" H 5700 2925 60  0000 C CNN
 F 3 "" H 5700 2925 60  0000 C CNN
@@ -653,10 +653,10 @@ Wire Wire Line
 Wire Wire Line
 	5700 3000 5700 2925
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR0116
 U 1 1 5F50B3E1
 P 8000 2550
-F 0 "#PWR?" H 8000 2640 20  0001 C CNN
+F 0 "#PWR0116" H 8000 2640 20  0001 C CNN
 F 1 "5V_LDO" H 7996 2688 30  0000 C CNN
 F 2 "" H 8000 2550 60  0000 C CNN
 F 3 "" H 8000 2550 60  0000 C CNN
@@ -676,10 +676,10 @@ Wire Wire Line
 Wire Wire Line
 	7900 2825 7975 2825
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0117
 U 1 1 5F51E415
 P 9425 5325
-F 0 "#PWR?" H 9425 5075 50  0001 C CNN
+F 0 "#PWR0117" H 9425 5075 50  0001 C CNN
 F 1 "GND" H 9430 5152 50  0000 C CNN
 F 2 "" H 9425 5325 60  0000 C CNN
 F 3 "" H 9425 5325 60  0000 C CNN
@@ -694,10 +694,10 @@ Connection ~ 9425 5200
 Wire Wire Line
 	9425 5200 9525 5200
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR0118
 U 1 1 5F522D75
 P 9425 3900
-F 0 "#PWR?" H 9425 3860 30  0001 C CNN
+F 0 "#PWR0118" H 9425 3860 30  0001 C CNN
 F 1 "3V3_LDO" H 9434 4038 30  0000 C CNN
 F 2 "" H 9425 3900 60  0000 C CNN
 F 3 "" H 9425 3900 60  0000 C CNN
@@ -714,10 +714,10 @@ Wire Wire Line
 	9525 3900 9425 3900
 Connection ~ 9425 3900
 $Comp
-L Kicad_symbols:sensair_s8 U?
+L Kicad_symbols:sensair_s8 U7
 U 1 1 5F514B72
 P 7075 4100
-F 0 "U?" H 7100 4525 50  0000 C CNN
+F 0 "U7" H 7100 4525 50  0000 C CNN
 F 1 "sensair_s8" H 7100 4434 50  0000 C CNN
 F 2 "" H 6925 4100 50  0001 C CNN
 F 3 "" H 6925 4100 50  0001 C CNN
@@ -725,10 +725,10 @@ F 3 "" H 6925 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR0119
 U 1 1 5F51697E
 P 6075 3825
-F 0 "#PWR?" H 6075 3915 20  0001 C CNN
+F 0 "#PWR0119" H 6075 3915 20  0001 C CNN
 F 1 "5V_LDO" H 6071 3963 30  0000 C CNN
 F 2 "" H 6075 3825 60  0000 C CNN
 F 3 "" H 6075 3825 60  0000 C CNN
@@ -740,10 +740,10 @@ Wire Wire Line
 Wire Wire Line
 	6075 4050 6525 4050
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0120
 U 1 1 5F5191A0
 P 6400 3925
-F 0 "#PWR?" H 6400 3675 50  0001 C CNN
+F 0 "#PWR0120" H 6400 3675 50  0001 C CNN
 F 1 "GND" H 6425 4000 50  0000 C CNN
 F 2 "" H 6400 3925 60  0000 C CNN
 F 3 "" H 6400 3925 60  0000 C CNN
@@ -771,10 +771,10 @@ Wire Wire Line
 Wire Wire Line
 	7675 4200 7750 4200
 $Comp
-L Transistor_FET:BSS138 Q?
+L Transistor_FET:BSS138 Q2
 U 1 1 5F55763C
 P 9950 2600
-F 0 "Q?" V 9850 2675 50  0000 C CNN
+F 0 "Q2" V 9850 2675 50  0000 C CNN
 F 1 "BSS138" V 10150 2600 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 10150 2525 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 9950 2600 50  0001 L CNN
@@ -784,32 +784,32 @@ $EndComp
 Text Label 9450 2700 2    50   ~ 0
 ARD_SCL_3V3
 $Comp
-L Device:R_Small R?
+L Device:R_Small R6
 U 1 1 5F575417
 P 9575 2450
-F 0 "R?" H 9634 2496 50  0000 L CNN
+F 0 "R6" H 9634 2496 50  0000 L CNN
 F 1 "10K" V 9575 2375 50  0000 L CNN
-F 2 "" H 9575 2450 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 9575 2450 50  0001 C CNN
 F 3 "~" H 9575 2450 50  0001 C CNN
 	1    9575 2450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R8
 U 1 1 5F575B24
 P 10275 2425
-F 0 "R?" H 10334 2471 50  0000 L CNN
+F 0 "R8" H 10334 2471 50  0000 L CNN
 F 1 "10K" V 10275 2350 50  0000 L CNN
-F 2 "" H 10275 2425 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10275 2425 50  0001 C CNN
 F 3 "~" H 10275 2425 50  0001 C CNN
 	1    10275 2425
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR0121
 U 1 1 5F578FC7
 P 9575 2300
-F 0 "#PWR?" H 9575 2260 30  0001 C CNN
+F 0 "#PWR0121" H 9575 2260 30  0001 C CNN
 F 1 "3V3_LDO" H 9584 2438 30  0000 C CNN
 F 2 "" H 9575 2300 60  0000 C CNN
 F 3 "" H 9575 2300 60  0000 C CNN
@@ -817,10 +817,10 @@ F 3 "" H 9575 2300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR0122
 U 1 1 5F57C5CF
 P 10275 2275
-F 0 "#PWR?" H 10275 2365 20  0001 C CNN
+F 0 "#PWR0122" H 10275 2365 20  0001 C CNN
 F 1 "5V_LDO" H 10271 2413 30  0000 C CNN
 F 2 "" H 10275 2275 60  0000 C CNN
 F 3 "" H 10275 2275 60  0000 C CNN
@@ -851,10 +851,10 @@ Connection ~ 9575 2300
 Wire Wire Line
 	10275 2275 10275 2325
 $Comp
-L Transistor_FET:BSS138 Q?
+L Transistor_FET:BSS138 Q3
 U 1 1 5F5B9780
 P 9950 3375
-F 0 "Q?" V 9825 3475 50  0000 C CNN
+F 0 "Q3" V 9825 3475 50  0000 C CNN
 F 1 "BSS138" V 10175 3375 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 10150 3300 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 9950 3375 50  0001 L CNN
@@ -864,32 +864,32 @@ $EndComp
 Text Label 9450 3475 2    50   ~ 0
 ARD_SDA_3V3
 $Comp
-L Device:R_Small R?
+L Device:R_Small R7
 U 1 1 5F5B9787
 P 9575 3225
-F 0 "R?" H 9634 3271 50  0000 L CNN
+F 0 "R7" H 9634 3271 50  0000 L CNN
 F 1 "10K" V 9575 3150 50  0000 L CNN
-F 2 "" H 9575 3225 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 9575 3225 50  0001 C CNN
 F 3 "~" H 9575 3225 50  0001 C CNN
 	1    9575 3225
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R9
 U 1 1 5F5B978D
 P 10275 3200
-F 0 "R?" H 10334 3246 50  0000 L CNN
+F 0 "R9" H 10334 3246 50  0000 L CNN
 F 1 "10K" V 10275 3125 50  0000 L CNN
-F 2 "" H 10275 3200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10275 3200 50  0001 C CNN
 F 3 "~" H 10275 3200 50  0001 C CNN
 	1    10275 3200
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR0123
 U 1 1 5F5B9793
 P 9575 3075
-F 0 "#PWR?" H 9575 3035 30  0001 C CNN
+F 0 "#PWR0123" H 9575 3035 30  0001 C CNN
 F 1 "3V3_LDO" H 9584 3213 30  0000 C CNN
 F 2 "" H 9575 3075 60  0000 C CNN
 F 3 "" H 9575 3075 60  0000 C CNN
@@ -897,10 +897,10 @@ F 3 "" H 9575 3075 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR0124
 U 1 1 5F5B9799
 P 10275 3050
-F 0 "#PWR?" H 10275 3140 20  0001 C CNN
+F 0 "#PWR0124" H 10275 3140 20  0001 C CNN
 F 1 "5V_LDO" H 10271 3188 30  0000 C CNN
 F 2 "" H 10275 3050 60  0000 C CNN
 F 3 "" H 10275 3050 60  0000 C CNN
@@ -964,10 +964,10 @@ Wire Wire Line
 Wire Wire Line
 	10025 4700 10100 4700
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0125
 U 1 1 5F6B2BB1
 P 10950 4375
-F 0 "#PWR?" H 10950 4125 50  0001 C CNN
+F 0 "#PWR0125" H 10950 4125 50  0001 C CNN
 F 1 "GND" H 10955 4202 50  0000 C CNN
 F 2 "" H 10950 4375 60  0000 C CNN
 F 3 "" H 10950 4375 60  0000 C CNN
@@ -979,21 +979,21 @@ Wire Wire Line
 Wire Wire Line
 	10950 4300 10950 4375
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:CONN_01X06 P?
+L Arduino_Uno_R3_From_Scratch-rescue:CONN_01X06 P1
 U 1 1 5F6DB19A
 P 1875 1625
-F 0 "P?" H 1953 1666 50  0000 L CNN
+F 0 "P1" H 1953 1666 50  0000 L CNN
 F 1 "BREAKOUTS" H 1650 2000 50  0000 L CNN
-F 2 "" H 1875 1625 60  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 1875 1625 60  0001 C CNN
 F 3 "" H 1875 1625 60  0000 C CNN
 	1    1875 1625
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR0126
 U 1 1 5F6DDE3C
 P 1575 1250
-F 0 "#PWR?" H 1575 1340 20  0001 C CNN
+F 0 "#PWR0126" H 1575 1340 20  0001 C CNN
 F 1 "5V_LDO" H 1571 1388 30  0000 C CNN
 F 2 "" H 1575 1250 60  0000 C CNN
 F 3 "" H 1575 1250 60  0000 C CNN
@@ -1001,10 +1001,10 @@ F 3 "" H 1575 1250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0127
 U 1 1 5F6DF1FF
 P 1450 1400
-F 0 "#PWR?" H 1450 1150 50  0001 C CNN
+F 0 "#PWR0127" H 1450 1150 50  0001 C CNN
 F 1 "GND" H 1325 1400 50  0000 C CNN
 F 2 "" H 1450 1400 60  0000 C CNN
 F 3 "" H 1450 1400 60  0000 C CNN
@@ -1062,10 +1062,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:R R?
 U 1 1 5F804717
 P 575 5600
 AR Path="/5F4E110C/5F804717" Ref="R?"  Part="1" 
-AR Path="/5F804717" Ref="R?"  Part="1" 
-F 0 "R?" V 655 5600 40  0000 C CNN
+AR Path="/5F804717" Ref="R1"  Part="1" 
+F 0 "R1" V 655 5600 40  0000 C CNN
 F 1 "10K" V 582 5601 40  0000 C CNN
-F 2 "~" V 505 5600 30  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 505 5600 30  0001 C CNN
 F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf" H 575 5600 30  0001 C CNN
 F 4 "RESISTOR, METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 10000ohm, SURFACE MOUNT, 0805" H 575 5600 60  0001 C CNN "Characteristics"
 F 5 "10K Comparator Voltage Divider Resistor" H 575 5600 60  0001 C CNN "Description"
@@ -1084,10 +1084,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:Q_PMOS_GSD Q?
 U 1 1 5F804726
 P 2675 6850
 AR Path="/5F4E110C/5F804726" Ref="Q?"  Part="1" 
-AR Path="/5F804726" Ref="Q?"  Part="1" 
-F 0 "Q?" V 2575 7025 60  0000 R CNN
+AR Path="/5F804726" Ref="Q1"  Part="1" 
+F 0 "Q1" V 2575 7025 60  0000 R CNN
 F 1 "FDN340P" V 2925 7050 60  0000 R CNN
-F 2 "~" H 2675 6850 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SuperSOT-3" H 2675 6850 60  0001 C CNN
 F 3 "https://www.fairchildsemi.com/datasheets/FD/FDN340P.pdf" H 2675 6850 60  0001 C CNN
 F 4 "2000 mA, 20 V, P-CHANNEL, Si, SMALL SIGNAL, MOSFET, SUPERSOT-3" H 2675 6850 60  0001 C CNN "Characteristics"
 F 5 "USBVCC MOSFET" H 2675 6850 60  0001 C CNN "Description"
@@ -1106,10 +1106,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:LM358 U?
 U 1 1 5F804735
 P 1675 6100
 AR Path="/5F4E110C/5F804735" Ref="U?"  Part="1" 
-AR Path="/5F804735" Ref="U?"  Part="1" 
-F 0 "U?" H 1625 6300 60  0000 L CNN
+AR Path="/5F804735" Ref="U1"  Part="1" 
+F 0 "U1" H 1625 6300 60  0000 L CNN
 F 1 "LMV358IDGKR" H 1625 5850 60  0000 L CNN
-F 2 "~" H 1675 6100 60  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 1675 6100 60  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmv358.pdf" H 1675 6100 60  0001 C CNN
 F 4 "DUAL OP-AMP, 7000uV OFFSET-MAX, 1MHz BAND WIDTH" H 1675 6100 60  0001 C CNN "Characteristics"
 F 5 "Comparator Op-amp" H 1675 6100 60  0001 C CNN "Description"
@@ -1135,8 +1135,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
 U 1 1 5F804742
 P 2325 5700
 AR Path="/5F4E110C/5F804742" Ref="#PWR?"  Part="1" 
-AR Path="/5F804742" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2325 5700 30  0001 C CNN
+AR Path="/5F804742" Ref="#PWR0128"  Part="1" 
+F 0 "#PWR0128" H 2325 5700 30  0001 C CNN
 F 1 "GND" H 2325 5630 30  0001 C CNN
 F 2 "~" H 2325 5700 60  0000 C CNN
 F 3 "~" H 2325 5700 60  0000 C CNN
@@ -1157,8 +1157,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:GND-RESCUE-Arduino_Uno_R3_From_Scratch #PWR
 U 1 1 5F80474B
 P 575 6950
 AR Path="/5F4E110C/5F80474B" Ref="#PWR?"  Part="1" 
-AR Path="/5F80474B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 575 6950 30  0001 C CNN
+AR Path="/5F80474B" Ref="#PWR0129"  Part="1" 
+F 0 "#PWR0129" H 575 6950 30  0001 C CNN
 F 1 "GND" H 575 6880 30  0001 C CNN
 F 2 "~" H 575 6950 60  0000 C CNN
 F 3 "~" H 575 6950 60  0000 C CNN
@@ -1181,8 +1181,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:USBVCC #PWR?
 U 1 1 5F804757
 P 2275 6800
 AR Path="/5F4E110C/5F804757" Ref="#PWR?"  Part="1" 
-AR Path="/5F804757" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2275 6890 20  0001 C CNN
+AR Path="/5F804757" Ref="#PWR0130"  Part="1" 
+F 0 "#PWR0130" H 2275 6890 20  0001 C CNN
 F 1 "USBVCC" H 2275 6890 30  0000 C CNN
 F 2 "~" H 2275 6800 60  0000 C CNN
 F 3 "~" H 2275 6800 60  0000 C CNN
@@ -1200,10 +1200,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:C C?
 U 1 1 5F804769
 P 3275 7350
 AR Path="/5F4E110C/5F804769" Ref="C?"  Part="1" 
-AR Path="/5F804769" Ref="C?"  Part="1" 
-F 0 "C?" H 3275 7450 40  0000 L CNN
+AR Path="/5F804769" Ref="C3"  Part="1" 
+F 0 "C3" H 3275 7450 40  0000 L CNN
 F 1 "1uF" H 3281 7265 40  0000 L CNN
-F 2 "~" H 3313 7200 30  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3313 7200 30  0000 C CNN
 F 3 "http://www.kemet.com/docfinder?Partnumber=C0805C105K8RACAUTO" H 3275 7350 60  0001 C CNN
 F 4 "CAPACITOR, CERAMIC, MULTILAYER, 10 V, X7R, 1 uF, SURFACE MOUNT, 0805" H 3275 7350 60  0001 C CNN "Characteristics"
 F 5 "3V3 LDO Input Cap" H 3275 7350 60  0001 C CNN "Description"
@@ -1224,10 +1224,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:R R?
 U 1 1 5F80477A
 P 575 6400
 AR Path="/5F4E110C/5F80477A" Ref="R?"  Part="1" 
-AR Path="/5F80477A" Ref="R?"  Part="1" 
-F 0 "R?" V 655 6400 40  0000 C CNN
+AR Path="/5F80477A" Ref="R2"  Part="1" 
+F 0 "R2" V 655 6400 40  0000 C CNN
 F 1 "10K" V 582 6401 40  0000 C CNN
-F 2 "~" V 505 6400 30  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 505 6400 30  0001 C CNN
 F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf" H 575 6400 30  0001 C CNN
 F 4 "RESISTOR, METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 10000ohm, SURFACE MOUNT, 0805" H 575 6400 60  0001 C CNN "Characteristics"
 F 5 "10K Comparator Voltage Divider Resistor" H 575 6400 60  0001 C CNN "Description"
@@ -1246,10 +1246,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:C C?
 U 1 1 5F804789
 P 1975 5500
 AR Path="/5F4E110C/5F804789" Ref="C?"  Part="1" 
-AR Path="/5F804789" Ref="C?"  Part="1" 
-F 0 "C?" H 2025 5600 40  0000 L CNN
+AR Path="/5F804789" Ref="C1"  Part="1" 
+F 0 "C1" H 2025 5600 40  0000 L CNN
 F 1 "0.1 uF" H 2025 5400 40  0000 L CNN
-F 2 "~" H 2013 5350 30  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2013 5350 30  0000 C CNN
 F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf" H 1975 5500 60  0001 C CNN
 F 4 "CAPACITOR, CERAMIC, MULTILAYER, 100 V, X7R, 0.1 uF, SURFACE MOUNT, 0805, CHIP, ROHS COMPLIANT" H 1975 5500 60  0001 C CNN "Characteristics"
 F 5 "LDO Bypass Cap" H 1975 5500 60  0001 C CNN "Description"
@@ -1268,8 +1268,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
 U 1 1 5F80478F
 P 3025 6450
 AR Path="/5F4E110C/5F80478F" Ref="#PWR?"  Part="1" 
-AR Path="/5F80478F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3025 6540 20  0001 C CNN
+AR Path="/5F80478F" Ref="#PWR0131"  Part="1" 
+F 0 "#PWR0131" H 3025 6540 20  0001 C CNN
 F 1 "5V_LDO" H 3025 6570 30  0000 C CNN
 F 2 "~" H 3025 6450 60  0000 C CNN
 F 3 "~" H 3025 6450 60  0000 C CNN
@@ -1281,8 +1281,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
 U 1 1 5F804795
 P 1575 5250
 AR Path="/5F4E110C/5F804795" Ref="#PWR?"  Part="1" 
-AR Path="/5F804795" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 1575 5340 20  0001 C CNN
+AR Path="/5F804795" Ref="#PWR0132"  Part="1" 
+F 0 "#PWR0132" H 1575 5340 20  0001 C CNN
 F 1 "5V_LDO" H 1575 5370 30  0000 C CNN
 F 2 "~" H 1575 5250 60  0000 C CNN
 F 3 "~" H 1575 5250 60  0000 C CNN
@@ -1290,13 +1290,13 @@ F 3 "~" H 1575 5250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:Vin #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:Vin #PWR0133
 U 1 1 5F80479B
 P 575 5250
-AR Path="/5F80479B" Ref="#PWR?"  Part="1" 
+AR Path="/5F80479B" Ref="#PWR0133"  Part="1" 
 AR Path="/55D0D7E6/5F80479B" Ref="#PWR?"  Part="1" 
 AR Path="/5F4E110C/5F80479B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 575 5340 20  0001 C CNN
+F 0 "#PWR0133" H 575 5340 20  0001 C CNN
 F 1 "VIN" H 575 5370 30  0000 C CNN
 F 2 "~" H 575 5250 60  0000 C CNN
 F 3 "~" H 575 5250 60  0000 C CNN
@@ -1308,8 +1308,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
 U 1 1 5F8047A4
 P 3275 7600
 AR Path="/5F4E110C/5F8047A4" Ref="#PWR?"  Part="1" 
-AR Path="/5F8047A4" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3275 7600 30  0001 C CNN
+AR Path="/5F8047A4" Ref="#PWR0134"  Part="1" 
+F 0 "#PWR0134" H 3275 7600 30  0001 C CNN
 F 1 "GND" H 3275 7530 30  0001 C CNN
 F 2 "~" H 3275 7600 60  0000 C CNN
 F 3 "~" H 3275 7600 60  0000 C CNN
@@ -1324,8 +1324,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
 U 1 1 5F8047AD
 P 1575 6900
 AR Path="/5F4E110C/5F8047AD" Ref="#PWR?"  Part="1" 
-AR Path="/5F8047AD" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 1575 6900 30  0001 C CNN
+AR Path="/5F8047AD" Ref="#PWR0135"  Part="1" 
+F 0 "#PWR0135" H 1575 6900 30  0001 C CNN
 F 1 "GND" H 1575 6830 30  0001 C CNN
 F 2 "~" H 1575 6900 60  0000 C CNN
 F 3 "~" H 1575 6900 60  0000 C CNN
@@ -1349,10 +1349,10 @@ L Regulator_Linear:LM1117-3.3 U?
 U 1 1 5F8047B8
 P 4250 6950
 AR Path="/5F4E110C/5F8047B8" Ref="U?"  Part="1" 
-AR Path="/5F8047B8" Ref="U?"  Part="1" 
-F 0 "U?" H 4250 7192 50  0000 C CNN
+AR Path="/5F8047B8" Ref="U4"  Part="1" 
+F 0 "U4" H 4250 7192 50  0000 C CNN
 F 1 "LM1117-3.3" H 4250 7101 50  0000 C CNN
-F 2 "" H 4250 6950 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 4250 6950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 4250 6950 50  0001 C CNN
 	1    4250 6950
 	1    0    0    -1  
@@ -1362,8 +1362,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR?
 U 1 1 5F8047BE
 P 4975 6750
 AR Path="/5F4E110C/5F8047BE" Ref="#PWR?"  Part="1" 
-AR Path="/5F8047BE" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4975 6710 30  0001 C CNN
+AR Path="/5F8047BE" Ref="#PWR0136"  Part="1" 
+F 0 "#PWR0136" H 4975 6710 30  0001 C CNN
 F 1 "3V3_LDO" H 4984 6888 30  0000 C CNN
 F 2 "" H 4975 6750 60  0000 C CNN
 F 3 "" H 4975 6750 60  0000 C CNN
@@ -1378,8 +1378,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
 U 1 1 5F8047C9
 P 4250 7650
 AR Path="/5F4E110C/5F8047C9" Ref="#PWR?"  Part="1" 
-AR Path="/5F8047C9" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4250 7650 30  0001 C CNN
+AR Path="/5F8047C9" Ref="#PWR0137"  Part="1" 
+F 0 "#PWR0137" H 4250 7650 30  0001 C CNN
 F 1 "GND" H 4250 7580 30  0001 C CNN
 F 2 "~" H 4250 7650 60  0000 C CNN
 F 3 "~" H 4250 7650 60  0000 C CNN
@@ -1400,10 +1400,10 @@ L Arduino_Uno_R3_From_Scratch-rescue:C C?
 U 1 1 5F8047DB
 P 4800 7350
 AR Path="/5F4E110C/5F8047DB" Ref="C?"  Part="1" 
-AR Path="/5F8047DB" Ref="C?"  Part="1" 
-F 0 "C?" H 4800 7450 40  0000 L CNN
+AR Path="/5F8047DB" Ref="C6"  Part="1" 
+F 0 "C6" H 4800 7450 40  0000 L CNN
 F 1 "4.7uF" H 4806 7265 40  0000 L CNN
-F 2 "~" H 4838 7200 30  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4838 7200 30  0000 C CNN
 F 3 "http://www.kemet.com/docfinder?Partnumber=C0805C105K8RACAUTO" H 4800 7350 60  0001 C CNN
 F 4 "CAPACITOR, CERAMIC, MULTILAYER, 10 V, X7R, 1 uF, SURFACE MOUNT, 0805" H 4800 7350 60  0001 C CNN "Characteristics"
 F 5 "3V3 LDO Input Cap" H 4800 7350 60  0001 C CNN "Description"
@@ -1434,8 +1434,8 @@ L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR?
 U 1 1 5F8047E8
 P 775 6200
 AR Path="/5F4E110C/5F8047E8" Ref="#PWR?"  Part="1" 
-AR Path="/5F8047E8" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 775 6160 30  0001 C CNN
+AR Path="/5F8047E8" Ref="#PWR0138"  Part="1" 
+F 0 "#PWR0138" H 775 6160 30  0001 C CNN
 F 1 "3V3_LDO" H 784 6338 30  0000 C CNN
 F 2 "" H 775 6200 60  0000 C CNN
 F 3 "" H 775 6200 60  0000 C CNN
