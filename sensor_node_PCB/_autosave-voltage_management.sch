@@ -1,0 +1,377 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:R R2
+U 1 1 55D0D88A
+P 625 5100
+F 0 "R2" V 705 5100 40  0000 C CNN
+F 1 "10K" V 632 5101 40  0000 C CNN
+F 2 "~" V 555 5100 30  0000 C CNN
+F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf" H 625 5100 30  0001 C CNN
+F 4 "RESISTOR, METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 10000ohm, SURFACE MOUNT, 0805" H 625 5100 60  0001 C CNN "Characteristics"
+F 5 "10K Comparator Voltage Divider Resistor" H 625 5100 60  0001 C CNN "Description"
+F 6 "Vishay" H 625 5100 60  0001 C CNN "MFN"
+F 7 "CRCW080510K0JNEA" H 625 5100 60  0001 C CNN "MFP"
+F 8 "SMD_0805" H 625 5100 60  0001 C CNN "Package ID"
+F 9 "ANY" H 625 5100 60  0001 C CNN "Source"
+F 10 "N" H 625 5100 60  0001 C CNN "Critical"
+F 11 "Voltage_Mgmt" H 625 5100 60  0001 C CNN "Subsystem"
+F 12 "~" H 625 5100 60  0001 C CNN "Notes"
+	1    625  5100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:Q_PMOS_GSD Q1
+U 1 1 55D0D9DF
+P 2725 6350
+F 0 "Q1" V 2625 6525 60  0000 R CNN
+F 1 "FDN340P" V 2975 6550 60  0000 R CNN
+F 2 "~" H 2725 6350 60  0000 C CNN
+F 3 "https://www.fairchildsemi.com/datasheets/FD/FDN340P.pdf" H 2725 6350 60  0001 C CNN
+F 4 "2000 mA, 20 V, P-CHANNEL, Si, SMALL SIGNAL, MOSFET, SUPERSOT-3" H 2725 6350 60  0001 C CNN "Characteristics"
+F 5 "USBVCC MOSFET" H 2725 6350 60  0001 C CNN "Description"
+F 6 "Fairchild Semiconductor" H 2725 6350 60  0001 C CNN "MFN"
+F 7 "FDN340P" H 2725 6350 60  0001 C CNN "MFP"
+F 8 "SOT23" H 2725 6350 60  0001 C CNN "Package ID"
+F 9 "ANY" H 2725 6350 60  0001 C CNN "Source"
+F 10 "N" H 2725 6350 60  0001 C CNN "Critical"
+F 11 "Voltage_Mgmt" H 2725 6350 60  0001 C CNN "Subsystem"
+F 12 "~" H 2725 6350 60  0001 C CNN "Notes"
+	1    2725 6350
+	0    -1   1    0   
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:LM358 U2
+U 1 1 55D11D89
+P 1725 5600
+F 0 "U2" H 1675 5800 60  0000 L CNN
+F 1 "LMV358IDGKR" H 1675 5350 60  0000 L CNN
+F 2 "~" H 1725 5600 60  0000 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv358.pdf" H 1725 5600 60  0001 C CNN
+F 4 "DUAL OP-AMP, 7000uV OFFSET-MAX, 1MHz BAND WIDTH" H 1725 5600 60  0001 C CNN "Characteristics"
+F 5 "Comparator Op-amp" H 1725 5600 60  0001 C CNN "Description"
+F 6 "Texas Instruments" H 1725 5600 60  0001 C CNN "MFN"
+F 7 "LMV358IDGKR" H 1725 5600 60  0001 C CNN "MFP"
+F 8 "VSSOP8" H 1725 5600 60  0001 C CNN "Package ID"
+F 9 "ANY" H 1725 5600 60  0001 C CNN "Source"
+F 10 "N" H 1725 5600 60  0001 C CNN "Critical"
+F 11 "Voltage_Mgmt" H 1725 5600 60  0001 C CNN "Subsystem"
+F 12 "~" H 1725 5600 60  0001 C CNN "Notes"
+	1    1725 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 6400 1625 6000
+Wire Wire Line
+	1625 5000 1875 5000
+Wire Wire Line
+	1625 4750 1625 5000
+Connection ~ 1625 5000
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR010
+U 1 1 55D120C2
+P 2375 5200
+F 0 "#PWR010" H 2375 5200 30  0001 C CNN
+F 1 "GND" H 2375 5130 30  0001 C CNN
+F 2 "~" H 2375 5200 60  0000 C CNN
+F 3 "~" H 2375 5200 60  0000 C CNN
+F 4 "ANY" H 2375 5200 60  0001 C CNN "Source"
+F 5 "N" H 2375 5200 60  0001 C CNN "Critical"
+F 6 "~" H 2375 5200 60  0001 C CNN "Notes"
+	1    2375 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2375 5000 2375 5200
+Wire Wire Line
+	2175 5000 2375 5000
+Wire Wire Line
+	625  5250 625  5500
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND-RESCUE-Arduino_Uno_R3_From_Scratch #PWR011
+U 1 1 55D120DC
+P 625 6450
+F 0 "#PWR011" H 625 6450 30  0001 C CNN
+F 1 "GND" H 625 6380 30  0001 C CNN
+F 2 "~" H 625 6450 60  0000 C CNN
+F 3 "~" H 625 6450 60  0000 C CNN
+	1    625  6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	625  6050 625  6450
+Wire Wire Line
+	625  4750 625  4950
+Wire Wire Line
+	1225 5500 625  5500
+Connection ~ 625  5500
+Wire Wire Line
+	2225 5600 2725 5600
+Wire Wire Line
+	2725 5600 2725 6150
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:USBVCC #PWR012
+U 1 1 55D126CE
+P 2325 6300
+F 0 "#PWR012" H 2325 6390 20  0001 C CNN
+F 1 "USBVCC" H 2325 6390 30  0000 C CNN
+F 2 "~" H 2325 6300 60  0000 C CNN
+F 3 "~" H 2325 6300 60  0000 C CNN
+	1    2325 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2525 6450 2325 6450
+Wire Wire Line
+	2325 6450 2325 6300
+Wire Notes Line
+	325  4750 325  4400
+Wire Notes Line
+	325  4400 5675 4400
+Wire Notes Line
+	5675 4400 5675 4700
+Wire Wire Line
+	3075 5950 3075 6450
+Text Notes 2125 4350 0    60   ~ 0
+USBVCC / VIN Comparator
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:C C5
+U 1 1 55D74BB5
+P 3325 6850
+F 0 "C5" H 3325 6950 40  0000 L CNN
+F 1 "1uF" H 3331 6765 40  0000 L CNN
+F 2 "~" H 3363 6700 30  0000 C CNN
+F 3 "http://www.kemet.com/docfinder?Partnumber=C0805C105K8RACAUTO" H 3325 6850 60  0001 C CNN
+F 4 "CAPACITOR, CERAMIC, MULTILAYER, 10 V, X7R, 1 uF, SURFACE MOUNT, 0805" H 3325 6850 60  0001 C CNN "Characteristics"
+F 5 "3V3 LDO Input Cap" H 3325 6850 60  0001 C CNN "Description"
+F 6 "Kemet" H 3325 6850 60  0001 C CNN "MFN"
+F 7 "C0805C105K8RACAUTO " H 3325 6850 60  0001 C CNN "MFP"
+F 8 "SMD_0805" H 3325 6850 60  0001 C CNN "Package ID"
+F 9 "ANY" H 3325 6850 60  0001 C CNN "Source"
+F 10 "N" H 3325 6850 60  0001 C CNN "Critical"
+F 11 "Voltage_Mgmt" H 3325 6850 60  0001 C CNN "Subsystem"
+F 12 "~" H 3325 6850 60  0001 C CNN "Notes"
+	1    3325 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3325 6450 3325 6700
+Wire Wire Line
+	3325 7000 3325 7575
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:R R3
+U 1 1 55D76313
+P 625 5900
+F 0 "R3" V 705 5900 40  0000 C CNN
+F 1 "10K" V 632 5901 40  0000 C CNN
+F 2 "~" V 555 5900 30  0000 C CNN
+F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf" H 625 5900 30  0001 C CNN
+F 4 "RESISTOR, METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 10000ohm, SURFACE MOUNT, 0805" H 625 5900 60  0001 C CNN "Characteristics"
+F 5 "10K Comparator Voltage Divider Resistor" H 625 5900 60  0001 C CNN "Description"
+F 6 "Vishay" H 625 5900 60  0001 C CNN "MFN"
+F 7 "CRCW080510K0JNEA" H 625 5900 60  0001 C CNN "MFP"
+F 8 "SMD_0805" H 625 5900 60  0001 C CNN "Package ID"
+F 9 "ANY" H 625 5900 60  0001 C CNN "Source"
+F 10 "N" H 625 5900 60  0001 C CNN "Critical"
+F 11 "Voltage_Mgmt" H 625 5900 60  0001 C CNN "Subsystem"
+F 12 "~" H 625 5900 60  0001 C CNN "Notes"
+	1    625  5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:C C4
+U 1 1 55D763EF
+P 2025 5000
+F 0 "C4" H 2075 5100 40  0000 L CNN
+F 1 "0.1 uF" H 2075 4900 40  0000 L CNN
+F 2 "~" H 2063 4850 30  0000 C CNN
+F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf" H 2025 5000 60  0001 C CNN
+F 4 "CAPACITOR, CERAMIC, MULTILAYER, 100 V, X7R, 0.1 uF, SURFACE MOUNT, 0805, CHIP, ROHS COMPLIANT" H 2025 5000 60  0001 C CNN "Characteristics"
+F 5 "LDO Bypass Cap" H 2025 5000 60  0001 C CNN "Description"
+F 6 "Kemet" H 2025 5000 60  0001 C CNN "MFN"
+F 7 "C0805C104K1RACAUTO" H 2025 5000 60  0001 C CNN "MFP"
+F 8 "SMD_0805" H 2025 5000 60  0001 C CNN "Package ID"
+F 9 "ANY" H 2025 5000 60  0001 C CNN "Source"
+F 10 "N" H 2025 5000 60  0001 C CNN "Critical"
+F 11 "Voltage_Mgmt" H 2025 5000 60  0001 C CNN "Subsystem"
+F 12 "~" H 2025 5000 60  0001 C CNN "Notes"
+	1    2025 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR014
+U 1 1 55E957AE
+P 3075 5950
+F 0 "#PWR014" H 3075 6040 20  0001 C CNN
+F 1 "5V_LDO" H 3075 6070 30  0000 C CNN
+F 2 "~" H 3075 5950 60  0000 C CNN
+F 3 "~" H 3075 5950 60  0000 C CNN
+	1    3075 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR015
+U 1 1 55E957BD
+P 1625 4750
+F 0 "#PWR015" H 1625 4840 20  0001 C CNN
+F 1 "5V_LDO" H 1625 4870 30  0000 C CNN
+F 2 "~" H 1625 4750 60  0000 C CNN
+F 3 "~" H 1625 4750 60  0000 C CNN
+	1    1625 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:Vin #PWR020
+U 1 1 55E957DB
+P 625 4750
+AR Path="/55E957DB" Ref="#PWR020"  Part="1" 
+AR Path="/55D0D7E6/55E957DB" Ref="#PWR016"  Part="1" 
+AR Path="/5F4E110C/55E957DB" Ref="#PWR016"  Part="1" 
+F 0 "#PWR016" H 625 4840 20  0001 C CNN
+F 1 "VIN" H 625 4870 30  0000 C CNN
+F 2 "~" H 625 4750 60  0000 C CNN
+F 3 "~" H 625 4750 60  0000 C CNN
+	1    625  4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR018
+U 1 1 561FE56D
+P 3325 7575
+F 0 "#PWR018" H 3325 7575 30  0001 C CNN
+F 1 "GND" H 3325 7505 30  0001 C CNN
+F 2 "~" H 3325 7575 60  0000 C CNN
+F 3 "~" H 3325 7575 60  0000 C CNN
+F 4 "ANY" H 3325 7575 60  0001 C CNN "Source"
+F 5 "N" H 3325 7575 60  0001 C CNN "Critical"
+F 6 "~" H 3325 7575 60  0001 C CNN "Notes"
+	1    3325 7575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR021
+U 1 1 562082E4
+P 1625 6400
+F 0 "#PWR021" H 1625 6400 30  0001 C CNN
+F 1 "GND" H 1625 6330 30  0001 C CNN
+F 2 "~" H 1625 6400 60  0000 C CNN
+F 3 "~" H 1625 6400 60  0000 C CNN
+F 4 "ANY" H 1625 6400 60  0001 C CNN "Source"
+F 5 "N" H 1625 6400 60  0001 C CNN "Critical"
+F 6 "~" H 1625 6400 60  0001 C CNN "Notes"
+	1    1625 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 5000 1625 5200
+Wire Wire Line
+	625  5500 625  5750
+Wire Wire Line
+	2925 6450 3075 6450
+Connection ~ 3075 6450
+Wire Wire Line
+	3075 6450 3325 6450
+$Comp
+L Regulator_Linear:LM1117-3.3 U?
+U 1 1 5F51492D
+P 4300 6450
+F 0 "U?" H 4300 6692 50  0000 C CNN
+F 1 "LM1117-3.3" H 4300 6601 50  0000 C CNN
+F 2 "" H 4300 6450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 4300 6450 50  0001 C CNN
+	1    4300 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR?
+U 1 1 5F51520A
+P 5025 6250
+F 0 "#PWR?" H 5025 6210 30  0001 C CNN
+F 1 "3V3_LDO" H 5034 6388 30  0000 C CNN
+F 2 "" H 5025 6250 60  0000 C CNN
+F 3 "" H 5025 6250 60  0000 C CNN
+	1    5025 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3325 6450 4000 6450
+Connection ~ 3325 6450
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+U 1 1 5F5165CD
+P 4300 7150
+F 0 "#PWR?" H 4300 7150 30  0001 C CNN
+F 1 "GND" H 4300 7080 30  0001 C CNN
+F 2 "~" H 4300 7150 60  0000 C CNN
+F 3 "~" H 4300 7150 60  0000 C CNN
+F 4 "ANY" H 4300 7150 60  0001 C CNN "Source"
+F 5 "N" H 4300 7150 60  0001 C CNN "Critical"
+F 6 "~" H 4300 7150 60  0001 C CNN "Notes"
+	1    4300 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 6750 4300 7050
+Wire Wire Line
+	4600 6450 4850 6450
+Wire Wire Line
+	5025 6450 5025 6250
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:C C?
+U 1 1 5F517783
+P 4850 6850
+F 0 "C?" H 4850 6950 40  0000 L CNN
+F 1 "4.7uF" H 4856 6765 40  0000 L CNN
+F 2 "~" H 4888 6700 30  0000 C CNN
+F 3 "http://www.kemet.com/docfinder?Partnumber=C0805C105K8RACAUTO" H 4850 6850 60  0001 C CNN
+F 4 "CAPACITOR, CERAMIC, MULTILAYER, 10 V, X7R, 1 uF, SURFACE MOUNT, 0805" H 4850 6850 60  0001 C CNN "Characteristics"
+F 5 "3V3 LDO Input Cap" H 4850 6850 60  0001 C CNN "Description"
+F 6 "Kemet" H 4850 6850 60  0001 C CNN "MFN"
+F 7 "C0805C105K8RACAUTO " H 4850 6850 60  0001 C CNN "MFP"
+F 8 "SMD_0805" H 4850 6850 60  0001 C CNN "Package ID"
+F 9 "ANY" H 4850 6850 60  0001 C CNN "Source"
+F 10 "N" H 4850 6850 60  0001 C CNN "Critical"
+F 11 "Voltage_Mgmt" H 4850 6850 60  0001 C CNN "Subsystem"
+F 12 "~" H 4850 6850 60  0001 C CNN "Notes"
+	1    4850 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 6450 4850 6700
+Connection ~ 4850 6450
+Wire Wire Line
+	4850 6450 5025 6450
+Wire Wire Line
+	4850 7000 4850 7050
+Wire Wire Line
+	4850 7050 4300 7050
+Connection ~ 4300 7050
+Wire Wire Line
+	4300 7050 4300 7150
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR?
+U 1 1 5F51A2DE
+P 825 5700
+F 0 "#PWR?" H 825 5660 30  0001 C CNN
+F 1 "3V3_LDO" H 834 5838 30  0000 C CNN
+F 2 "" H 825 5700 60  0000 C CNN
+F 3 "" H 825 5700 60  0000 C CNN
+	1    825  5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	825  5700 1225 5700
+$EndSCHEMATC
