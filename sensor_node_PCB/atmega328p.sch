@@ -33,12 +33,6 @@ F 12 "~" H 7050 3750 60  0001 C CNN "Notes"
 	1    7050 3750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5650 2050 5650 2400
-Connection ~ 5650 2050
-Wire Wire Line
-	5650 2700 5650 3050
-Connection ~ 5650 3050
 Text HLabel 4800 3750 0    40   Input ~ 0
 AREF
 Wire Wire Line
@@ -221,7 +215,7 @@ U 1 1 55E8CAAE
 P 3800 850
 F 0 "ICSP2" H 3800 1100 50  0000 C CNN
 F 1 "M20-9980346" H 3800 650 40  0000 C CNN
-F 2 "" H 3800 850 60  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical_SMD" H 3800 850 60  0001 C CNN
 F 3 "http://cdn.harwin.com/pdfs/M20-998.pdf" H 3800 850 60  0001 C CNN
 F 4 "6 CONTACT(S), MALE, STRAIGHT TWO PART BOARD CONNECTOR" H 3800 850 60  0001 C CNN "Characteristics"
 F 5 "ATMEGA328P ICSP Header" H 3800 850 60  0001 C CNN "Description"
@@ -241,7 +235,7 @@ U 1 1 55E8CABC
 P 5300 1200
 F 0 "D7" H 5300 1300 40  0000 C CNN
 F 1 "1N4148W-7-F" H 5300 1100 40  0000 C CNN
-F 2 "" H 5300 1200 60  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 5300 1200 60  0001 C CNN
 F 3 "http://www.diodes.com/_files/datasheets/ds30086.pdf" H 5300 1200 60  0001 C CNN
 F 4 "DIODE GEN PURP 100V 300MA SOD123" H 5300 1200 60  0001 C CNN "Characteristics"
 F 5 "ATMEGA328P ICSP Reset Voltage Spike Protection" H 5300 1200 60  0001 C CNN "Description"
@@ -388,38 +382,6 @@ F 12 "~" H 2700 1500 60  0001 C CNN "Notes"
 	1    2700 1500
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:CERAMIC_RESONATOR X2
-U 1 1 5614A1DB
-P 5250 2550
-F 0 "X2" V 5325 2450 50  0000 R CNN
-F 1 "CSTCE16MOV53-R0" V 5175 2450 40  0000 R CNN
-F 2 "" H 5250 2550 60  0001 C CNN
-F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/timingdevice/ceralock/p16e.ashx" H 5250 2550 60  0001 C CNN
-F 4 "CER RESONATOR 16.0MHZ SMD" H 5250 2550 60  0001 C CNN "Characteristics"
-F 5 "ATMEGA328P Oscillator" H 5250 2550 60  0001 C CNN "Description"
-F 6 "Murata" H 5250 2550 60  0001 C CNN "MFN"
-F 7 "CSTCE16M0V53-R0" H 5250 2550 60  0001 C CNN "MFP"
-F 8 "SMD" H 5250 2550 60  0001 C CNN "Package ID"
-F 9 "ANY" H 5250 2550 60  0001 C CNN "Source"
-F 10 "Y" H 5250 2550 60  0001 C CNN "Critical"
-F 11 "328P_Sub" H 5250 2550 60  0001 C CNN "Subsystem"
-F 12 "~" H 5250 2550 60  0001 C CNN "Notes"
-	1    5250 2550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5300 2050 5650 2050
-Wire Wire Line
-	5300 2050 5300 2150
-Wire Wire Line
-	5300 2950 5300 3050
-Wire Wire Line
-	5300 3050 5650 3050
-Wire Wire Line
-	5050 2550 4750 2550
-Wire Wire Line
-	4750 2550 4750 2900
 Text Notes 6150 1050 0    40   ~ 0
 Atmel Appnote: AVR042 - AVR Hardware Design Considerations\nhttp://www.atmel.com/Images/Atmel-2521-AVR-Hardware-Design-Considerations_ApplicationNote_AVR042.pdf\n\nRefer to this for PCB layout information
 $Comp
@@ -542,26 +504,6 @@ F 12 "~" H 2050 1500 60  0001 C CNN "Notes"
 	1    2050 1500
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:R R17
-U 1 1 5615BCD3
-P 5650 2550
-F 0 "R17" H 5725 2500 40  0000 L CNN
-F 1 "1M" V 5650 2550 40  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5580 2550 30  0001 C CNN
-F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 5650 2550 30  0001 C CNN
-F 4 "RES SMD 1M OHM 1% 1/8W 0805" H 5650 2550 60  0001 C CNN "Characteristics"
-F 5 "ATMEGA328P Xtal 1M Feedback Resistor" H 5650 2550 60  0001 C CNN "Description"
-F 6 "Vishay" H 5650 2550 60  0001 C CNN "MFN"
-F 7 "CRCW08051M00FKEA" H 5650 2550 60  0001 C CNN "MFP"
-F 8 "SMD_0805" H 5650 2550 60  0001 C CNN "Package ID"
-F 9 "ANY" H 5650 2550 60  0001 C CNN "Source"
-F 10 "N" H 5650 2550 60  0001 C CNN "Critical"
-F 11 "328P_Sub" H 5650 2550 60  0001 C CNN "Subsystem"
-F 12 "~" H 5650 2550 60  0001 C CNN "Notes"
-	1    5650 2550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3500 1650 3500 1775
 Wire Wire Line
@@ -591,15 +533,15 @@ $EndComp
 $Comp
 L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR044
 U 1 1 56207870
-P 4750 2900
-F 0 "#PWR044" H 4750 2900 30  0001 C CNN
-F 1 "GND" H 4750 2830 30  0001 C CNN
-F 2 "~" H 4750 2900 60  0000 C CNN
-F 3 "~" H 4750 2900 60  0000 C CNN
-F 4 "ANY" H 4750 2900 60  0001 C CNN "Source"
-F 5 "N" H 4750 2900 60  0001 C CNN "Critical"
-F 6 "~" H 4750 2900 60  0001 C CNN "Notes"
-	1    4750 2900
+P 4450 2525
+F 0 "#PWR044" H 4450 2525 30  0001 C CNN
+F 1 "GND" H 4450 2455 30  0001 C CNN
+F 2 "~" H 4450 2525 60  0000 C CNN
+F 3 "~" H 4450 2525 60  0000 C CNN
+F 4 "ANY" H 4450 2525 60  0001 C CNN "Source"
+F 5 "N" H 4450 2525 60  0001 C CNN "Critical"
+F 6 "~" H 4450 2525 60  0001 C CNN "Notes"
+	1    4450 2525
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -645,10 +587,6 @@ F 6 "~" H 4350 1100 60  0001 C CNN "Notes"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5650 2050 5850 2050
-Wire Wire Line
-	5650 3050 5850 3050
-Wire Wire Line
 	5600 4500 5600 4700
 Wire Wire Line
 	5600 4700 5600 4950
@@ -688,4 +626,62 @@ Wire Wire Line
 	3400 2275 3500 2275
 Wire Wire Line
 	5650 1500 5850 1500
+Wire Wire Line
+	5300 3050 5850 3050
+Wire Wire Line
+	5300 2050 5850 2050
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:Crystal Y1
+U 1 1 5F569D4C
+P 5300 2575
+F 0 "Y1" V 5254 2706 50  0000 L CNN
+F 1 "Crystal" V 5345 2706 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm" H 5300 2575 60  0001 C CNN
+F 3 "" H 5300 2575 60  0000 C CNN
+	1    5300 2575
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 2050 5300 2425
+Wire Wire Line
+	5300 2725 5300 3050
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:C C7
+U 1 1 5F570541
+P 5000 2050
+F 0 "C7" V 4748 2050 50  0000 C CNN
+F 1 "18pF" V 4839 2050 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5038 1900 30  0001 C CNN
+F 3 "" H 5000 2050 60  0000 C CNN
+	1    5000 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:C C8
+U 1 1 5F570D63
+P 5025 3050
+F 0 "C8" V 4773 3050 50  0000 C CNN
+F 1 "18pF" V 4864 3050 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5063 2900 30  0001 C CNN
+F 3 "" H 5025 3050 60  0000 C CNN
+	1    5025 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 2050 5300 2050
+Connection ~ 5300 2050
+Wire Wire Line
+	5175 3050 5300 3050
+Connection ~ 5300 3050
+Wire Wire Line
+	4850 2050 4450 2050
+Wire Wire Line
+	4450 2050 4450 2400
+Wire Wire Line
+	4875 3050 4875 2400
+Wire Wire Line
+	4875 2400 4450 2400
+Connection ~ 4450 2400
+Wire Wire Line
+	4450 2400 4450 2525
 $EndSCHEMATC
