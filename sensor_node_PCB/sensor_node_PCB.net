@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\sensor_node_PCB.sch)
-    (date "05/09/2020 21:33:58")
+    (date "06/09/2020 09:53:27")
     (tool "Eeschema (5.1.5)-3")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -35,7 +35,7 @@
       (tstamp 5F4C0C85))
     (comp (ref J1)
       (value USB_B_Mini)
-      (footprint Connector_USB:USB_Mini-B_Wuerth_65100516121_Horizontal)
+      (footprint Connector_USB:USB_Mini-B_Tensility_54-00023_Vertical)
       (datasheet ~)
       (libsource (lib Connector) (part USB_B_Mini) (description "USB Mini Type B connector"))
       (sheetpath (names /) (tstamps /))
