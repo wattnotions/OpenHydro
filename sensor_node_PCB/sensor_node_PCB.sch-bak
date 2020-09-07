@@ -598,7 +598,7 @@ F 3 "" H 6300 2625 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 6250 2925 2    50   ~ 0
-AED_TX1
+ARD_TX1
 Text Label 6250 2625 2    50   ~ 0
 ARD_RX1
 Wire Wire Line
