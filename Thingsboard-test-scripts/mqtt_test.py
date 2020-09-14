@@ -36,7 +36,7 @@ try:
 
         # Sending humidity and temperature data to ThingsBoard
         client.publish('v1/devices/me/telemetry', json.dumps(sensor_data), 1)
-
+        print(json.dumps(sensor_data))
         next_reading += INTERVAL
         sleep_time = next_reading-time.time()
         if sleep_time > 0:
