@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\shane\Documents\GitHub\OpenHydro\sensor_node_PCB\sensor_node_PCB.sch</source>
+    <date>21/09/2020 12:10:17</date>
+    <tool>Eeschema (5.1.5)-3</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>sensor_node_PCB.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/atmega328p/" tstamps="/5F4E1E8A/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>atmega328p.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U8">
+      <value>BME280</value>
+      <footprint>Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering</footprint>
+      <datasheet>https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf</datasheet>
+      <libsource lib="Sensor" part="BME280" description="3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F4C0C85</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>USB_B_Mini</value>
+      <footprint>Connector_USB:USB_Mini-B_Tensility_54-00023_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="USB_B_Mini" description="USB Mini Type B connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F4E1AA5</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>27R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F4E3CCC</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>27R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F4E5156</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>Polyfuse</value>
+      <footprint>Fuse:Fuse_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F4E6403</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>INPUT CONNECTOR</value>
+      <footprint>Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_4-GF-5,08_1x04_P5.08mm_Horizontal_ThreadedFlange</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x04" description="Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F4EDCB8</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>OUTPUT_CONNECTOR</value>
+      <footprint>Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_4-GF-5,08_1x04_P5.08mm_Horizontal_ThreadedFlange</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x04" description="Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F4EE65B</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>DIODE</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/MRA4003T3-D.PDF</datasheet>
+      <fields>
+        <field name="Characteristics">1A, 1000V, SILICON, SIGNAL DIODE, ROHS COMPLIANT, COMPACT, PLASTIC, CASE 403D-02, SMA, 2 PIN</field>
+        <field name="Critical">N</field>
+        <field name="Description">Reverse Voltage Protection Diode</field>
+        <field name="MFN">ON Semi</field>
+        <field name="MFP">MRA4007T3G</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">R-PDSO-J2</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Reg</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="D" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F514196</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>47uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/BEYS/BEYSS04513/BEYSS04513-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">CAPACITOR, ALUMINUM ELECTROLYTIC, NON SOLID, POLARIZED, 50 V, 47 uF, SURFACE MOUNT, 3131, CHIP, ROHS COMPLIANT</field>
+        <field name="Critical">N</field>
+        <field name="Description">47uF Low ESR LDO Input Cap</field>
+        <field name="MFN">Vishay</field>
+        <field name="MFP">MAL215371479E3</field>
+        <field name="Notes">ESR must fall between 0.33Ω and 22Ω</field>
+        <field name="Package ID">SMD 5.0 x 5.0 x 5.3</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Reg</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="CP" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5141A5</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>0.1 uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">CAPACITOR, CERAMIC, MULTILAYER, 100 V, X7R, 0.1 uF, SURFACE MOUNT, 0805, CHIP, ROHS COMPLIANT</field>
+        <field name="Critical">N</field>
+        <field name="Description">LDO Bypass Cap</field>
+        <field name="MFN">Kemet</field>
+        <field name="MFP">C0805C104K1RACAUTO</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Reg</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5141B4</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>47uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/BEYS/BEYSS04513/BEYSS04513-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">CAPACITOR, ALUMINUM ELECTROLYTIC, NON SOLID, POLARIZED, 50 V, 47 uF, SURFACE MOUNT, 3131, CHIP, ROHS COMPLIANT</field>
+        <field name="Critical">N</field>
+        <field name="Description">47uF Low ESR LDO Output Cap</field>
+        <field name="MFN">Vishay</field>
+        <field name="MFP">MAL215371479E3</field>
+        <field name="Notes">ESR must fall between 0.33Ω and 22Ω</field>
+        <field name="Package ID">SMD 5.0 x 5.0 x 5.3</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Reg</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="CP" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5141C4</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>510</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>http://www.yageo.com/pdf/Pu-RC0805_51_PbFree_L_2.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">RESISTOR, METAL GLAZE/THICK FILM, 0.125W, 1%, 100ppm, 510ohm, SURFACE MOUNT, 0805</field>
+        <field name="Critical">N</field>
+        <field name="Description">Power On LED Resistor</field>
+        <field name="MFN">Yageo</field>
+        <field name="MFP">RC0805FR-07510RL</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Reg</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5141D3</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <datasheet>http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">LED CHIPLED 570NM GREEN</field>
+        <field name="Critical">N</field>
+        <field name="Description">Power On Green LED</field>
+        <field name="MFN">OSRAM Opto</field>
+        <field name="MFP">LG R971-KN-1</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Reg</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="LED" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5141E2</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>LD1117S50TR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
+      <datasheet>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">5 V FIXED POSITIVE LDO REGULATOR, 1.2 V DROPOUT, PDSO3, ROHS COMPLIANT, SOT-223, 4 PIN</field>
+        <field name="Critical">N</field>
+        <field name="Description">5V Fixed LDO</field>
+        <field name="MFN">STMicroelectronics</field>
+        <field name="MFP">LD1117S50TR</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SOT-223</field>
+        <field name="Source">Any</field>
+        <field name="Subsystem">Voltage_Reg</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="LD1117S50TR" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F51421D</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>FT231XS</value>
+      <footprint>Package_SO:SSOP-20_3.9x8.7mm_P0.635mm</footprint>
+      <datasheet>https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT231X.pdf</datasheet>
+      <libsource lib="Interface_USB" part="FT231XS" description="Full Speed USB to Full Handshake UART, SSOP-20"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F4E39B1</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>SP485EEN-L_TR</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <libsource lib="Kicad_symbols" part="SP485EEN-L_TR" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F4FEF6B</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>sensair_s8</value>
+      <footprint>kicad_footprints:senseair_s8_v3</footprint>
+      <libsource lib="Kicad_symbols" part="sensair_s8" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F514B72</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>BSS138</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="BSS138" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F55763C</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F575417</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F575B24</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>BSS138</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="BSS138" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5B9780</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5B9787</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5B978D</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>BREAKOUTS</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-6-2.54_1x06_P2.54mm_Horizontal</footprint>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="CONN_01X06" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6DB19A</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">RESISTOR, METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 10000ohm, SURFACE MOUNT, 0805</field>
+        <field name="Critical">N</field>
+        <field name="Description">10K Comparator Voltage Divider Resistor</field>
+        <field name="MFN">Vishay</field>
+        <field name="MFP">CRCW080510K0JNEA</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Mgmt</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F804717</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>FDN340P</value>
+      <footprint>Package_TO_SOT_SMD:SuperSOT-3</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/FD/FDN340P.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">2000 mA, 20 V, P-CHANNEL, Si, SMALL SIGNAL, MOSFET, SUPERSOT-3</field>
+        <field name="Critical">N</field>
+        <field name="Description">USBVCC MOSFET</field>
+        <field name="MFN">Fairchild Semiconductor</field>
+        <field name="MFP">FDN340P</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SOT23</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Mgmt</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="Q_PMOS_GSD" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F804726</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>LMV358IDGKR</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lmv358.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">DUAL OP-AMP, 7000uV OFFSET-MAX, 1MHz BAND WIDTH</field>
+        <field name="Critical">N</field>
+        <field name="Description">Comparator Op-amp</field>
+        <field name="MFN">Texas Instruments</field>
+        <field name="MFP">LMV358IDGKR</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">VSSOP8</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Mgmt</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="LM358" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F804735</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>http://www.kemet.com/docfinder?Partnumber=C0805C105K8RACAUTO</datasheet>
+      <fields>
+        <field name="Characteristics">CAPACITOR, CERAMIC, MULTILAYER, 10 V, X7R, 1 uF, SURFACE MOUNT, 0805</field>
+        <field name="Critical">N</field>
+        <field name="Description">3V3 LDO Input Cap</field>
+        <field name="MFN">Kemet</field>
+        <field name="MFP">C0805C105K8RACAUTO </field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Mgmt</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F804769</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">RESISTOR, METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 10000ohm, SURFACE MOUNT, 0805</field>
+        <field name="Critical">N</field>
+        <field name="Description">10K Comparator Voltage Divider Resistor</field>
+        <field name="MFN">Vishay</field>
+        <field name="MFP">CRCW080510K0JNEA</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Mgmt</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F80477A</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>0.1 uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">CAPACITOR, CERAMIC, MULTILAYER, 100 V, X7R, 0.1 uF, SURFACE MOUNT, 0805, CHIP, ROHS COMPLIANT</field>
+        <field name="Critical">N</field>
+        <field name="Description">LDO Bypass Cap</field>
+        <field name="MFN">Kemet</field>
+        <field name="MFP">C0805C104K1RACAUTO</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Mgmt</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F804789</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>LM1117-3.3</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm1117.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="LM1117-3.3" description="800mA Low-Dropout Linear Regulator, 3.3V fixed output, TO-220/TO-252/TO-263/SOT-223"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F8047B8</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>http://www.kemet.com/docfinder?Partnumber=C0805C105K8RACAUTO</datasheet>
+      <fields>
+        <field name="Characteristics">CAPACITOR, CERAMIC, MULTILAYER, 10 V, X7R, 1 uF, SURFACE MOUNT, 0805</field>
+        <field name="Critical">N</field>
+        <field name="Description">3V3 LDO Input Cap</field>
+        <field name="MFN">Kemet</field>
+        <field name="MFP">C0805C105K8RACAUTO </field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">Voltage_Mgmt</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F8047DB</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>ATMEGA328P</value>
+      <footprint>Package_QFP:TQFP-32_7x7mm_P0.8mm</footprint>
+      <datasheet>http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">IC MCU 8BIT 32KB FLASH 28DIP</field>
+        <field name="Critical">Y</field>
+        <field name="Description">ATMEGA328P</field>
+        <field name="MFN">Atmel</field>
+        <field name="MFP">ATMEGA328P-PU</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">PTH</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="ATMEGA328P-PU" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>55E8A80E</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 1000ohm, SURFACE MOUNT, 0805,</field>
+        <field name="Critical">N</field>
+        <field name="Description">ATMEGA328P DTR Pull Down Resistor</field>
+        <field name="MFN">Vishay</field>
+        <field name="MFP">CRCW08051K00JNEA</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="R" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>55E8B3B8</tstamp>
+    </comp>
+    <comp ref="ICSP2">
+      <value>M20-9980346</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical_SMD</footprint>
+      <datasheet>http://cdn.harwin.com/pdfs/M20-998.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">6 CONTACT(S), MALE, STRAIGHT TWO PART BOARD CONNECTOR</field>
+        <field name="Critical">N</field>
+        <field name="Description">ATMEGA328P ICSP Header</field>
+        <field name="MFN">Harwin</field>
+        <field name="MFP">M20-9980346</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">PTH</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="CONN_02X03" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>55E8CAAE</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>1N4148W-7-F</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>http://www.diodes.com/_files/datasheets/ds30086.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">DIODE GEN PURP 100V 300MA SOD123</field>
+        <field name="Critical">N</field>
+        <field name="Description">ATMEGA328P ICSP Reset Voltage Spike Protection</field>
+        <field name="MFN">Diodes Inc</field>
+        <field name="MFP">1N4148W-7-F</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SOD123</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="D" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>55E8CABC</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>RESET_SWITCH</value>
+      <footprint>Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx</footprint>
+      <datasheet>http://industrial.panasonic.com/www-data/pdf/ATK0000/ATK0000CE28.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">SWITCH TACTILE SPST-NO 0.02A 15V</field>
+        <field name="Critical">N</field>
+        <field name="Description">Reset Pushbutton</field>
+        <field name="MFN">Panasonic</field>
+        <field name="MFP">EVQ-Q2U02W</field>
+        <field name="Notes">Prefer below 3mm in accuator height off PCB</field>
+        <field name="Package ID">SMD</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="RESET_SWITCH" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>55E8D514</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+AOA0001+ERJ6GEY0R00V+7+WW</datasheet>
+      <fields>
+        <field name="Characteristics">RES SMD 0.0 OHM JUMPER 1/8W 0805</field>
+        <field name="Critical">N</field>
+        <field name="Description">ATMEGA328P DTR 0R Link</field>
+        <field name="MFN">Panasonic</field>
+        <field name="MFP">ERJ-6GEY0R00V</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="R" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>55EAC911</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>0.1 uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">CAPACITOR, CERAMIC, MULTILAYER, 100 V, X7R, 0.1 uF, SURFACE MOUNT, 0805, CHIP, ROHS COMPLIANT</field>
+        <field name="Critical">N</field>
+        <field name="Description">ATMEGA328P AREF Bypass Cap</field>
+        <field name="MFN">Kemet</field>
+        <field name="MFP">C0805C104K1RACAUTO</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="C" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>56159BB8</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>0.1 uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">CAPACITOR, CERAMIC, MULTILAYER, 100 V, X7R, 0.1 uF, SURFACE MOUNT, 0805, CHIP, ROHS COMPLIANT</field>
+        <field name="Critical">N</field>
+        <field name="Description">ATMEGA328P VCC and AVCC Bypass Cap</field>
+        <field name="MFN">Kemet</field>
+        <field name="MFP">C0805C104K1RACAUTO</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="C" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>56159BD3</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">RESISTOR, METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 10000ohm, SURFACE MOUNT, 0805</field>
+        <field name="Critical">N</field>
+        <field name="Description">ATMEGA328P 10K ICSP Pull Up</field>
+        <field name="MFN">Vishay</field>
+        <field name="MFP">CRCW080510K0JNEA</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="R" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>56159EEE</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 1000ohm, SURFACE MOUNT, 0805,</field>
+        <field name="Critical">N</field>
+        <field name="Description">ATMEGA328P Serial Tx Terminator</field>
+        <field name="MFN">Vishay</field>
+        <field name="MFP">CRCW08051K00JNEA</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="R" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>5615AAC4</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 1000ohm, SURFACE MOUNT, 0805,</field>
+        <field name="Critical">N</field>
+        <field name="Description">ATMEGA328P Serial Rx Terminator</field>
+        <field name="MFN">Vishay</field>
+        <field name="MFP">CRCW08051K00JNEA</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="R" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>5615AB21</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>0.1 uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf</datasheet>
+      <fields>
+        <field name="Characteristics">CAPACITOR, CERAMIC, MULTILAYER, 100 V, X7R, 0.1 uF, SURFACE MOUNT, 0805, CHIP, ROHS COMPLIANT</field>
+        <field name="Critical">N</field>
+        <field name="Description">ATMEGA328P Reset Cap</field>
+        <field name="MFN">Kemet</field>
+        <field name="MFP">C0805C104K1RACAUTO</field>
+        <field name="Notes">~</field>
+        <field name="Package ID">SMD_0805</field>
+        <field name="Source">ANY</field>
+        <field name="Subsystem">328P_Sub</field>
+      </fields>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="C" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>5615AE65</tstamp>
+    </comp>
+    <comp ref="Y1">
+      <value>Crystal</value>
+      <footprint>Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm</footprint>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="Crystal" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>5F569D4C</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>18pF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="C" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>5F570541</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>18pF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Arduino_Uno_R3_From_Scratch-rescue" part="C" description=""/>
+      <sheetpath names="/atmega328p/" tstamps="/5F4E1E8A/"/>
+      <tstamp>5F570D63</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="ATMEGA328P-PU">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ATMEGA328P-PU</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~RESET" type="input"/>
+        <pin num="2" name="(RXD)PD0" type="input"/>
+        <pin num="3" name="(TXD)PD1" type="input"/>
+        <pin num="4" name="(INT0)PD2" type="input"/>
+        <pin num="5" name="(INT1)PD3" type="input"/>
+        <pin num="6" name="(T0)PD4" type="input"/>
+        <pin num="7" name="VCC" type="input"/>
+        <pin num="8" name="GND" type="input"/>
+        <pin num="9" name="XTAL1" type="input"/>
+        <pin num="10" name="XTAL2" type="input"/>
+        <pin num="11" name="(T1)PD5" type="input"/>
+        <pin num="12" name="(AIN0)PD6" type="input"/>
+        <pin num="13" name="(AIN1)PD7" type="input"/>
+        <pin num="14" name="(ICP)PB0" type="input"/>
+        <pin num="15" name="(OC1)PB1" type="input"/>
+        <pin num="16" name="(SS)PB2" type="input"/>
+        <pin num="17" name="(MOSI)PB3" type="input"/>
+        <pin num="18" name="(MISO)PB4" type="input"/>
+        <pin num="19" name="(SCK)PB5" type="input"/>
+        <pin num="20" name="AVCC" type="input"/>
+        <pin num="21" name="AREF" type="input"/>
+        <pin num="22" name="AGND" type="input"/>
+        <pin num="23" name="(ADC0)PC0" type="input"/>
+        <pin num="24" name="(ADC1)PC1" type="input"/>
+        <pin num="25" name="(ADC2)PC2" type="input"/>
+        <pin num="26" name="(ADC3)PC3" type="input"/>
+        <pin num="27" name="(ADC4)PC4" type="input"/>
+        <pin num="28" name="(ADC5)PC5" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="C">
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="CONN_01X06">
+      <footprints>
+        <fp>Pin_Header_Straight_1X06</fp>
+        <fp>Pin_Header_Angled_1X06</fp>
+        <fp>Socket_Strip_Straight_1X06</fp>
+        <fp>Socket_Strip_Angled_1X06</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="CONN_02X03">
+      <footprints>
+        <fp>Pin_Header_Straight_2X03</fp>
+        <fp>Pin_Header_Angled_2X03</fp>
+        <fp>Socket_Strip_Straight_2X03</fp>
+        <fp>Socket_Strip_Angled_2X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_02X03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="CP">
+      <footprints>
+        <fp>CP*</fp>
+        <fp>Elko*</fp>
+        <fp>TantalC*</fp>
+        <fp>C*elec</fp>
+        <fp>c_elec*</fp>
+        <fp>SMD*_Pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="Crystal">
+      <footprints>
+        <fp>Crystal_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="D">
+      <footprints>
+        <fp>Diode_*</fp>
+        <fp>D-Pak_TO252AA</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="LD1117S50TR">
+      <footprints>
+        <fp>SOT223</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LD1117S50TR</field>
+        <field name="Footprint">SOT-223</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="LED">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="LM358">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM358</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="Q_PMOS_GSD">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_PMOS_GSD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="R">
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Uno_R3_From_Scratch-rescue" part="RESET_SWITCH">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">RESET_SWITCH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x04">
+      <description>Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="USB_B_Micro">
+      <aliases>
+        <alias>USB_B_Mini</alias>
+      </aliases>
+      <description>USB Micro Type B connector</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_B_Micro</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="power_out"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="D+" type="passive"/>
+        <pin num="4" name="ID" type="passive"/>
+        <pin num="5" name="GND" type="power_out"/>
+        <pin num="6" name="Shield" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Polyfuse">
+      <description>Resettable fuse, polymeric positive temperature coefficient</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*polyfuse*</fp>
+        <fp>*PTC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Polyfuse</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small">
+      <description>Resistor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface_USB" part="FT231XS">
+      <description>Full Speed USB to Full Handshake UART, SSOP-20</description>
+      <docs>https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT231X.pdf</docs>
+      <footprints>
+        <fp>*SSOP*3.9x8.7mm*P0.635mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">FT231XS</field>
+        <field name="Footprint">Package_SO:SSOP-20_3.9x8.7mm_P0.635mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~DTR" type="output"/>
+        <pin num="2" name="~RTS" type="output"/>
+        <pin num="3" name="VCCIO" type="power_in"/>
+        <pin num="4" name="RXD" type="input"/>
+        <pin num="5" name="~RI" type="input"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="~DSR" type="input"/>
+        <pin num="8" name="~DCD" type="input"/>
+        <pin num="9" name="~CTS" type="input"/>
+        <pin num="10" name="CBUS2" type="BiDi"/>
+        <pin num="11" name="USBDP" type="BiDi"/>
+        <pin num="12" name="USBDM" type="BiDi"/>
+        <pin num="13" name="3V3OUT" type="power_out"/>
+        <pin num="14" name="~RESET" type="input"/>
+        <pin num="15" name="VCC" type="power_in"/>
+        <pin num="16" name="GND" type="power_in"/>
+        <pin num="17" name="CBUS1" type="BiDi"/>
+        <pin num="18" name="CBUS0" type="BiDi"/>
+        <pin num="19" name="CBUS3" type="BiDi"/>
+        <pin num="20" name="TXD" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="Kicad_symbols" part="SP485EEN-L_TR">
+      <footprints>
+        <fp>NSOIC-8</fp>
+        <fp>NSOIC-8-M</fp>
+        <fp>NSOIC-8-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SP485EEN-L_TR</field>
+        <field name="Footprint">NSOIC-8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RO" type="output"/>
+        <pin num="2" name="*RE" type="output"/>
+        <pin num="3" name="DE" type="output"/>
+        <pin num="4" name="DI" type="input"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="A" type="BiDi"/>
+        <pin num="7" name="B" type="BiDi"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Kicad_symbols" part="sensair_s8">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">sensair_s8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G+(5V)" type="input"/>
+        <pin num="2" name="G0(GND)" type="input"/>
+        <pin num="3" name="ALARM_OC" type="input"/>
+        <pin num="4" name="PWM" type="input"/>
+        <pin num="5" name="DVcc_OUT" type="output"/>
+        <pin num="6" name="UART_RxD" type="output"/>
+        <pin num="7" name="UART_TxD" type="output"/>
+        <pin num="8" name="UART_R/T" type="output"/>
+        <pin num="9" name="bCAL_in" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="LM1117-1.8">
+      <aliases>
+        <alias>LM1117-2.5</alias>
+        <alias>LM1117-3.3</alias>
+        <alias>LM1117-5.0</alias>
+        <alias>TLV1117-15</alias>
+        <alias>TLV1117-18</alias>
+        <alias>TLV1117-25</alias>
+        <alias>TLV1117-33</alias>
+        <alias>TLV1117-50</alias>
+      </aliases>
+      <description>800mA Low-Dropout Linear Regulator, 1.8V fixed output, TO-220/TO-252/TO-263/SOT-223</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm1117.pdf</docs>
+      <footprints>
+        <fp>SOT?223*</fp>
+        <fp>TO?263*</fp>
+        <fp>TO?252*</fp>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM1117-1.8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor" part="BME280">
+      <description>3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8</description>
+      <docs>https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf</docs>
+      <footprints>
+        <fp>*LGA*2.5x2.5mm*P0.65mm*Clockwise*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BME280</field>
+        <field name="Footprint">Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="CSB" type="input"/>
+        <pin num="3" name="SDI" type="BiDi"/>
+        <pin num="4" name="SCK" type="input"/>
+        <pin num="5" name="SDO" type="BiDi"/>
+        <pin num="6" name="VDDIO" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="BSS138">
+      <aliases>
+        <alias>2N7002</alias>
+        <alias>2N7002E</alias>
+        <alias>2N7002H</alias>
+        <alias>2N7002K</alias>
+        <alias>BS170F</alias>
+        <alias>BS870</alias>
+        <alias>BSN20</alias>
+        <alias>BSS123</alias>
+        <alias>BSS127S</alias>
+        <alias>DMG2302U</alias>
+        <alias>DMG3402L</alias>
+        <alias>DMG3404L</alias>
+        <alias>DMG3406L</alias>
+        <alias>DMG3414U</alias>
+        <alias>DMG3418L</alias>
+        <alias>DMN10H220L</alias>
+        <alias>DMN10H700S</alias>
+        <alias>DMN13H750S</alias>
+        <alias>DMN2041L</alias>
+        <alias>DMN2050L</alias>
+        <alias>DMN2056U</alias>
+        <alias>DMN2058U</alias>
+        <alias>DMN2075U</alias>
+        <alias>DMN2230U</alias>
+        <alias>DMN24H11DS</alias>
+        <alias>DMN24H3D5L</alias>
+        <alias>DMN3042L</alias>
+        <alias>DMN3051L</alias>
+        <alias>DMN30H4D0L</alias>
+        <alias>DMN3110S</alias>
+        <alias>DMN3150L</alias>
+        <alias>DMN3300U</alias>
+        <alias>DMN3404L</alias>
+        <alias>DMN6075S</alias>
+        <alias>DMN6140L</alias>
+        <alias>DMN67D7L</alias>
+        <alias>DMN67D8L</alias>
+        <alias>MMBF170</alias>
+        <alias>VN10LF</alias>
+        <alias>ZVN3306F</alias>
+        <alias>ZVN3310F</alias>
+        <alias>ZVN3320F</alias>
+        <alias>ZVN4106F</alias>
+        <alias>ZXM61N02F</alias>
+        <alias>ZXM61N03F</alias>
+        <alias>ZXMN10A07F</alias>
+        <alias>ZXMN2A01F</alias>
+        <alias>ZXMN2A14F</alias>
+        <alias>ZXMN2B01F</alias>
+        <alias>ZXMN2B14FH</alias>
+        <alias>ZXMN2F30FH</alias>
+        <alias>ZXMN2F34FH</alias>
+        <alias>ZXMN3A01F</alias>
+        <alias>ZXMN3A14F</alias>
+        <alias>ZXMN3B01F</alias>
+        <alias>ZXMN3B14F</alias>
+        <alias>ZXMN3F30FH</alias>
+        <alias>ZXMN6A07F</alias>
+        <alias>IRLML0030</alias>
+        <alias>IRLML2060</alias>
+      </aliases>
+      <description>50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23</description>
+      <docs>https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BSS138</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Arduino_Uno_R3_From_Scratch-rescue">
+      <uri>C:/Users/shane/Documents/GitHub/OpenHydro/sensor_node_PCB/arduino_uno_r3_from_scratch-master/arduino_uno_r3_from_scratch-master/Arduino_Uno_R3_From_Scratch-rescue.lib</uri>
+    </library>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Interface_USB">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Interface_USB.lib</uri>
+    </library>
+    <library logical="Kicad_symbols">
+      <uri>C:/Users/shane/Documents/GitHub/Kicad_parts/Kicad_symbols.lib</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Regulator_Linear.lib</uri>
+    </library>
+    <library logical="Sensor">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Sensor.lib</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Transistor_FET.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/ARD_SCL_3V3">
+      <node ref="U8" pin="4"/>
+      <node ref="R6" pin="2"/>
+      <node ref="Q2" pin="2"/>
+    </net>
+    <net code="2" name="/ARD_SDA_3V3">
+      <node ref="Q3" pin="2"/>
+      <node ref="U8" pin="3"/>
+      <node ref="R7" pin="2"/>
+    </net>
+    <net code="3" name="/ARD_SDA">
+      <node ref="Q3" pin="3"/>
+      <node ref="U5" pin="27"/>
+      <node ref="R9" pin="2"/>
+    </net>
+    <net code="4" name="GND">
+      <node ref="J2" pin="1"/>
+      <node ref="J3" pin="1"/>
+      <node ref="U8" pin="7"/>
+      <node ref="U8" pin="1"/>
+      <node ref="U1" pin="4"/>
+      <node ref="U8" pin="5"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="D2" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="C3" pin="2"/>
+      <node ref="J1" pin="6"/>
+      <node ref="U2" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="J1" pin="5"/>
+      <node ref="ICSP2" pin="6"/>
+      <node ref="R12" pin="2"/>
+      <node ref="U5" pin="8"/>
+      <node ref="U5" pin="22"/>
+      <node ref="C8" pin="2"/>
+      <node ref="U3" pin="16"/>
+      <node ref="U3" pin="6"/>
+      <node ref="U7" pin="2"/>
+      <node ref="U6" pin="2"/>
+      <node ref="U6" pin="5"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="SW1" pin="1"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C15" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="P1" pin="2"/>
+      <node ref="U4" pin="1"/>
+    </net>
+    <net code="5" name="/atmega328p/ARD_AN0">
+      <node ref="P1" pin="6"/>
+      <node ref="U5" pin="23"/>
+    </net>
+    <net code="6" name="/atmega328p/ARD_DIG6">
+      <node ref="P1" pin="5"/>
+      <node ref="U5" pin="12"/>
+    </net>
+    <net code="7" name="/atmega328p/ARD_DIG7">
+      <node ref="U5" pin="13"/>
+      <node ref="P1" pin="4"/>
+    </net>
+    <net code="8" name="/atmega328p/ARD_DIG8">
+      <node ref="U5" pin="14"/>
+      <node ref="P1" pin="3"/>
+    </net>
+    <net code="9" name="5V_LDO">
+      <node ref="C1" pin="2"/>
+      <node ref="P1" pin="1"/>
+      <node ref="U1" pin="8"/>
+      <node ref="U7" pin="1"/>
+      <node ref="U5" pin="20"/>
+      <node ref="U5" pin="7"/>
+      <node ref="U4" pin="3"/>
+      <node ref="C3" pin="1"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="R9" pin="1"/>
+      <node ref="U6" pin="8"/>
+      <node ref="U6" pin="3"/>
+      <node ref="C15" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R3" pin="2"/>
+      <node ref="U3" pin="15"/>
+      <node ref="R8" pin="1"/>
+      <node ref="U2" pin="2"/>
+      <node ref="ICSP2" pin="2"/>
+      <node ref="R16" pin="2"/>
+      <node ref="D7" pin="2"/>
+    </net>
+    <net code="10" name="/ARD_TX2">
+      <node ref="U7" pin="6"/>
+      <node ref="U5" pin="11"/>
+    </net>
+    <net code="11" name="3V3_LDO">
+      <node ref="R7" pin="1"/>
+      <node ref="Q2" pin="1"/>
+      <node ref="Q3" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="U4" pin="2"/>
+      <node ref="U8" pin="6"/>
+      <node ref="U8" pin="8"/>
+      <node ref="U1" pin="2"/>
+      <node ref="C6" pin="1"/>
+      <node ref="U8" pin="2"/>
+    </net>
+    <net code="12" name="/ARD_RX2">
+      <node ref="U7" pin="7"/>
+      <node ref="U5" pin="6"/>
+    </net>
+    <net code="13" name="Net-(U7-Pad9)">
+      <node ref="U7" pin="9"/>
+    </net>
+    <net code="14" name="Net-(U7-Pad8)">
+      <node ref="U7" pin="8"/>
+    </net>
+    <net code="15" name="Net-(U7-Pad5)">
+      <node ref="U7" pin="5"/>
+    </net>
+    <net code="16" name="/ARD_SCL">
+      <node ref="R8" pin="2"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="U5" pin="28"/>
+    </net>
+    <net code="17" name="/ard_DTR">
+      <node ref="C11" pin="1"/>
+      <node ref="U3" pin="1"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="18" name="Net-(Q1-Pad1)">
+      <node ref="Q1" pin="1"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="19" name="Vin">
+      <node ref="C2" pin="1"/>
+      <node ref="R1" pin="2"/>
+      <node ref="U2" pin="3"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="20" name="Net-(R1-Pad1)">
+      <node ref="U1" pin="3"/>
+      <node ref="R2" pin="2"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="21" name="USBVCC">
+      <node ref="F1" pin="1"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="22" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="23" name="12V_BUS">
+      <node ref="J3" pin="4"/>
+      <node ref="J2" pin="4"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="24" name="/MODBUS_B+">
+      <node ref="J3" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="U6" pin="7"/>
+    </net>
+    <net code="25" name="/MODBUS_A-">
+      <node ref="J2" pin="3"/>
+      <node ref="J3" pin="3"/>
+      <node ref="U6" pin="6"/>
+    </net>
+    <net code="26" name="Net-(F1-Pad2)">
+      <node ref="J1" pin="1"/>
+      <node ref="F1" pin="2"/>
+    </net>
+    <net code="27" name="Net-(J1-Pad4)">
+      <node ref="J1" pin="4"/>
+    </net>
+    <net code="28" name="Net-(J1-Pad3)">
+      <node ref="J1" pin="3"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="29" name="Net-(J1-Pad2)">
+      <node ref="R5" pin="2"/>
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="30" name="Net-(U7-Pad4)">
+      <node ref="U7" pin="4"/>
+    </net>
+    <net code="31" name="Net-(U7-Pad3)">
+      <node ref="U7" pin="3"/>
+    </net>
+    <net code="32" name="/USB_D-">
+      <node ref="R5" pin="1"/>
+      <node ref="U3" pin="12"/>
+    </net>
+    <net code="33" name="/USB_D+">
+      <node ref="R4" pin="1"/>
+      <node ref="U3" pin="11"/>
+    </net>
+    <net code="34" name="/ARD_TX1">
+      <node ref="U6" pin="4"/>
+      <node ref="U5" pin="5"/>
+    </net>
+    <net code="35" name="/ARD_RX1">
+      <node ref="U6" pin="1"/>
+      <node ref="U5" pin="4"/>
+    </net>
+    <net code="36" name="Net-(U3-Pad17)">
+      <node ref="U3" pin="17"/>
+    </net>
+    <net code="37" name="Net-(U3-Pad9)">
+      <node ref="U3" pin="9"/>
+    </net>
+    <net code="38" name="Net-(U3-Pad8)">
+      <node ref="U3" pin="8"/>
+    </net>
+    <net code="39" name="Net-(U3-Pad7)">
+      <node ref="U3" pin="7"/>
+    </net>
+    <net code="40" name="Net-(U3-Pad5)">
+      <node ref="U3" pin="5"/>
+    </net>
+    <net code="41" name="Net-(U3-Pad2)">
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="42" name="Net-(U3-Pad19)">
+      <node ref="U3" pin="19"/>
+    </net>
+    <net code="43" name="Net-(U3-Pad18)">
+      <node ref="U3" pin="18"/>
+    </net>
+    <net code="44" name="Net-(U3-Pad13)">
+      <node ref="U3" pin="3"/>
+      <node ref="U3" pin="14"/>
+      <node ref="U3" pin="13"/>
+    </net>
+    <net code="45" name="Net-(U3-Pad10)">
+      <node ref="U3" pin="10"/>
+    </net>
+    <net code="46" name="/ard_tx">
+      <node ref="R15" pin="1"/>
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="47" name="/ard_rx">
+      <node ref="U3" pin="20"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="48" name="Net-(C11-Pad2)">
+      <node ref="R13" pin="1"/>
+      <node ref="C11" pin="2"/>
+    </net>
+    <net code="49" name="Net-(C7-Pad1)">
+      <node ref="C7" pin="1"/>
+      <node ref="U5" pin="10"/>
+      <node ref="Y1" pin="1"/>
+    </net>
+    <net code="50" name="Net-(C8-Pad1)">
+      <node ref="U5" pin="9"/>
+      <node ref="C8" pin="1"/>
+      <node ref="Y1" pin="2"/>
+    </net>
+    <net code="51" name="/atmega328p/ARD_DIG1">
+      <node ref="U5" pin="3"/>
+      <node ref="R15" pin="2"/>
+    </net>
+    <net code="52" name="/atmega328p/AREF">
+      <node ref="U5" pin="21"/>
+      <node ref="C14" pin="1"/>
+    </net>
+    <net code="53" name="/atmega328p/ARD_DIG0">
+      <node ref="U5" pin="2"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="54" name="/atmega328p/ARD_DIG9">
+      <node ref="U5" pin="15"/>
+    </net>
+    <net code="55" name="328P_ICSP_MOSI">
+      <node ref="ICSP2" pin="4"/>
+      <node ref="U5" pin="17"/>
+    </net>
+    <net code="56" name="328P_ICSP_MISO">
+      <node ref="ICSP2" pin="1"/>
+      <node ref="U5" pin="18"/>
+    </net>
+    <net code="57" name="328P_ICSP_SCK">
+      <node ref="ICSP2" pin="3"/>
+      <node ref="U5" pin="19"/>
+    </net>
+    <net code="58" name="/atmega328p/ARD_DIG10/SPI_SS">
+      <node ref="U5" pin="16"/>
+    </net>
+    <net code="59" name="/atmega328p/328P_RESET">
+      <node ref="ICSP2" pin="5"/>
+      <node ref="R13" pin="2"/>
+      <node ref="U5" pin="1"/>
+      <node ref="R16" pin="1"/>
+      <node ref="SW1" pin="3"/>
+      <node ref="D7" pin="1"/>
+      <node ref="SW1" pin="4"/>
+    </net>
+    <net code="60" name="/atmega328p/ARD_AN3">
+      <node ref="U5" pin="26"/>
+    </net>
+    <net code="61" name="/atmega328p/ARD_AN2">
+      <node ref="U5" pin="25"/>
+    </net>
+    <net code="62" name="/atmega328p/ARD_AN1">
+      <node ref="U5" pin="24"/>
+    </net>
+  </nets>
+</export>

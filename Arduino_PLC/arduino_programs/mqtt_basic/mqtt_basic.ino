@@ -18,7 +18,7 @@
 #include <PubSubClient.h>
 
 byte mac[]    = {  0xDE, 0xED, 0xBA, 0xFE, 0xFE, 0xED };
-IPAddress ip(192, 168, 0, 116);
+IPAddress ip(192, 168, 0, 45);
 IPAddress server(64, 227, 46, 82);
 
 //const char* server = "test.mosquitto.org";
