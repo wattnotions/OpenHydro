@@ -17,6 +17,8 @@
 #include <Ethernet.h>
 #include <PubSubClient.h>
 
+byte buffer[35];
+String RPC_num, rpc_response;
 byte mac[]    = {  0xDE, 0xED, 0xBA, 0xFE, 0xFE, 0xED };
 IPAddress ip(192, 168, 0, 45);
 IPAddress server(64, 227, 46, 82);
@@ -26,17 +28,32 @@ IPAddress server(64, 227, 46, 82);
 void callback(char* topic, byte* payload, unsigned int length, PubSubClient *client) {
   Serial.print("Message arrived [");
   Serial.print(topic);
-  String RPC_num = getValue(topic,'/',5);
+  
+ 
+
+  
+  
   Serial.print("] ");
+  
+  
 
-
-  &client.publish("v1/devices/me/rpc/response/" + RPC_num, "");
-
+  
   
   for (int i=0;i<length;i++) {
     Serial.print((char)payload[i]);
   }
   Serial.println();
+  
+  RPC_num = getValue(topic,'/',5);
+  rpc_response = String("v1/devices/me/rpc/response/");
+
+  rpc_response += RPC_num;
+
+ 
+  Serial.println(rpc_response);
+  rpc_response.toCharArray(buffer, 35);
+
+  client->publish( buffer , "");
 }
 
 EthernetClient ethClient;
