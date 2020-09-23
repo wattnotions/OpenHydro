@@ -25,39 +25,29 @@ IPAddress server(64, 227, 46, 82);
 
 //const char* server = "test.mosquitto.org";
 
-void callback(char* topic, byte* payload, unsigned int length, PubSubClient *client) {
+
+
+EthernetClient ethClient;
+PubSubClient client(ethClient);
+
+void callback(char* topic, byte* payload, unsigned int length) {
   Serial.print("Message arrived [");
   Serial.print(topic);
-  
- 
-
-  
-  
   Serial.print("] ");
-  
-  
-
-  
   
   for (int i=0;i<length;i++) {
     Serial.print((char)payload[i]);
   }
   Serial.println();
-  
+
+
+  //respond to rpc msg with rpc num for thingsboard to verify msg received
   RPC_num = getValue(topic,'/',5);
   rpc_response = String("v1/devices/me/rpc/response/");
-
   rpc_response += RPC_num;
-
- 
-  Serial.println(rpc_response);
   rpc_response.toCharArray(buffer, 35);
-
-  client->publish( buffer , "");
+  client.publish( buffer , "");
 }
-
-EthernetClient ethClient;
-PubSubClient client(ethClient);
 
 void reconnect() {
   // Loop until we're reconnected
