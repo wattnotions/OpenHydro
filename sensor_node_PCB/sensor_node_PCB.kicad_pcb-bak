@@ -233,7 +233,7 @@
     (descr "Mounting Hole 3mm")
     (tags "mounting hole 3mm")
     (attr virtual)
-    (fp_text reference REF** (at 0 -4) (layer F.SilkS)
+    (fp_text reference REF** (at 0 -4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MountingHole_3mm_Pad (at 0 4) (layer F.Fab)
@@ -252,7 +252,7 @@
     (descr "Mounting Hole 3mm")
     (tags "mounting hole 3mm")
     (attr virtual)
-    (fp_text reference REF** (at 0 -4) (layer F.SilkS)
+    (fp_text reference REF** (at 0 -4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MountingHole_3mm_Pad (at 0 4) (layer F.Fab)
@@ -271,7 +271,7 @@
     (descr "Mounting Hole 3mm")
     (tags "mounting hole 3mm")
     (attr virtual)
-    (fp_text reference REF** (at 0 -4) (layer F.SilkS)
+    (fp_text reference REF** (at 0 -4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MountingHole_3mm_Pad (at 0 4) (layer F.Fab)
@@ -290,7 +290,7 @@
     (descr "Mounting Hole 3mm")
     (tags "mounting hole 3mm")
     (attr virtual)
-    (fp_text reference REF** (at 0 -4) (layer F.SilkS)
+    (fp_text reference REF** (at 0 -4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MountingHole_3mm_Pad (at 0 4) (layer F.Fab)
