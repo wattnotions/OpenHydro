@@ -54,7 +54,7 @@ void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
-    if (client.connect("Arduino_mqtt", "RASPBERRY_PI_DEMO_TOKEN", "")) {
+    if (client.connect("Arduino_mqtt", "GROWROOM", "")) {
       Serial.println("connected");
       // Once connected, publish an announcement...
       //client.publish("v1/devices/me/telemetry", "{\"temperature\": 45, \"humidity\": 88}");

@@ -41,10 +41,10 @@ void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
-    if (client.connect("Arduino_mqtt", "DHT11_DEMO_TOKEN", "")) {
+    if (client.connect("Arduino_mqtt", "GROWROOM", "")) {
       Serial.println("connected");
       // Once connected, publish an announcement...
-      client.publish("v1/devices/me/telemetry", "{\"temperature\": 45, \"humidity\": 88}");
+      client.publish("v1/devices/me/telemetry", "{\"temperatureB\": 45, \"humidity\": 88}");
       // ... and resubscribe
       client.subscribe("inTopic");
     } else {
