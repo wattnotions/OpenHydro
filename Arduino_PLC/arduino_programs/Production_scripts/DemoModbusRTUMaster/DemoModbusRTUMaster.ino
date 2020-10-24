@@ -114,7 +114,7 @@ float temp, pres, hum;
 
 int i;
 
-char *str;
+char *tptr, *pptr, *hptr, *cptr;
 
 void loop() {
   
@@ -123,25 +123,21 @@ void loop() {
 
     
 
-     temp = float( (ModbusSlaveRegisters[0]) )/100;
-     hum =  (ModbusSlaveRegisters[2]);
+    // temp = float( (ModbusSlaveRegisters[0]) )/100;
+    // pres = float( (ModbusSlaveRegisters[1]) )/100;
+    // hum =  float( (ModbusSlaveRegisters[1]) )/100;
 
      
-
-    char tstr[10];
-    char str1[30];
-    char str2[30];
-    char str_temp[10];
-
-    dtostrf(temp, 4, 2, str_temp);
-    sprintf(tstr, "%s", str_temp);
 
     
-     
+    char str1[30];
+    char str2[30];
+    
+    
+    
+    
 
-     char mqtt_body[] = "{\"temperatureB\": ";
-     strcat(mqtt_body, tstr);
-     str = strcat(mqtt_body, "}");
+    
 
      
 
@@ -151,19 +147,21 @@ void loop() {
       
 
     i++;
-    if (i==5000){
+    if (i==20000){
        i=0;
       if (client.connect("Arduino_mqtt", "GROWROOM", "")) {
         Serial.println("connected");
-        Serial.println(str);
+        
         
        
      
 
-
+        for (int h=0; h<3; h++){
+          mqtt_pub(h);
+        }
         
         // Once connected, publish an announcement...
-        client.publish("v1/devices/me/telemetry", str);
+        
         // ... and resubscribe
         client.subscribe("inTopic");
          }
@@ -179,6 +177,27 @@ void loop() {
 
 
     
+
+}
+
+void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
+  char str_temp[10];
+  char tstr[10];
+  char mqtt_body[100];
+  temp = float( (ModbusSlaveRegisters[memaddr]) );
+  
+  if (memaddr == 0) {strcpy(mqtt_body,"{\"temperature\": "); temp = temp /100;}
+  if (memaddr == 1) {strcpy(mqtt_body,"{\"pressure\": ");}
+  if (memaddr == 2) {strcpy(mqtt_body,"{\"humidity\": "); temp = temp/100;}
+  if (memaddr == 3) {strcpy(mqtt_body,"{\"c02\": ");}
+
+  dtostrf(temp, 4, 2, str_temp);
+  sprintf(tstr, "%s", str_temp);
+  strcat(mqtt_body, tstr);
+  tptr = strcat(mqtt_body, "}");
+  Serial.println(tptr);
+
+  client.publish("v1/devices/me/telemetry", tptr);
 
 }
 
