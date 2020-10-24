@@ -46,28 +46,8 @@ EthernetClient ethClient;
 PubSubClient client(ethClient);
 
 
-//mqtt reconnect func
-void reconnect() {
-  // Loop until we're reconnected
-  while (!client.connected()) {
-    Serial.print("Attempting MQTT connection...");
-    // Attempt to connect
-    if (client.connect("Arduino_mqtt", "GROWROOM", "")) {
-      Serial.println("connected");
-      // Once connected, publish an announcement...
-      client.publish("v1/devices/me/telemetry", "{\"temperatureB\": 45, \"humidity\": 88}");
-      // ... and resubscribe
-      client.subscribe("inTopic");
-    } else {
-      Serial.print("failed, rc=");
-      Serial.print(client.state());
-      Serial.println(" try again in 5 seconds");// Update these with values suitable for your network.
 
-      // Wait 5 seconds before retrying
-      delay(5000);
-    }
-  }
-}
+
 
 
 
@@ -117,9 +97,17 @@ int i;
 char *tptr, *pptr, *hptr, *cptr;
 
 void loop() {
+
+    if (!client.connected()) {
+      reconnect();
+    }
+    client.loop();
+    
   
     ControllinoModbusMaster.query( ModbusQuery[0] ); // send query (only once) 0 is read 1 is write
     ControllinoModbusMaster.poll(); // check incoming messages
+
+    
 
     
 
@@ -148,27 +136,10 @@ void loop() {
 
     i++;
     if (i==20000){
-       i=0;
-      if (client.connect("Arduino_mqtt", "GROWROOM", "")) {
-        Serial.println("connected");
-        
-        
-       
-     
-
-        for (int h=0; h<3; h++){
-          mqtt_pub(h);
-        }
-        
-        // Once connected, publish an announcement...
-        
-        // ... and resubscribe
-        client.subscribe("inTopic");
-         }
-      else{
-        Serial.println("connect failed!!!");
-           }
-
+      i=0;
+      for (int h=0; h<3; h++){
+        mqtt_pub(h);
+      }
     }
     
     
@@ -217,4 +188,22 @@ void print_modbus_registers(){
           Serial.println(ModbusSlaveRegisters[3], DEC);
           Serial.println("-------------------------------------");
           Serial.println("");
+}
+
+void reconnect() {
+  // Loop until we're reconnected
+  while (!client.connected()) {
+    Serial.print("Attempting MQTT connection...");
+    // Attempt to connect
+    if (client.connect("Arduino_mqtt", "GROWROOM", "")) {
+      Serial.println("connected");
+    } else {
+      Serial.print("failed, rc=");
+      Serial.print(client.state());
+      Serial.println(" try again in 5 seconds");// Update these with values suitable for your network.
+
+      // Wait 5 seconds before retrying
+      delay(5000);
+    }
+  }
 }
