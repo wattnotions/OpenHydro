@@ -110,7 +110,9 @@ void setup() {
 }
 
 
-int temp, pres, hum;
+float temp, pres, hum;
+
+int i;
 
 char *str;
 
@@ -121,14 +123,18 @@ void loop() {
 
     
 
-     temp = (ModbusSlaveRegisters[0]);
+     temp = float( (ModbusSlaveRegisters[0]) )/100;
      hum =  (ModbusSlaveRegisters[2]);
+
+     
 
     char tstr[10];
     char str1[30];
     char str2[30];
-    
-    sprintf(tstr, "%d", temp);
+    char str_temp[10];
+
+    dtostrf(temp, 4, 2, str_temp);
+    sprintf(tstr, "%s", str_temp);
 
     
      
@@ -137,26 +143,39 @@ void loop() {
      strcat(mqtt_body, tstr);
      str = strcat(mqtt_body, "}");
 
-     Serial.print(str);
+     
 
      
      
        
       
 
-    
+    i++;
+    if (i==5000){
+       i=0;
+      if (client.connect("Arduino_mqtt", "GROWROOM", "")) {
+        Serial.println("connected");
+        Serial.println(str);
+        
+       
+     
 
-   
-    if (client.connect("Arduino_mqtt", "GROWROOM", "")) {
-      Serial.println("connected");
-      // Once connected, publish an announcement...
-      client.publish("v1/devices/me/telemetry", str);
-      // ... and resubscribe
-      client.subscribe("inTopic");
+
+        
+        // Once connected, publish an announcement...
+        client.publish("v1/devices/me/telemetry", str);
+        // ... and resubscribe
+        client.subscribe("inTopic");
+         }
+      else{
+        Serial.println("connect failed!!!");
+           }
+
+    }
     
     
   
-    } 
+    
 
 
     
