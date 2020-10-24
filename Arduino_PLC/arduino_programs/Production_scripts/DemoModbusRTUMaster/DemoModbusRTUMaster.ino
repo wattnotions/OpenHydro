@@ -30,17 +30,9 @@ unsigned long WaitingTime;
 byte mac[]    = {  0xDE, 0xED, 0xBA, 0xFE, 0xFE, 0xED };
 IPAddress ip(192, 168, 0, 45);
 IPAddress server(64, 227, 46, 82);
+String RPC_num, rpc_response;
+byte buffer[35];
 
-//mqtt callback func
-void callback(char* topic, byte* payload, unsigned int length) {
-  Serial.print("Message arrived [");
-  Serial.print(topic);
-  Serial.print("] ");
-  for (int i=0;i<length;i++) {
-    Serial.print((char)payload[i]);
-  }
-  Serial.println();
-}
 
 EthernetClient ethClient;
 PubSubClient client(ethClient);
@@ -87,6 +79,9 @@ void setup() {
   Ethernet.begin(mac, ip);
   // Allow the hardware to sort itself out
   delay(1500);
+
+  pinMode(CONTROLLINO_R0, OUTPUT);
+  digitalWrite(CONTROLLINO_R0, HIGH);
 }
 
 
@@ -107,33 +102,6 @@ void loop() {
     ControllinoModbusMaster.query( ModbusQuery[0] ); // send query (only once) 0 is read 1 is write
     ControllinoModbusMaster.poll(); // check incoming messages
 
-    
-
-    
-
-    // temp = float( (ModbusSlaveRegisters[0]) )/100;
-    // pres = float( (ModbusSlaveRegisters[1]) )/100;
-    // hum =  float( (ModbusSlaveRegisters[1]) )/100;
-
-     
-
-    
-    char str1[30];
-    char str2[30];
-    
-    
-    
-    
-
-    
-
-     
-
-     
-     
-       
-      
-
     i++;
     if (i==20000){
       i=0;
@@ -151,6 +119,8 @@ void loop() {
 
 }
 
+//this function gets a sensor reading from the the modbus slave register on this device (periodically updated)
+//it then formats the int value to a string and appends it to another string needed for mqtt/thingsboard
 void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
   char str_temp[10];
   char tstr[10];
@@ -172,7 +142,9 @@ void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
 
 }
 
-
+//print sensor values coming in over modbus for address 0-4
+//these registers are on this device but are periodically updated
+// needs modbus polling code etc to work
 void print_modbus_registers(){
    // registers read was proceed
           Serial.println("---------- READ RESPONSE RECEIVED ----");
@@ -190,6 +162,7 @@ void print_modbus_registers(){
           Serial.println("");
 }
 
+//connect or reconnect MQTT
 void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
@@ -197,6 +170,7 @@ void reconnect() {
     // Attempt to connect
     if (client.connect("Arduino_mqtt", "GROWROOM", "")) {
       Serial.println("connected");
+      client.subscribe("v1/devices/me/rpc/request/+");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -206,4 +180,41 @@ void reconnect() {
       delay(5000);
     }
   }
+}
+
+//mqtt callback if a subscribed topic pushes some data
+void callback(char* topic, byte* payload, unsigned int length) {
+  Serial.print("Message arrived [");
+  Serial.print(topic);
+  Serial.print("] ");
+  
+  for (int i=0;i<length;i++) {
+    Serial.print((char)payload[i]);
+  }
+  Serial.println();
+
+
+  //respond to rpc msg with rpc num for thingsboard to verify msg received
+  RPC_num = getValue(topic,'/',5);
+  rpc_response = String("v1/devices/me/rpc/response/");
+  rpc_response += RPC_num;
+  rpc_response.toCharArray(buffer, 35);
+  client.publish( buffer , "");
+}
+
+String getValue(String data, char separator, int index)
+{
+  int found = 0;
+  int strIndex[] = {0, -1};
+  int maxIndex = data.length()-1;
+
+  for(int i=0; i<=maxIndex && found<=index; i++){
+    if(data.charAt(i)==separator || i==maxIndex){
+        found++;
+        strIndex[0] = strIndex[1]+1;
+        strIndex[1] = (i == maxIndex) ? i+1 : i;
+    }
+  }
+
+  return found>index ? data.substring(strIndex[0], strIndex[1]) : "";
 }
