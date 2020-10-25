@@ -105,7 +105,7 @@ void loop() {
     i++;
     if (i==20000){
       i=0;
-      for (int h=0; h<3; h++){
+      for (int h=0; h<4; h++){
         mqtt_pub(h);
       }
     }
