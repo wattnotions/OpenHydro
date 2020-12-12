@@ -1,0 +1,7 @@
+* C:\Users\shane\Documents\GitHub\OpenHydro\0-10v_PCB\ltspice\pwm_test.asc
+V1 N001 0 PULSE(0 10 0 0 0 0.75m 1m)
+R1 N002 N001 10k
+C1 N002 0 10µ
+.tran 1
+.backanno
+.end
