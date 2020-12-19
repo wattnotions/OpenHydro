@@ -124,17 +124,6 @@ Wire Wire Line
 	6275 1700 6225 1700
 Connection ~ 6225 1700
 $Comp
-L Connector:Screw_Terminal_01x04 J2
-U 1 1 5F4EDCB8
-P 8925 1225
-F 0 "J2" H 8843 800 50  0000 C CNN
-F 1 "INPUT CONNECTOR" H 8675 900 50  0000 C CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_4-GF-5,08_1x04_P5.08mm_Horizontal_ThreadedFlange" H 8925 1225 50  0001 C CNN
-F 3 "~" H 8925 1225 50  0001 C CNN
-	1    8925 1225
-	-1   0    0    1   
-$EndComp
-$Comp
 L Connector:Screw_Terminal_01x04 J3
 U 1 1 5F4EE65B
 P 10525 1225
@@ -145,12 +134,6 @@ F 3 "~" H 10525 1225 50  0001 C CNN
 	1    10525 1225
 	1    0    0    1   
 $EndComp
-Text Label 9200 1225 0    50   ~ 0
-MODBUS_B+
-Text Label 9200 1125 0    50   ~ 0
-MODBUS_A-
-Text Label 9200 1325 0    50   ~ 0
-GND
 Text Label 10250 1125 2    50   ~ 0
 MODBUS_A-
 Text Label 10250 1225 2    50   ~ 0
@@ -158,19 +141,13 @@ MODBUS_B+
 Text Label 10250 1325 2    50   ~ 0
 GND
 Wire Notes Line
-	8775 725  10650 725 
+	8750 725  10625 725 
 Wire Notes Line
 	10650 725  10650 1450
 Wire Notes Line
 	10650 1450 8775 1450
 Wire Notes Line
-	8775 1450 8775 725 
-Wire Wire Line
-	9125 1125 9200 1125
-Wire Wire Line
-	9125 1225 9200 1225
-Wire Wire Line
-	9125 1325 9200 1325
+	8750 1450 8750 725 
 Wire Wire Line
 	10250 1125 10325 1125
 Wire Wire Line
@@ -180,10 +157,7 @@ Wire Wire Line
 Text GLabel 9675 975  1    50   Input ~ 0
 12V_BUS
 Wire Wire Line
-	9125 1025 9675 1025
-Wire Wire Line
 	9675 1025 9675 975 
-Connection ~ 9675 1025
 Wire Wire Line
 	9675 1025 10325 1025
 $Comp
