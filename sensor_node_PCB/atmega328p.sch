@@ -523,4 +523,8 @@ Wire Wire Line
 	7750 4125 7825 4125
 Wire Wire Line
 	5725 2050 6275 2050
+Text HLabel 7825 3325 2    50   Input ~ 0
+ARD_DIG9
+Wire Wire Line
+	7750 3325 7825 3325
 $EndSCHEMATC

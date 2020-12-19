@@ -304,10 +304,10 @@ F 3 "" H 8750 3900 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L MCU_Microchip_ATmega:ATmega328P-AU U?
+L MCU_Microchip_ATmega:ATmega328P-AU U5
 U 1 1 5F6ABACB
 P 7150 4425
-F 0 "U?" H 7400 2800 50  0000 C CNN
+F 0 "U5" H 7400 2800 50  0000 C CNN
 F 1 "ATmega328P-AU" H 7575 2925 50  0000 C CNN
 F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 7150 4425 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 7150 4425 50  0001 C CNN
@@ -315,10 +315,10 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20w
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:C C?
+L Arduino_Uno_R3_From_Scratch-rescue:C C8
 U 1 1 5F6C2143
 P 8900 3600
-F 0 "C?" V 8648 3600 50  0000 C CNN
+F 0 "C8" V 8648 3600 50  0000 C CNN
 F 1 "18pF" V 8739 3600 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8938 3450 30  0001 C CNN
 F 3 "" H 8900 3600 60  0000 C CNN
@@ -326,10 +326,10 @@ F 3 "" H 8900 3600 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:C C?
+L Arduino_Uno_R3_From_Scratch-rescue:C C9
 U 1 1 5F6C2B63
 P 8900 4225
-F 0 "C?" V 8825 4350 50  0000 C CNN
+F 0 "C9" V 8825 4350 50  0000 C CNN
 F 1 "18pF" V 8739 4225 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8938 4075 30  0001 C CNN
 F 3 "" H 8900 4225 60  0000 C CNN
@@ -351,10 +351,10 @@ Wire Wire Line
 	8750 4050 8750 4225
 Connection ~ 8750 4050
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0139
 U 1 1 5F6CFD3D
 P 9375 3925
-F 0 "#PWR?" H 9375 3925 30  0001 C CNN
+F 0 "#PWR0139" H 9375 3925 30  0001 C CNN
 F 1 "GND" H 9375 3855 30  0001 C CNN
 F 2 "~" H 9375 3925 60  0000 C CNN
 F 3 "~" H 9375 3925 60  0000 C CNN
@@ -378,10 +378,10 @@ Connection ~ 9200 3900
 Wire Wire Line
 	9200 3900 9200 3600
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:C C?
+L Arduino_Uno_R3_From_Scratch-rescue:C C7
 U 1 1 5F6D7CAF
 P 6000 3225
-F 0 "C?" H 6050 3325 40  0000 L CNN
+F 0 "C7" H 6050 3325 40  0000 L CNN
 F 1 "0.1 uF" H 6050 3125 40  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6038 3075 30  0000 C CNN
 F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf" H 6000 3225 60  0001 C CNN
@@ -398,10 +398,10 @@ F 12 "~" H 6000 3225 60  0001 C CNN "Notes"
 	0    1    1    0   
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0140
 U 1 1 5F6DA776
 P 5375 3275
-F 0 "#PWR?" H 5375 3275 30  0001 C CNN
+F 0 "#PWR0140" H 5375 3275 30  0001 C CNN
 F 1 "GND" H 5375 3205 30  0001 C CNN
 F 2 "~" H 5375 3275 60  0000 C CNN
 F 3 "~" H 5375 3275 60  0000 C CNN
@@ -424,10 +424,10 @@ Wire Wire Line
 Wire Wire Line
 	7250 2850 7250 2925
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR0141
 U 1 1 5F6E82FA
 P 7200 2800
-F 0 "#PWR?" H 7200 2890 20  0001 C CNN
+F 0 "#PWR0141" H 7200 2890 20  0001 C CNN
 F 1 "5V_LDO" H 7200 2920 30  0000 C CNN
 F 2 "~" H 7200 2800 60  0000 C CNN
 F 3 "~" H 7200 2800 60  0000 C CNN
@@ -440,10 +440,10 @@ Connection ~ 7200 2850
 Wire Wire Line
 	7200 2850 7250 2850
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0142
 U 1 1 5F6F085B
 P 7150 5975
-F 0 "#PWR?" H 7150 5975 30  0001 C CNN
+F 0 "#PWR0142" H 7150 5975 30  0001 C CNN
 F 1 "GND" H 7150 5905 30  0001 C CNN
 F 2 "~" H 7150 5975 60  0000 C CNN
 F 3 "~" H 7150 5975 60  0000 C CNN
@@ -523,4 +523,8 @@ Wire Wire Line
 	7750 4125 7825 4125
 Wire Wire Line
 	5725 2050 6275 2050
+Text HLabel 7825 3325 2    50   Input ~ 0
+ARD_DIG9
+Wire Wire Line
+	7750 3325 7825 3325
 $EndSCHEMATC
