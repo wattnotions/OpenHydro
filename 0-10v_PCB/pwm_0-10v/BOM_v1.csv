@@ -1,0 +1,5 @@
+Qty,Designator,Footprint,Comment,LCSC Part # (optional),Description
+4,"SL1, SL2, SL3, SL4",02P,,,
+3,"R1, R2, R3",M0805,,,
+3,"C1, C2, C3",C0805,,,
+3,"U1, U2, U3",SOIC127P599X175-8N,,,
