@@ -25,7 +25,7 @@ Comment,Designator,Footprint,LCSC
 "LMV358IDGKR","U1","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",""
 "dps310","U10","Package_LGA:Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering",""
 "LD1117S50TR","U2","Package_TO_SOT_SMD:SOT-223-3_TabPin2",""
-"CP2102N-A01-GQFN24","U3","Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm",""
+"CP2102N-A01-GQFN28","U3","Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm",""
 "LM1117-3.3","U4","Package_TO_SOT_SMD:SOT-223-3_TabPin2",""
 "ATmega328P-AU","U5","Package_QFP:TQFP-32_7x7mm_P0.8mm",""
 "SP485EEN-L_TR","U6","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",""
