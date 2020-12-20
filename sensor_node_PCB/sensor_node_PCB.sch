@@ -1421,17 +1421,6 @@ Wire Wire Line
 	1350 875  1425 875 
 Wire Wire Line
 	1350 1575 1675 1575
-$Comp
-L sensor_node_PCB-rescue:sht20-Kicad_symbols U9
-U 1 1 5FE5F04C
-P 7275 5050
-F 0 "U9" H 7100 5355 50  0000 C CNN
-F 1 "sht20" H 7100 5264 50  0000 C CNN
-F 2 "Package_DFN_QFN:DFN-6-1EP_3x3mm_P1mm_EP1.5x2.4mm" H 7100 5173 50  0000 C CNN
-F 3 "" H 7275 5050 50  0001 C CNN
-	1    7275 5050
-	1    0    0    -1  
-$EndComp
 Text Label 6600 5100 2    50   ~ 0
 ARD_SDA_3V3
 Text Label 7575 5100 0    50   ~ 0
@@ -1471,21 +1460,21 @@ Wire Wire Line
 Wire Wire Line
 	8150 5200 7475 5200
 $Comp
-L Kicad_symbols:dps310 U?
+L Kicad_symbols:dps310 U10
 U 1 1 5FE12569
 P 7125 5925
-F 0 "U?" H 7125 6100 50  0000 C CNN
+F 0 "U10" H 7125 6100 50  0000 C CNN
 F 1 "dps310" H 7125 6009 50  0000 C CNN
-F 2 "" H 7125 5925 50  0001 C CNN
+F 2 "Package_LGA:Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering" H 7125 5925 50  0001 C CNN
 F 3 "" H 7125 5925 50  0001 C CNN
 	1    7125 5925
 	1    0    0    -1  
 $EndComp
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0143
 U 1 1 5FE1A61C
 P 6325 6000
-F 0 "#PWR?" H 6325 5750 50  0001 C CNN
+F 0 "#PWR0143" H 6325 5750 50  0001 C CNN
 F 1 "GND" H 6330 5827 50  0000 C CNN
 F 2 "" H 6325 6000 60  0000 C CNN
 F 3 "" H 6325 6000 60  0000 C CNN
@@ -1497,10 +1486,10 @@ Wire Wire Line
 Wire Wire Line
 	6325 5975 6675 5975
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0144
 U 1 1 5FE23F96
 P 7875 6175
-F 0 "#PWR?" H 7875 5925 50  0001 C CNN
+F 0 "#PWR0144" H 7875 5925 50  0001 C CNN
 F 1 "GND" H 7880 6002 50  0000 C CNN
 F 2 "" H 7875 6175 60  0000 C CNN
 F 3 "" H 7875 6175 60  0000 C CNN
@@ -1510,10 +1499,10 @@ $EndComp
 Wire Wire Line
 	7575 6175 7875 6175
 $Comp
-L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR?
+L Arduino_Uno_R3_From_Scratch-rescue:3V3_LDO #PWR0145
 U 1 1 5FE2D476
 P 8300 6000
-F 0 "#PWR?" H 8300 5960 30  0001 C CNN
+F 0 "#PWR0145" H 8300 5960 30  0001 C CNN
 F 1 "3V3_LDO" H 8309 6138 30  0000 C CNN
 F 2 "" H 8300 6000 60  0000 C CNN
 F 3 "" H 8300 6000 60  0000 C CNN
@@ -1545,4 +1534,22 @@ Wire Wire Line
 	6575 6525 6575 6275
 Wire Wire Line
 	6575 6275 6675 6275
+$Comp
+L Kicad_symbols:sht20 U9
+U 1 1 5FE623C8
+P 7275 5050
+F 0 "U9" H 7100 5265 50  0000 C CNN
+F 1 "sht20" H 7100 5174 50  0000 C CNN
+F 2 "Package_DFN_QFN:DFN-6-1EP_3x3mm_P1mm_EP1.5x2.4mm" H 7275 5050 50  0001 C CNN
+F 3 "" H 7275 5050 50  0001 C CNN
+	1    7275 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7075 5600 6650 5600
+Wire Wire Line
+	6650 5600 6650 5400
+Wire Wire Line
+	6650 5400 6525 5400
+Connection ~ 6525 5400
 $EndSCHEMATC
