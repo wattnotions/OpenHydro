@@ -120,33 +120,6 @@ Wire Wire Line
 Connection ~ 3625 2050
 Wire Wire Line
 	2625 2050 2975 2050
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:RESET_SWITCH SW1
-U 1 1 55E8D514
-P 3825 2525
-F 0 "SW1" V 3675 2825 60  0000 C CNN
-F 1 "RESET_SWITCH" V 3975 3075 60  0000 C CNN
-F 2 "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx" H 3825 2525 60  0001 C CNN
-F 3 "http://industrial.panasonic.com/www-data/pdf/ATK0000/ATK0000CE28.pdf" H 3825 2525 60  0001 C CNN
-F 4 "SWITCH TACTILE SPST-NO 0.02A 15V" H 3825 2525 60  0001 C CNN "Characteristics"
-F 5 "Reset Pushbutton" H 3825 2525 60  0001 C CNN "Description"
-F 6 "Panasonic" H 3825 2525 60  0001 C CNN "MFN"
-F 7 "EVQ-Q2U02W" H 3825 2525 60  0001 C CNN "MFP"
-F 8 "SMD" H 3825 2525 60  0001 C CNN "Package ID"
-F 9 "ANY" H 3825 2525 60  0001 C CNN "Source"
-F 10 "N" H 3825 2525 60  0001 C CNN "Critical"
-F 11 "328P_Sub" H 3825 2525 60  0001 C CNN "Subsystem"
-F 12 "Prefer below 3mm in accuator height off PCB" H 3825 2525 60  0001 C CNN "Notes"
-	1    3825 2525
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3825 2050 3825 2200
-Connection ~ 3825 2050
-Wire Wire Line
-	3825 2825 3825 2975
-Connection ~ 3825 2200
-Connection ~ 3825 2825
 Wire Wire Line
 	1975 2650 1975 2975
 Wire Wire Line
@@ -222,32 +195,6 @@ F 12 "~" H 2475 2050 60  0001 C CNN "Notes"
 	1    2475 2050
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	3925 2200 3925 2325
-Wire Wire Line
-	3725 2200 3825 2200
-Wire Wire Line
-	3725 2325 3725 2200
-Wire Wire Line
-	3925 2825 3925 2725
-Wire Wire Line
-	3725 2825 3825 2825
-Wire Wire Line
-	3725 2825 3725 2725
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR045
-U 1 1 562079B8
-P 3825 2975
-F 0 "#PWR045" H 3825 2975 30  0001 C CNN
-F 1 "GND" H 3825 2905 30  0001 C CNN
-F 2 "~" H 3825 2975 60  0000 C CNN
-F 3 "~" H 3825 2975 60  0000 C CNN
-F 4 "ANY" H 3825 2975 60  0001 C CNN "Source"
-F 5 "N" H 3825 2975 60  0001 C CNN "Critical"
-F 6 "~" H 3825 2975 60  0001 C CNN "Notes"
-	1    3825 2975
-	1    0    0    -1  
-$EndComp
 $Comp
 L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR046
 U 1 1 56207AE4
@@ -284,14 +231,6 @@ Wire Wire Line
 	5325 1300 5725 1300
 Wire Wire Line
 	5325 2050 5725 2050
-Wire Wire Line
-	3625 2050 3825 2050
-Wire Wire Line
-	3825 2050 5325 2050
-Wire Wire Line
-	3825 2200 3925 2200
-Wire Wire Line
-	3825 2825 3925 2825
 $Comp
 L Arduino_Uno_R3_From_Scratch-rescue:Crystal Y1
 U 1 1 5F569D4C
@@ -527,4 +466,6 @@ Text HLabel 7825 3325 2    50   Input ~ 0
 ARD_DIG9
 Wire Wire Line
 	7750 3325 7825 3325
+Wire Wire Line
+	3625 2050 5325 2050
 $EndSCHEMATC

@@ -464,36 +464,10 @@ Wire Wire Line
 	1800 4725 2325 4725
 Text GLabel 1800 4725 0    50   Input ~ 0
 12V_BUS
-$Comp
-L Interface_USB:FT231XS U3
-U 1 1 5F4E39B1
-P 3975 2300
-F 0 "U3" H 3975 3381 50  0000 C CNN
-F 1 "FT231XS" H 3975 3290 50  0000 C CNN
-F 2 "Package_SO:SSOP-20_3.9x8.7mm_P0.635mm" H 4975 1500 50  0001 C CNN
-F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT231X.pdf" H 3975 2300 50  0001 C CNN
-	1    3975 2300
-	1    0    0    -1  
-$EndComp
-Text Label 3200 2100 2    50   ~ 0
+Text Label 3275 2675 2    50   ~ 0
 USB_D+
-Text Label 3200 2000 2    50   ~ 0
+Text Label 3275 2775 2    50   ~ 0
 USB_D-
-Wire Wire Line
-	3200 2000 3275 2000
-Wire Wire Line
-	3200 2100 3275 2100
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR0111
-U 1 1 5F4ED2A9
-P 3600 1300
-F 0 "#PWR0111" H 3600 1390 20  0001 C CNN
-F 1 "5V_LDO" H 3596 1438 30  0000 C CNN
-F 2 "" H 3600 1300 60  0000 C CNN
-F 3 "" H 3600 1300 60  0000 C CNN
-	1    3600 1300
-	1    0    0    -1  
-$EndComp
 Text Label 1425 3150 0    50   ~ 0
 ard_tx
 Wire Wire Line
@@ -502,20 +476,14 @@ Text Label 1425 3250 0    50   ~ 0
 ard_rx
 Wire Wire Line
 	1350 3250 1425 3250
-Text Label 4775 1800 0    50   ~ 0
+Text Label 4650 1975 0    50   ~ 0
 ard_tx
-Text Label 4775 1700 0    50   ~ 0
+Text Label 4650 2075 0    50   ~ 0
 ard_rx
-Wire Wire Line
-	4675 1700 4775 1700
-Wire Wire Line
-	4675 1800 4775 1800
 Text Label 1450 3050 0    50   ~ 0
 ard_DTR
-Text Label 4775 2100 0    50   ~ 0
+Text Label 4650 2275 0    50   ~ 0
 ard_DTR
-Wire Wire Line
-	4675 2100 4775 2100
 $Comp
 L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0112
 U 1 1 5F50BD57
@@ -527,29 +495,6 @@ F 3 "" H 3975 3325 60  0000 C CNN
 	1    3975 3325
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3875 3200 3875 3325
-Wire Wire Line
-	3875 3325 3975 3325
-Wire Wire Line
-	4075 3200 4075 3325
-Wire Wire Line
-	4075 3325 3975 3325
-Connection ~ 3975 3325
-Wire Wire Line
-	3600 1300 3600 1400
-Wire Wire Line
-	3600 1400 3875 1400
-Wire Wire Line
-	3275 1700 3200 1700
-Wire Wire Line
-	3200 1700 3200 1100
-Wire Wire Line
-	3200 1100 4200 1100
-Wire Wire Line
-	4200 1100 4200 1400
-Wire Wire Line
-	4200 1400 4075 1400
 Text Label 1425 2675 0    50   ~ 0
 ARD_TX1
 Text Label 1425 2775 0    50   ~ 0
@@ -905,7 +850,7 @@ U 1 1 5F6DB19A
 P 1875 1625
 F 0 "P1" H 1953 1666 50  0000 L CNN
 F 1 "BREAKOUTS" H 1650 2000 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-6-2.54_1x06_P2.54mm_Horizontal" H 1875 1625 60  0001 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 1875 1625 60  0001 C CNN
 F 3 "" H 1875 1625 60  0000 C CNN
 	1    1875 1625
 	1    0    0    -1  
@@ -970,13 +915,6 @@ F13 "ARD_AN0" I R 1350 1875 50
 F14 "DTR" I R 1350 3050 50 
 F15 "ARD_DIG9" I R 1350 1575 50 
 $EndSheet
-Wire Wire Line
-	3275 2300 2750 2300
-Wire Wire Line
-	2750 2300 2750 1700
-Wire Wire Line
-	2750 1700 3200 1700
-Connection ~ 3200 1700
 $Comp
 L Arduino_Uno_R3_From_Scratch-rescue:R R?
 U 1 1 5F804717
@@ -1458,7 +1396,7 @@ Wire Wire Line
 Wire Wire Line
 	8150 4975 8150 5200
 Wire Wire Line
-	8150 5200 7475 5200
+	8150 5200 7825 5200
 $Comp
 L Kicad_symbols:dps310 U10
 U 1 1 5FE12569
@@ -1552,4 +1490,145 @@ Wire Wire Line
 Wire Wire Line
 	6650 5400 6525 5400
 Connection ~ 6525 5400
+$Comp
+L Device:C_Small C10
+U 1 1 5FE85087
+P 7825 5425
+F 0 "C10" H 7917 5471 50  0000 L CNN
+F 1 "1uF" H 7917 5380 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7825 5425 50  0001 C CNN
+F 3 "~" H 7825 5425 50  0001 C CNN
+	1    7825 5425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7825 5200 7825 5325
+Connection ~ 7825 5200
+Wire Wire Line
+	7825 5200 7475 5200
+Wire Wire Line
+	7825 5525 7825 5600
+Wire Wire Line
+	7825 5600 7075 5600
+Connection ~ 7075 5600
+$Comp
+L Interface_USB:CP2102N-A01-GQFN24 U?
+U 1 1 5FEADE93
+P 3950 2275
+F 0 "U?" H 3950 3356 50  0000 C CNN
+F 1 "CP2102N-A01-GQFN24" H 3950 3265 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 4400 1475 50  0001 L CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" H 4000 1225 50  0001 C CNN
+	1    3950 2275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
+U 1 1 5FEB97F5
+P 2900 2025
+F 0 "#PWR?" H 2900 2115 20  0001 C CNN
+F 1 "5V_LDO" H 2896 2163 30  0000 C CNN
+F 2 "" H 2900 2025 60  0000 C CNN
+F 3 "" H 2900 2025 60  0000 C CNN
+	1    2900 2025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2025 2900 2275
+Wire Wire Line
+	2900 2275 3350 2275
+Wire Wire Line
+	3950 3175 3950 3325
+Wire Wire Line
+	3950 3325 3975 3325
+Wire Wire Line
+	4050 3175 4050 3325
+Wire Wire Line
+	4050 3325 3975 3325
+Connection ~ 3975 3325
+Wire Wire Line
+	4550 2275 4650 2275
+Wire Wire Line
+	4550 1975 4650 1975
+Wire Wire Line
+	4550 2075 4650 2075
+Wire Wire Line
+	3275 2675 3350 2675
+Wire Wire Line
+	3275 2775 3350 2775
+Wire Wire Line
+	3950 1375 3850 1375
+$Comp
+L Device:R_Small R?
+U 1 1 5FF181DD
+P 2975 1575
+F 0 "R?" H 3034 1621 50  0000 L CNN
+F 1 "1k" H 3034 1530 50  0000 L CNN
+F 2 "" H 2975 1575 50  0001 C CNN
+F 3 "~" H 2975 1575 50  0001 C CNN
+	1    2975 1575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2975 1675 3350 1675
+Wire Wire Line
+	2975 1375 3850 1375
+Wire Wire Line
+	2975 1375 2975 1475
+Connection ~ 3850 1375
+Wire Wire Line
+	3350 2575 3350 2275
+Connection ~ 3350 2275
+$Comp
+L Device:C_Small C?
+U 1 1 5FF3FE64
+P 4775 1400
+F 0 "C?" H 4675 1525 50  0000 L CNN
+F 1 "C_Small" H 4825 1225 50  0000 L CNN
+F 2 "" H 4775 1400 50  0001 C CNN
+F 3 "~" H 4775 1400 50  0001 C CNN
+	1    4775 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5FF40686
+P 4950 1400
+F 0 "C?" H 4850 1525 50  0000 L CNN
+F 1 "C_Small" H 5042 1355 50  0000 L CNN
+F 2 "" H 4950 1400 50  0001 C CNN
+F 3 "~" H 4950 1400 50  0001 C CNN
+	1    4950 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1375 4600 1375
+Wire Wire Line
+	4600 1375 4600 1175
+Wire Wire Line
+	4600 1175 4850 1175
+Wire Wire Line
+	4850 1175 4850 1300
+Wire Wire Line
+	4850 1300 4775 1300
+Connection ~ 3950 1375
+Wire Wire Line
+	4850 1300 4950 1300
+Connection ~ 4850 1300
+Wire Wire Line
+	4950 1500 4775 1500
+Wire Wire Line
+	4775 1500 4775 1550
+Connection ~ 4775 1500
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
+U 1 1 5FF6DE1E
+P 4775 1550
+F 0 "#PWR?" H 4775 1300 50  0001 C CNN
+F 1 "GND" H 4780 1377 50  0000 C CNN
+F 2 "" H 4775 1550 60  0000 C CNN
+F 3 "" H 4775 1550 60  0000 C CNN
+	1    4775 1550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
