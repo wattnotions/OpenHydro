@@ -464,9 +464,9 @@ Wire Wire Line
 	1800 4725 2325 4725
 Text GLabel 1800 4725 0    50   Input ~ 0
 12V_BUS
-Text Label 3275 2675 2    50   ~ 0
+Text Label 3400 1800 2    50   ~ 0
 USB_D+
-Text Label 3275 2775 2    50   ~ 0
+Text Label 3400 1900 2    50   ~ 0
 USB_D-
 Text Label 1425 3150 0    50   ~ 0
 ard_tx
@@ -476,25 +476,14 @@ Text Label 1425 3250 0    50   ~ 0
 ard_rx
 Wire Wire Line
 	1350 3250 1425 3250
-Text Label 4650 1975 0    50   ~ 0
+Text Label 4550 1500 0    50   ~ 0
 ard_tx
-Text Label 4650 2075 0    50   ~ 0
+Text Label 4550 1600 0    50   ~ 0
 ard_rx
 Text Label 1450 3050 0    50   ~ 0
 ard_DTR
-Text Label 4650 2275 0    50   ~ 0
+Text Label 4550 1800 0    50   ~ 0
 ard_DTR
-$Comp
-L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0112
-U 1 1 5F50BD57
-P 3975 3325
-F 0 "#PWR0112" H 3975 3075 50  0001 C CNN
-F 1 "GND" H 3980 3152 50  0000 C CNN
-F 2 "" H 3975 3325 60  0000 C CNN
-F 3 "" H 3975 3325 60  0000 C CNN
-	1    3975 3325
-	1    0    0    -1  
-$EndComp
 Text Label 1425 2675 0    50   ~ 0
 ARD_TX1
 Text Label 1425 2775 0    50   ~ 0
@@ -1512,123 +1501,138 @@ Wire Wire Line
 	7825 5600 7075 5600
 Connection ~ 7075 5600
 $Comp
-L Interface_USB:CP2102N-A01-GQFN24 U?
-U 1 1 5FEADE93
-P 3950 2275
-F 0 "U?" H 3950 3356 50  0000 C CNN
-F 1 "CP2102N-A01-GQFN24" H 3950 3265 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 4400 1475 50  0001 L CNN
-F 3 "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" H 4000 1225 50  0001 C CNN
-	1    3950 2275
+L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR0111
+U 1 1 5FEB97F5
+P 3850 900
+F 0 "#PWR0111" H 3850 990 20  0001 C CNN
+F 1 "5V_LDO" H 3846 1038 30  0000 C CNN
+F 2 "" H 3850 900 60  0000 C CNN
+F 3 "" H 3850 900 60  0000 C CNN
+	1    3850 900 
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R_Small R10
+U 1 1 5FF181DD
+P 3300 1275
+F 0 "R10" H 3359 1321 50  0000 L CNN
+F 1 "1k" H 3359 1230 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3300 1275 50  0001 C CNN
+F 3 "~" H 3300 1275 50  0001 C CNN
+	1    3300 1275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C12
+U 1 1 5FF3FE64
+P 4750 1050
+F 0 "C12" H 4650 1175 50  0000 L CNN
+F 1 "C_Small" H 4800 875 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4750 1050 50  0001 C CNN
+F 3 "~" H 4750 1050 50  0001 C CNN
+	1    4750 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C13
+U 1 1 5FF40686
+P 4925 1050
+F 0 "C13" H 4825 1175 50  0000 L CNN
+F 1 "C_Small" H 5017 1005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4925 1050 50  0001 C CNN
+F 3 "~" H 4925 1050 50  0001 C CNN
+	1    4925 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4825 825  4825 950 
+Wire Wire Line
+	4825 950  4750 950 
+Wire Wire Line
+	4825 950  4925 950 
+Connection ~ 4825 950 
+Wire Wire Line
+	4925 1150 4750 1150
+Wire Wire Line
+	4750 1150 4750 1200
+Connection ~ 4750 1150
+$Comp
+L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR0146
+U 1 1 5FF6DE1E
+P 4750 1200
+F 0 "#PWR0146" H 4750 950 50  0001 C CNN
+F 1 "GND" H 4755 1027 50  0000 C CNN
+F 2 "" H 4750 1200 60  0000 C CNN
+F 3 "" H 4750 1200 60  0000 C CNN
+	1    4750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_USB:CP2102N-A01-GQFN28 U?
+U 1 1 5FF9F30A
+P 3950 2400
+F 0 "U?" H 4175 3700 50  0000 C CNN
+F 1 "CP2102N-A01-GQFN28" H 4450 1125 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm" H 4400 1200 50  0001 L CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" H 4000 1650 50  0001 C CNN
+	1    3950 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1500 3300 1500
+Wire Wire Line
+	3300 1500 3300 1375
 $Comp
 L Arduino_Uno_R3_From_Scratch-rescue:5V_LDO #PWR?
-U 1 1 5FEB97F5
-P 2900 2025
-F 0 "#PWR?" H 2900 2115 20  0001 C CNN
-F 1 "5V_LDO" H 2896 2163 30  0000 C CNN
-F 2 "" H 2900 2025 60  0000 C CNN
-F 3 "" H 2900 2025 60  0000 C CNN
-	1    2900 2025
+U 1 1 600093F3
+P 3050 1475
+F 0 "#PWR?" H 3050 1565 20  0001 C CNN
+F 1 "5V_LDO" H 3046 1613 30  0000 C CNN
+F 2 "" H 3050 1475 60  0000 C CNN
+F 3 "" H 3050 1475 60  0000 C CNN
+	1    3050 1475
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2900 2025 2900 2275
+	3050 1475 3050 1700
 Wire Wire Line
-	2900 2275 3350 2275
+	3050 1700 3450 1700
 Wire Wire Line
-	3950 3175 3950 3325
+	3400 1800 3450 1800
 Wire Wire Line
-	3950 3325 3975 3325
+	3400 1900 3450 1900
 Wire Wire Line
-	4050 3175 4050 3325
+	3950 825  3950 1100
 Wire Wire Line
-	4050 3325 3975 3325
-Connection ~ 3975 3325
+	3950 825  4300 825 
 Wire Wire Line
-	4550 2275 4650 2275
+	4550 1500 4450 1500
 Wire Wire Line
-	4550 1975 4650 1975
+	4450 1600 4550 1600
 Wire Wire Line
-	4550 2075 4650 2075
-Wire Wire Line
-	3275 2675 3350 2675
-Wire Wire Line
-	3275 2775 3350 2775
-Wire Wire Line
-	3950 1375 3850 1375
-$Comp
-L Device:R_Small R?
-U 1 1 5FF181DD
-P 2975 1575
-F 0 "R?" H 3034 1621 50  0000 L CNN
-F 1 "1k" H 3034 1530 50  0000 L CNN
-F 2 "" H 2975 1575 50  0001 C CNN
-F 3 "~" H 2975 1575 50  0001 C CNN
-	1    2975 1575
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2975 1675 3350 1675
-Wire Wire Line
-	2975 1375 3850 1375
-Wire Wire Line
-	2975 1375 2975 1475
-Connection ~ 3850 1375
-Wire Wire Line
-	3350 2575 3350 2275
-Connection ~ 3350 2275
-$Comp
-L Device:C_Small C?
-U 1 1 5FF3FE64
-P 4775 1400
-F 0 "C?" H 4675 1525 50  0000 L CNN
-F 1 "C_Small" H 4825 1225 50  0000 L CNN
-F 2 "" H 4775 1400 50  0001 C CNN
-F 3 "~" H 4775 1400 50  0001 C CNN
-	1    4775 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5FF40686
-P 4950 1400
-F 0 "C?" H 4850 1525 50  0000 L CNN
-F 1 "C_Small" H 5042 1355 50  0000 L CNN
-F 2 "" H 4950 1400 50  0001 C CNN
-F 3 "~" H 4950 1400 50  0001 C CNN
-	1    4950 1400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3950 1375 4600 1375
-Wire Wire Line
-	4600 1375 4600 1175
-Wire Wire Line
-	4600 1175 4850 1175
-Wire Wire Line
-	4850 1175 4850 1300
-Wire Wire Line
-	4850 1300 4775 1300
-Connection ~ 3950 1375
-Wire Wire Line
-	4850 1300 4950 1300
-Connection ~ 4850 1300
-Wire Wire Line
-	4950 1500 4775 1500
-Wire Wire Line
-	4775 1500 4775 1550
-Connection ~ 4775 1500
+	4450 1800 4550 1800
 $Comp
 L Arduino_Uno_R3_From_Scratch-rescue:GND #PWR?
-U 1 1 5FF6DE1E
-P 4775 1550
-F 0 "#PWR?" H 4775 1300 50  0001 C CNN
-F 1 "GND" H 4780 1377 50  0000 C CNN
-F 2 "" H 4775 1550 60  0000 C CNN
-F 3 "" H 4775 1550 60  0000 C CNN
-	1    4775 1550
+U 1 1 600955EC
+P 3950 3750
+F 0 "#PWR?" H 3950 3500 50  0001 C CNN
+F 1 "GND" H 3955 3577 50  0000 C CNN
+F 2 "" H 3950 3750 60  0000 C CNN
+F 3 "" H 3950 3750 60  0000 C CNN
+	1    3950 3750
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3950 3750 3950 3700
+Wire Wire Line
+	3850 900  3850 1100
+Wire Wire Line
+	3300 650  4300 650 
+Wire Wire Line
+	4300 650  4300 825 
+Wire Wire Line
+	3300 650  3300 1175
+Connection ~ 4300 825 
+Wire Wire Line
+	4300 825  4825 825 
 $EndSCHEMATC

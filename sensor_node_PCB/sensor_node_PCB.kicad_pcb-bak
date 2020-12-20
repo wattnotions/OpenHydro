@@ -2174,7 +2174,7 @@
     (descr "simple 6pin terminal block, pitch 5.08mm, revamped version of bornier6")
     (tags "terminal block bornier6")
     (path /5F6DB19A)
-    (fp_text reference P1 (at 12.65 -4.55) (layer F.SilkS)
+    (fp_text reference P1 (at 30.355 0.1) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value BREAKOUTS (at 12.7 4.75) (layer F.Fab)
