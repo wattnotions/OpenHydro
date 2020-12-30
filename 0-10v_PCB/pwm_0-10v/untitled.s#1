@@ -8218,7 +8218,6 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
-<part name="X1" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2" device="" package3d_urn="urn:adsk.eagle:package:9880/1"/>
 <part name="X2" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2" device="" package3d_urn="urn:adsk.eagle:package:9880/1"/>
 <part name="X3" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2" device="" package3d_urn="urn:adsk.eagle:package:9880/1"/>
 <part name="X4" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2" device="" package3d_urn="urn:adsk.eagle:package:9880/1"/>
@@ -8297,13 +8296,6 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 </instance>
 <instance part="P+4" gate="1" x="-2.54" y="88.9" smashed="yes">
 <attribute name="VALUE" x="-5.08" y="83.82" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="X1" gate="-1" x="-71.12" y="134.62" smashed="yes">
-<attribute name="NAME" x="-72.39" y="135.509" size="1.778" layer="95" rot="R180"/>
-</instance>
-<instance part="X1" gate="-2" x="-71.12" y="129.54" smashed="yes">
-<attribute name="NAME" x="-72.39" y="130.429" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-74.93" y="125.857" size="1.778" layer="96"/>
 </instance>
 <instance part="X2" gate="-1" x="-20.32" y="109.22" smashed="yes" rot="R270">
 <attribute name="NAME" x="-19.431" y="110.49" size="1.778" layer="95" rot="R90"/>

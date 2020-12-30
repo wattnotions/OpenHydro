@@ -8222,6 +8222,12 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <part name="X3" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2" device="" package3d_urn="urn:adsk.eagle:package:9880/1"/>
 <part name="X4" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2" device="" package3d_urn="urn:adsk.eagle:package:9880/1"/>
 <part name="X5" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2" device="" package3d_urn="urn:adsk.eagle:package:9880/1"/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
+<part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
+<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
+<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8325,6 +8331,27 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <attribute name="NAME" x="133.35" y="85.471" size="1.778" layer="95"/>
 <attribute name="VALUE" x="135.89" y="90.043" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="R4" gate="G$1" x="-30.48" y="104.14" smashed="yes">
+<attribute name="NAME" x="-34.29" y="105.6386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-34.29" y="100.838" size="1.778" layer="96"/>
+</instance>
+<instance part="GND9" gate="1" x="-40.64" y="99.06" smashed="yes">
+<attribute name="VALUE" x="-43.18" y="96.52" size="1.778" layer="96"/>
+</instance>
+<instance part="R5" gate="G$1" x="53.34" y="175.26" smashed="yes">
+<attribute name="NAME" x="49.53" y="176.7586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="49.53" y="171.958" size="1.778" layer="96"/>
+</instance>
+<instance part="GND8" gate="1" x="43.18" y="170.18" smashed="yes">
+<attribute name="VALUE" x="40.64" y="167.64" size="1.778" layer="96"/>
+</instance>
+<instance part="R6" gate="G$1" x="55.88" y="104.14" smashed="yes">
+<attribute name="NAME" x="52.07" y="105.6386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="52.07" y="100.838" size="1.778" layer="96"/>
+</instance>
+<instance part="GND10" gate="1" x="45.72" y="99.06" smashed="yes">
+<attribute name="VALUE" x="43.18" y="96.52" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -8369,6 +8396,24 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="33.02" y1="134.62" x2="33.02" y2="129.54" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="-40.64" y1="101.6" x2="-40.64" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="-40.64" y1="104.14" x2="-35.56" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND8" gate="1" pin="GND"/>
+<wire x1="43.18" y1="172.72" x2="43.18" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="175.26" x2="48.26" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="45.72" y1="101.6" x2="45.72" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="45.72" y1="104.14" x2="50.8" y2="104.14" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+12V" class="0">
 <segment>
@@ -8404,6 +8449,8 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="17.78" y1="73.66" x2="22.86" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="X3" gate="-2" pin="KL"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+<junction x="60.96" y="104.14"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -8445,6 +8492,8 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="-68.58" y1="73.66" x2="-63.5" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="X2" gate="-2" pin="KL"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<junction x="-25.4" y="104.14"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -8466,6 +8515,8 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="15.24" y1="144.78" x2="20.32" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="X4" gate="-2" pin="KL"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<junction x="58.42" y="175.26"/>
 </segment>
 </net>
 <net name="N$6" class="0">

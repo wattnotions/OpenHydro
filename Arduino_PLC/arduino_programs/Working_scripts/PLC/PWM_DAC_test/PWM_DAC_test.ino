@@ -14,12 +14,14 @@
 void setup() {
   // put your setup code here, to run once:
 
-  pinMode(CONTROLLINO_D11, OUTPUT);
+  pinMode(CONTROLLINO_D10, OUTPUT);
   pinMode(CONTROLLINO_A0, INPUT);
   
   
 
   Serial.begin(9600);
+
+  
 
 }
 
@@ -30,14 +32,14 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   
-  for(int i=0; i<30 ; i++){
+  for(int i=0; i<255 ; i++){
     read_and_print(i);
-    delay(500);
+    delay(100);
   }
 
-  for(int i=30; i>0 ; i--){
+  for(int i=255; i>0 ; i--){
     read_and_print(i);
-    delay(500);
+    delay(100);
   }
   
 
@@ -48,7 +50,7 @@ void loop() {
 }
 
 void read_and_print(int i){
-  analogWrite(CONTROLLINO_D11, i);
+  analogWrite(CONTROLLINO_D10, i);
   analog_val = ( analogRead(CONTROLLINO_A0)) ;
   volts      = (float(analog_val) / 68);
   Serial.print(volts);
