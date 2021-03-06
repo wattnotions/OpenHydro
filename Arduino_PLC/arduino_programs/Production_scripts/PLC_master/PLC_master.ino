@@ -3,6 +3,7 @@
 #include <SPI.h>
 #include <Ethernet.h>
 #include <PubSubClient.h>
+#include <ArduinoJson.h>
 
 #include <stdio.h>
 #include <string.h>
@@ -182,9 +183,12 @@ void reconnect() {
   }
 }
 
+StaticJsonDocument<200> doc;
+JsonArray array = doc.to<JsonArray>();
 //mqtt callback if a subscribed topic pushes some data
 void callback(char* topic, byte* payload, unsigned int length) {
   Serial.print("Message arrived [");
+  char inData[80];
   Serial.print(topic);
   Serial.print("] ");
   
@@ -192,6 +196,21 @@ void callback(char* topic, byte* payload, unsigned int length) {
     Serial.print((char)payload[i]);
   }
   Serial.println();
+
+  DeserializationError err=deserializeJson(doc, payload);
+
+  if(err) {
+    Serial.print(F("deserializeJson() failed with code "));
+    Serial.println(err.c_str());
+    }
+
+  const char* method = doc["method"]; // "Hum_SP"
+  float params = doc["params"]; // 20.92
+
+  
+  Serial.println(params);
+
+  
 
 
   //respond to rpc msg with rpc num for thingsboard to verify msg received
