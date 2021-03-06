@@ -39,6 +39,10 @@ EthernetClient ethClient;
 PubSubClient client(ethClient);
 
 
+//parameters received from thingsboard
+float Temp_SP, InFan_SP, OutFan_SP;
+
+
 
 
 
@@ -85,7 +89,7 @@ void setup() {
   digitalWrite(CONTROLLINO_R0, HIGH);
 }
 
-
+//modbus values storage
 float temp, pres, hum;
 
 int i;
@@ -204,13 +208,10 @@ void callback(char* topic, byte* payload, unsigned int length) {
     Serial.println(err.c_str());
     }
 
-  const char* method = doc["method"]; // "Hum_SP"
-  float params = doc["params"]; // 20.92
-
-  
-  Serial.println(params);
-
-  
+  //parse Json and update local variables
+  const char* method = doc["method"];
+  float params = doc["params"]; // 
+  thingsbUpdate(method, params);
 
 
   //respond to rpc msg with rpc num for thingsboard to verify msg received
@@ -219,6 +220,14 @@ void callback(char* topic, byte* payload, unsigned int length) {
   rpc_response += RPC_num;
   rpc_response.toCharArray(buffer, 35);
   client.publish( buffer , "");
+}
+
+void thingsbUpdate(char* method, float param){
+  if ( (strcmp(method, 'Temp_SP')) == 0 ) Temp_SP = param;
+  if ( (strcmp(method, 'InFan_SP')) == 0 ) InFan_SP = param;
+  if ( (strcmp(method, 'OutFan_SP')) == 0 ) OutFan_SP = param;
+  
+  
 }
 
 String getValue(String data, char separator, int index)
