@@ -240,7 +240,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 void thingsbUpdate(char* method, float param){
   if ( (strcmp(method, "Temp_SP")) == 0 ) Temp_SP = param;
   if ( (strcmp(method, "InFan_SP")) == 0 )InFan_SP = param;
-  if ( (strcmp(method, 'OutFan_SP')) == 0 ) OutFan_SP = param;
+  if ( (strcmp(method, "OutFan_SP")) == 0 ) OutFan_SP = param;
   
   
 }
