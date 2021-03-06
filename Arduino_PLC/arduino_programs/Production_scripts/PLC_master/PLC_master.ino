@@ -14,6 +14,13 @@
 // This MACRO defines number of the comport that is used for RS 485 interface.
 #define RS485Serial     3
 
+//max and min values for varios setpoints, temp, fan speed etc. received from thingsboard
+#define MAX_TEMP 255
+#define MIN_TEMP 0
+
+#define MAX_FAN 255
+#define MIN_FAN 0
+
 Modbus ControllinoModbusMaster(MasterModbusAdd, RS485Serial, 0);
 
 
@@ -41,6 +48,8 @@ PubSubClient client(ethClient);
 
 //parameters received from thingsboard
 float Temp_SP, InFan_SP, OutFan_SP;
+
+
 
 
 
@@ -86,6 +95,10 @@ void setup() {
   delay(1500);
 
   pinMode(CONTROLLINO_R0, OUTPUT);
+  pinMode(CONTROLLINO_D9, OUTPUT);
+  pinMode(CONTROLLINO_D10, OUTPUT);
+  pinMode(CONTROLLINO_D11, OUTPUT);
+  
   digitalWrite(CONTROLLINO_R0, HIGH);
 }
 
@@ -107,9 +120,11 @@ void loop() {
     ControllinoModbusMaster.query( ModbusQuery[0] ); // send query (only once) 0 is read 1 is write
     ControllinoModbusMaster.poll(); // check incoming messages
 
+    //non blocking delay - sends mqtt every few seconds
     i++;
     if (i==20000){
       i=0;
+      updateSetpoints(Temp_SP, InFan_SP, OutFan_SP);
       for (int h=0; h<4; h++){
         mqtt_pub(h);
       }
@@ -223,10 +238,29 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 
 void thingsbUpdate(char* method, float param){
-  if ( (strcmp(method, 'Temp_SP')) == 0 ) Temp_SP = param;
-  if ( (strcmp(method, 'InFan_SP')) == 0 ) InFan_SP = param;
+  if ( (strcmp(method, "Temp_SP")) == 0 ) Temp_SP = param;
+  if ( (strcmp(method, "InFan_SP")) == 0 )InFan_SP = param;
   if ( (strcmp(method, 'OutFan_SP')) == 0 ) OutFan_SP = param;
   
+  
+}
+
+void updateSetpoints(float Temp_SP, float InFan_SP, float OutFan_SP){
+  int tempVal = map(int(Temp_SP), 0, 100, 0, 255);
+  if( (tempVal < MAX_TEMP) & (tempVal > MIN_TEMP) ) {
+    analogWrite(CONTROLLINO_D9, int(tempVal));
+    Serial.println("TEMP UPDATED");
+  }
+
+  int infanVal = map(int(InFan_SP), 0, 100, 0, 255);
+  analogWrite(CONTROLLINO_D10, int(infanVal));
+
+  int outfanVal = map(int(OutFan_SP), 0, 100, 0, 255);
+  analogWrite(CONTROLLINO_D11, int(outfanVal));
+
+  Serial.println(tempVal);
+  Serial.println(infanVal);
+  Serial.println(outfanVal);
   
 }
 
