@@ -15,7 +15,7 @@
 #define RS485Serial     3
 
 //max and min values for varios setpoints, temp, fan speed etc. received from thingsboard
-#define MAX_TEMP 255
+#define MAX_TEMP 60
 #define MIN_TEMP 0
 
 #define MAX_FAN 255
@@ -48,6 +48,9 @@ PubSubClient client(ethClient);
 
 //parameters received from thingsboard
 float Temp_SP, InFan_SP, OutFan_SP;
+
+// variables to store latest modbus sensor values from first sensor node (Node A)
+float TempA, PresA, HumA;
 
 
 
@@ -103,7 +106,7 @@ void setup() {
 }
 
 //modbus values storage
-float temp, pres, hum;
+
 
 int i;
 
@@ -145,11 +148,11 @@ void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
   char str_temp[10];
   char tstr[10];
   char mqtt_body[100];
-  temp = float( (ModbusSlaveRegisters[memaddr]) );
+  float temp = float( (ModbusSlaveRegisters[memaddr]) );
   
-  if (memaddr == 0) {strcpy(mqtt_body,"{\"temperature\": "); temp = temp /100;}
-  if (memaddr == 1) {strcpy(mqtt_body,"{\"pressure\": ");}
-  if (memaddr == 2) {strcpy(mqtt_body,"{\"humidity\": "); temp = temp/100;}
+  if (memaddr == 0) {strcpy(mqtt_body,"{\"temperature\": "); temp = temp /100; TempA = temp;}
+  if (memaddr == 1) {strcpy(mqtt_body,"{\"pressure\": "); PresA = temp;}
+  if (memaddr == 2) {strcpy(mqtt_body,"{\"humidity\": "); temp = temp/100; HumA = temp;}
   if (memaddr == 3) {strcpy(mqtt_body,"{\"c02\": ");}
 
   dtostrf(temp, 4, 2, str_temp);
@@ -157,6 +160,7 @@ void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
   strcat(mqtt_body, tstr);
   tptr = strcat(mqtt_body, "}");
   Serial.println(tptr);
+ 
 
   client.publish("v1/devices/me/telemetry", tptr);
 
@@ -181,6 +185,8 @@ void print_modbus_registers(){
           Serial.println("-------------------------------------");
           Serial.println("");
 }
+
+
 
 //connect or reconnect MQTT
 void reconnect() {
@@ -208,6 +214,8 @@ JsonArray array = doc.to<JsonArray>();
 void callback(char* topic, byte* payload, unsigned int length) {
   Serial.print("Message arrived [");
   char inData[80];
+  
+  
   Serial.print(topic);
   Serial.print("] ");
   
@@ -228,15 +236,26 @@ void callback(char* topic, byte* payload, unsigned int length) {
   float params = doc["params"]; // 
   thingsbUpdate(method, params);
 
+  char* response = "";
+  char str_val[10];
+  
+  if ( (strcmp(method, "getTemp_SP")) == 0 )  dtostrf(Temp_SP, 4, 2, str_val); response = str_val;
+  if ( (strcmp(method, "getInFan_SP")) == 0 )  dtostrf(InFan_SP, 4, 2, str_val); response = str_val;
+  if ( (strcmp(method, "getOutFan_SP")) == 0 )  dtostrf(OutFan_SP, 4, 2, str_val); response = str_val;
+  
 
   //respond to rpc msg with rpc num for thingsboard to verify msg received
   RPC_num = getValue(topic,'/',5);
   rpc_response = String("v1/devices/me/rpc/response/");
   rpc_response += RPC_num;
   rpc_response.toCharArray(buffer, 35);
-  client.publish( buffer , "");
+  Serial.print(rpc_response);
+  Serial.print("    ");
+  Serial.println(response);
+  client.publish( buffer , response);
 }
 
+//check received mqtt msg and update local SP variables if we get a match
 void thingsbUpdate(char* method, float param){
   if ( (strcmp(method, "Temp_SP")) == 0 ) Temp_SP = param;
   if ( (strcmp(method, "InFan_SP")) == 0 )InFan_SP = param;
@@ -245,25 +264,26 @@ void thingsbUpdate(char* method, float param){
   
 }
 
+//update the local variables that hold the system setpoints
 void updateSetpoints(float Temp_SP, float InFan_SP, float OutFan_SP){
-  int tempVal = map(int(Temp_SP), 0, 100, 0, 255);
+  int tempVal = map(int(Temp_SP), 0, 100, 0, MAX_TEMP);
   if( (tempVal < MAX_TEMP) & (tempVal > MIN_TEMP) ) {
     analogWrite(CONTROLLINO_D9, int(tempVal));
     Serial.println("TEMP UPDATED");
   }
 
   int infanVal = map(int(InFan_SP), 0, 100, 0, 255);
-  analogWrite(CONTROLLINO_D10, int(infanVal));
+  analogWrite(CONTROLLINO_D11, int(infanVal));
+  Serial.println(infanVal);
 
   int outfanVal = map(int(OutFan_SP), 0, 100, 0, 255);
-  analogWrite(CONTROLLINO_D11, int(outfanVal));
+  analogWrite(CONTROLLINO_D10, int(outfanVal));
 
-  Serial.println(tempVal);
-  Serial.println(infanVal);
-  Serial.println(outfanVal);
+  
   
 }
 
+//extract integer from string 
 String getValue(String data, char separator, int index)
 {
   int found = 0;
