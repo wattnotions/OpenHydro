@@ -44,7 +44,7 @@ byte response[] = {0,0,0,0,0,0,0};  //create an array to store the response
 int valMultiplier = 1;
 
 
-Modbus slave(1,modbus,TXEN); // this is slave @1 and RS-485
+Modbus slave(2,modbus,TXEN); // this is slave @1 and RS-485
 
 void setup() {
   Serial.begin( 19200 ); // baud-rate at 19200
@@ -112,7 +112,7 @@ void getSensorValues(int i) {
   //  Serial.print(hum);
   //  Serial.println(" %");
     Serial.println(i);
-    if (i == 100){
+    if (i == -100){
       s8_Serial.listen();
       sendRequest(readCO2);
       uint16_t valCO2 = getValue(response);

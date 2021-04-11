@@ -109,6 +109,7 @@ void setup() {
 
 
 int i;
+int slave_select = 1;
 
 char *tptr, *pptr, *hptr, *cptr;
 
@@ -118,10 +119,10 @@ void loop() {
       reconnect();
     }
     client.loop();
+
     
-  
-    ControllinoModbusMaster.query( ModbusQuery[0] ); // send query (only once) 0 is read 1 is write
-    ControllinoModbusMaster.poll(); // check incoming messages
+    
+    
 
     //non blocking delay - sends mqtt every few seconds
     i++;
@@ -131,15 +132,20 @@ void loop() {
       for (int h=0; h<4; h++){
         mqtt_pub(h);
       }
+
+      set_slave_address(slave_select);
+      slave_select++;
+      if (slave_select > 2) slave_select=1;
+      Serial.println(slave_select);
+      ControllinoModbusMaster.query( ModbusQuery[0] ); // send query (only once) 0 is read 1 is write
+      ControllinoModbusMaster.query( ModbusQuery[0] ); // send query (only once) 0 is read 1 is write
+      ControllinoModbusMaster.query( ModbusQuery[0] ); // send query (only once) 0 is read 1 is write
+       ControllinoModbusMaster.poll(); // check incoming messages
     }
     
-    
-  
-    
-
+    ControllinoModbusMaster.poll(); // check incoming messages
 
     
-
 }
 
 //this function gets a sensor reading from the the modbus slave register on this device (periodically updated)
@@ -149,11 +155,22 @@ void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
   char tstr[10];
   char mqtt_body[100];
   float temp = float( (ModbusSlaveRegisters[memaddr]) );
+
+  if (ModbusQuery[0].u8id==1){  //this code is terrible
+    if (memaddr == 0) {strcpy(mqtt_body,"{\"temperature1\": "); temp = temp /100; TempA = temp;}
+    if (memaddr == 1) {strcpy(mqtt_body,"{\"pressure1\": "); PresA = temp;}
+    if (memaddr == 2) {strcpy(mqtt_body,"{\"humidity1\": "); temp = temp/100; HumA = temp;}
+    if (memaddr == 3) {strcpy(mqtt_body,"{\"c02_1\": ");}
+  }
+
+   if (ModbusQuery[0].u8id==2){  //this code is terrible
+    if (memaddr == 0) {strcpy(mqtt_body,"{\"temperature2\": "); temp = temp /100; TempA = temp;}
+    if (memaddr == 1) {strcpy(mqtt_body,"{\"pressure2\": "); PresA = temp;}
+    if (memaddr == 2) {strcpy(mqtt_body,"{\"humidity2\": "); temp = temp/100; HumA = temp;}
+    if (memaddr == 3) {strcpy(mqtt_body,"{\"c02_2\": ");}
+  }
+
   
-  if (memaddr == 0) {strcpy(mqtt_body,"{\"temperature\": "); temp = temp /100; TempA = temp;}
-  if (memaddr == 1) {strcpy(mqtt_body,"{\"pressure\": "); PresA = temp;}
-  if (memaddr == 2) {strcpy(mqtt_body,"{\"humidity\": "); temp = temp/100; HumA = temp;}
-  if (memaddr == 3) {strcpy(mqtt_body,"{\"c02\": ");}
 
   dtostrf(temp, 4, 2, str_temp);
   sprintf(tstr, "%s", str_temp);
@@ -165,6 +182,8 @@ void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
   client.publish("v1/devices/me/telemetry", tptr);
 
 }
+
+
 
 //print sensor values coming in over modbus for address 0-4
 //these registers are on this device but are periodically updated
@@ -299,4 +318,9 @@ String getValue(String data, char separator, int index)
   }
 
   return found>index ? data.substring(strIndex[0], strIndex[1]) : "";
+}
+
+void set_slave_address(int address){
+  ModbusQuery[0].u8id = address; // slave address for reads
+  ModbusQuery[1].u8id = address; // slave address for writes
 }
