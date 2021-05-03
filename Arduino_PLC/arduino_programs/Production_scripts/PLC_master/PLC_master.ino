@@ -109,7 +109,7 @@ void setup() {
 //modbus values storage
 
 
-int i;
+int i,addr,change_addr;
 int slave_select = 1;
 
 char *tptr, *pptr, *hptr, *cptr;
@@ -133,8 +133,14 @@ void loop() {
       for (int h=0; h<4; h++){
         mqtt_pub(h);
       }
+      Serial.print("SLAVE_ADDR = ");
+      Serial.println(ModbusSlaveRegisters[4]);
 
-      set_slave_address(slave_select);
+      change_addr = !change_addr;
+      Serial.print(change_addr);
+      if(change_addr==1){addr=1;} 
+      else{addr=7;}
+      set_slave_address(addr);
       slave_select++;
       if (slave_select > 2) slave_select=1;
       Serial.println(slave_select);
@@ -157,14 +163,14 @@ void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
   char mqtt_body[100];
   float temp = float( (ModbusSlaveRegisters[memaddr]) );
 
-  if (ModbusQuery[0].u8id==1){  //this code is terrible
+  if (ModbusSlaveRegisters[4]==7){  //this code is terrible
     if (memaddr == 0) {strcpy(mqtt_body,"{\"temperature1\": "); temp = temp /100; TempA = temp;}
     if (memaddr == 1) {strcpy(mqtt_body,"{\"pressure1\": "); PresA = temp;}
     if (memaddr == 2) {strcpy(mqtt_body,"{\"humidity1\": "); temp = temp/100; HumA = temp;}
     if (memaddr == 3) {strcpy(mqtt_body,"{\"c02_1\": ");}
   }
 
-   if (ModbusQuery[0].u8id==2){  //this code is terrible
+   if (ModbusSlaveRegisters[4]==5){  //this code is terrible
     if (memaddr == 0) {strcpy(mqtt_body,"{\"temperature2\": "); temp = temp /100; TempA = temp;}
     if (memaddr == 1) {strcpy(mqtt_body,"{\"pressure2\": "); PresA = temp;}
     if (memaddr == 2) {strcpy(mqtt_body,"{\"humidity2\": "); temp = temp/100; HumA = temp;}
@@ -178,8 +184,7 @@ void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
   strcat(mqtt_body, tstr);
   tptr = strcat(mqtt_body, "}");
   Serial.println(tptr);
-  Serial.print("SLAVE_ADDR = ");
-  Serial.println(ModbusSlaveRegisters[4]);
+  
  
 
   client.publish("v1/devices/me/telemetry", tptr);

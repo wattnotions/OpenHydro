@@ -30,13 +30,13 @@ SoftwareSerial modbus(2, 3); // RX, TX
 #define SEALEVELPRESSURE_HPA (1013.25)
 
 //set modbus slave address
-#define MY_ADDR 5
+#define MY_ADDR 7
 
 Adafruit_BME280 bme; // I2C
 unsigned long delayTime;
 
 // data array for modbus network sharing
-uint16_t ModbusSReg[8] = {1112,232,344,9,5,6,7,8};   //modbus slave registers
+uint16_t ModbusSReg[8] = {1112,232,344,9,MY_ADDR,6,7,8};   //modbus slave registers
 
 //senseair s8 defs
 SoftwareSerial s8_Serial(4,5);   
@@ -115,7 +115,7 @@ void getSensorValues(int i) {
     ModbusSReg[2] = hum;
   //  Serial.print(hum);
   //  Serial.println(" %");
-    Serial.println(i);
+    
     if (i == -100){
       s8_Serial.listen();
       sendRequest(readCO2);
