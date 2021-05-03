@@ -137,13 +137,13 @@ void loop() {
       Serial.println(ModbusSlaveRegisters[4]);
 
       change_addr = !change_addr;
-      Serial.print(change_addr);
+      
       if(change_addr==1){addr=1;} 
       else{addr=7;}
       set_slave_address(addr);
       slave_select++;
       if (slave_select > 2) slave_select=1;
-      Serial.println(slave_select);
+      
       ControllinoModbusMaster.query( ModbusQuery[0] ); // send query (only once) 0 is read 1 is write
       ControllinoModbusMaster.query( ModbusQuery[0] ); // send query (only once) 0 is read 1 is write
       ControllinoModbusMaster.query( ModbusQuery[0] ); // send query (only once) 0 is read 1 is write
@@ -155,26 +155,30 @@ void loop() {
     
 }
 
+
+
 //this function gets a sensor reading from the the modbus slave register on this device (periodically updated)
 //it then formats the int value to a string and appends it to another string needed for mqtt/thingsboard
+
+int tempOUT,presOUT,humOUT,co2OUT,tempIN,presIN,humIN,co2IN;
 void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
   char str_temp[10];
   char tstr[10];
   char mqtt_body[100];
   float temp = float( (ModbusSlaveRegisters[memaddr]) );
 
-  if (ModbusSlaveRegisters[4]==7){  //this code is terrible
-    if (memaddr == 0) {strcpy(mqtt_body,"{\"temperature1\": "); temp = temp /100; TempA = temp;}
-    if (memaddr == 1) {strcpy(mqtt_body,"{\"pressure1\": "); PresA = temp;}
-    if (memaddr == 2) {strcpy(mqtt_body,"{\"humidity1\": "); temp = temp/100; HumA = temp;}
-    if (memaddr == 3) {strcpy(mqtt_body,"{\"c02_1\": ");}
+  if (ModbusSlaveRegisters[4]==7){  //this code is terrible   //slave with address 7
+    if (memaddr == 0) {strcpy(mqtt_body,"{\"temperatureOUT\": "); temp = temp /100; TempA = temp; tempOUT=temp;}
+    if (memaddr == 1) {strcpy(mqtt_body,"{\"pressureOUT\": "); PresA = temp; presOUT=temp;}
+    if (memaddr == 2) {strcpy(mqtt_body,"{\"humidityOUT\": "); temp = temp/100; HumA = temp; humOUT=temp;}
+    if (memaddr == 3) {strcpy(mqtt_body,"{\"c02_OUT\": "); co2OUT=temp;}
   }
 
-   if (ModbusSlaveRegisters[4]==5){  //this code is terrible
-    if (memaddr == 0) {strcpy(mqtt_body,"{\"temperature2\": "); temp = temp /100; TempA = temp;}
-    if (memaddr == 1) {strcpy(mqtt_body,"{\"pressure2\": "); PresA = temp;}
-    if (memaddr == 2) {strcpy(mqtt_body,"{\"humidity2\": "); temp = temp/100; HumA = temp;}
-    if (memaddr == 3) {strcpy(mqtt_body,"{\"c02_2\": ");}
+   if (ModbusSlaveRegisters[4]==5){  //this code is terrible  //actual addr is 1 but 5 is in mem addr on that slave
+    if (memaddr == 0) {strcpy(mqtt_body,"{\"temperatureIN\": "); temp = temp /100; TempA = temp; tempIN=temp;}
+    if (memaddr == 1) {strcpy(mqtt_body,"{\"pressureIN\": "); PresA = temp; presIN=temp;}
+    if (memaddr == 2) {strcpy(mqtt_body,"{\"humidityIN\": "); temp = temp/100; HumA = temp; humIN=temp;}
+    if (memaddr == 3) {strcpy(mqtt_body,"{\"c02_IN\": "); co2IN=temp;}
   }
 
   
@@ -183,7 +187,7 @@ void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
   sprintf(tstr, "%s", str_temp);
   strcat(mqtt_body, tstr);
   tptr = strcat(mqtt_body, "}");
-  Serial.println(tptr);
+  //Serial.println(tptr);
   
  
 
@@ -193,25 +197,7 @@ void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
 
 
 
-//print sensor values coming in over modbus for address 0-4
-//these registers are on this device but are periodically updated
-// needs modbus polling code etc to work
-void print_modbus_registers(){
-   // registers read was proceed
-          Serial.println("---------- READ RESPONSE RECEIVED ----");
-          Serial.print("Slave ");
-          Serial.print(SlaveModbusAdd, DEC); 
-          Serial.print(" Reg 0 : ");
-          Serial.print(ModbusSlaveRegisters[0],DEC);
-          Serial.print(" , Reg 1: ");
-          Serial.print(ModbusSlaveRegisters[1],DEC);
-          Serial.print(" , Reg2 : ");
-          Serial.print(ModbusSlaveRegisters[2], DEC);
-          Serial.print(" , Reg3 : ");
-          Serial.println(ModbusSlaveRegisters[3], DEC);
-          Serial.println("-------------------------------------");
-          Serial.println("");
-}
+
 
 
 
@@ -291,7 +277,7 @@ void thingsbUpdate(char* method, float param){
   
 }
 
-//update the local variables that hold the system setpoints
+//update the local variables that hold the system setpoints received from the thingsboard dashboard
 void updateSetpoints(float Temp_SP, float InFan_SP, float OutFan_SP){
   int tempVal = map(int(Temp_SP), 0, 100, 0, MAX_TEMP);
   if( (tempVal < MAX_TEMP) & (tempVal > MIN_TEMP) ) {
@@ -301,7 +287,7 @@ void updateSetpoints(float Temp_SP, float InFan_SP, float OutFan_SP){
 
   int infanVal = map(int(InFan_SP), 0, 100, 0, 255);
   analogWrite(CONTROLLINO_D11, int(infanVal));
-  Serial.println(infanVal);
+  
 
   int outfanVal = map(int(OutFan_SP), 0, 100, 0, 255);
   analogWrite(CONTROLLINO_D10, int(outfanVal));
