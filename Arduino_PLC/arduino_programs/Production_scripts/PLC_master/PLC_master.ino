@@ -1,3 +1,4 @@
+
 #include <Controllino.h>  /* Usage of CONTROLLINO library allows you to use CONTROLLINO_xx aliases in your sketch. */
 #include "ModbusRtu.h"    /* Usage of ModBusRtu library allows you to implement the Modbus RTU protocol in your sketch. */
 #include <SPI.h>
@@ -81,7 +82,7 @@ void setup() {
   ModbusQuery[1].u16CoilsNo = 1; // number of elements (coils or registers) to write
   ModbusQuery[1].au16reg = ModbusSlaveRegisters+4; // pointer to a memory array in the CONTROLLINO
   ModbusSlaveRegisters[4] = 1; // initial value for the relays 
-	
+  
   ControllinoModbusMaster.begin( 19200 ); // baud-rate at 19200
   ControllinoModbusMaster.setTimeOut( 5000 ); // if there is no answer in 5000 ms, roll over
   
