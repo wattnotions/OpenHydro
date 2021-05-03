@@ -72,13 +72,13 @@ void setup() {
   ModbusQuery[0].u8id = SlaveModbusAdd; // slave address
   ModbusQuery[0].u8fct = 3; // function code (this one is registers read)
   ModbusQuery[0].u16RegAdd = 0; // start address in slave
-  ModbusQuery[0].u16CoilsNo = 4; // number of elements (coils or registers) to read
+  ModbusQuery[0].u16CoilsNo = 5; // number of elements (coils or registers) to read
   ModbusQuery[0].au16reg = ModbusSlaveRegisters; // pointer to a memory array in the CONTROLLINO
 
   // ModbusQuery 1: write a single register
   ModbusQuery[1].u8id = SlaveModbusAdd; // slave address
   ModbusQuery[1].u8fct = 6; // function code (this one is write a single register)
-  ModbusQuery[1].u16RegAdd = 4; // start address in slave
+  ModbusQuery[1].u16RegAdd = 6; // start address in slave
   ModbusQuery[1].u16CoilsNo = 1; // number of elements (coils or registers) to write
   ModbusQuery[1].au16reg = ModbusSlaveRegisters+4; // pointer to a memory array in the CONTROLLINO
   ModbusSlaveRegisters[4] = 1; // initial value for the relays 
@@ -178,6 +178,8 @@ void mqtt_pub(int memaddr){  // 0 temp, 1 pres, 2 humidity, 3 c02
   strcat(mqtt_body, tstr);
   tptr = strcat(mqtt_body, "}");
   Serial.println(tptr);
+  Serial.print("SLAVE_ADDR = ");
+  Serial.println(ModbusSlaveRegisters[4]);
  
 
   client.publish("v1/devices/me/telemetry", tptr);
