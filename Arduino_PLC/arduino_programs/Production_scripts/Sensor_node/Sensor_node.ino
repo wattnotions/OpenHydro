@@ -16,6 +16,7 @@
 
 #include <SoftwareSerial.h>
 
+
 SoftwareSerial modbus(2, 3); // RX, TX
 
 // assign the Arduino pin that must be connected to RE-DE RS485 transceiver
@@ -27,6 +28,9 @@ SoftwareSerial modbus(2, 3); // RX, TX
 #define BME_MOSI 11
 #define BME_CS 10
 #define SEALEVELPRESSURE_HPA (1013.25)
+
+//set modbus slave address
+#define MY_ADDR 5
 
 Adafruit_BME280 bme; // I2C
 unsigned long delayTime;
@@ -44,7 +48,7 @@ byte response[] = {0,0,0,0,0,0,0};  //create an array to store the response
 int valMultiplier = 1;
 
 
-Modbus slave(2,modbus,TXEN); // this is slave @1 and RS-485
+Modbus slave(MY_ADDR,modbus,TXEN); // set up slave(us) with address MY_ADDR and RS-485
 
 void setup() {
   Serial.begin( 19200 ); // baud-rate at 19200
@@ -120,6 +124,8 @@ void getSensorValues(int i) {
       ModbusSReg[3] = valCO2;
       Serial.println(valCO2);
     }
+
+    ModbusSReg[4] = MY_ADDR;
 
  //   Serial.println();
 }
